@@ -38,5 +38,73 @@
   /* Legacy iOS */
   font-weight: lighter;
   font-style: normal; }
+* {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-color: #f1cd4e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  -webkit-justify-content: space-between; }
+
+#logo_container {
+  /*background-color: #666;*/
+  align-items: center;
+  -webkit-align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-left: 15px; }
+  #logo_container a {
+    background: url("../img/common/logo.png");
+    display: block;
+    height: 60px;
+    width: 130px; }
+
+#social_link_container {
+  align-items: center;
+  -webkit-align-items: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-family: PFDinTextCondPro;
+  font-weight: bold;
+  font-size: 22px;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  margin-right: 20px;
+  width: 140px; }
+  #social_link_container .social_link {
+    /*background-color: crimson;*/
+    display: block; }
+  #social_link_container .facebook_link {
+    background-position: top center;
+    background: url("../img/common/facebook.png");
+    height: 36px;
+    width: 36px; }
+    #social_link_container .facebook_link:hover {
+      background-position: bottom center; }
+
+@media screen and (max-width: 640px) {
+  #logo_container {
+    padding-left: 10px; }
+
+  #logo_container a {
+    background: url("../img/common/logo_mobile.png");
+    height: 46px;
+    width: 100px; } }
+/************************************** Shadow **********************************************/
+#shadow_container img {
+  height: 121px;
+  width: 100%; }
 
 /*# sourceMappingURL=master.css.map */
