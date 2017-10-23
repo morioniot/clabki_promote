@@ -111,37 +111,41 @@ body {
   width: 100%; }
 
 /*********************************************************************************************/
+/************************************ General elements ***************************************/
+/*********************************************************************************************/
+.title_container {
+  margin: 0 auto;
+  position: relative;
+  width: 30%; }
+  .title_container img {
+    display: block;
+    height: auto;
+    position: relative;
+    width: 100%;
+    z-index: 0; }
+  .title_container h2 {
+    bottom: 0;
+    color: #dff4f5;
+    font-family: PFDinTextCondPro;
+    font-size: 32px;
+    font-size: 2.4vw;
+    font-weight: bold;
+    height: 54%;
+    left: 0;
+    margin: auto;
+    margin-left: 12%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 65%;
+    z-index: 1; }
+
+/*********************************************************************************************/
 /******************************** Value Proposal Section *************************************/
 /*********************************************************************************************/
 #value_proposal_section {
   background-color: #dff4f5;
   margin-top: -40px; }
-  #value_proposal_section .title_container {
-    margin: 0 auto;
-    position: relative;
-    width: 30%; }
-    #value_proposal_section .title_container img {
-      display: block;
-      height: auto;
-      position: relative;
-      width: 100%;
-      z-index: 0; }
-    #value_proposal_section .title_container h2 {
-      bottom: 0;
-      color: #dff4f5;
-      font-family: PFDinTextCondPro;
-      font-size: 32px;
-      font-size: 2.4vw;
-      font-weight: bold;
-      height: 54%;
-      left: 0;
-      margin: auto;
-      margin-left: 12%;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 65%;
-      z-index: 1; }
   #value_proposal_section #proposal_intro {
     color: #1A223C;
     font-family: "Source Sans Pro", sans-serif;
@@ -189,5 +193,85 @@ body {
       display: block;
       height: auto;
       width: 100%; }
+
+/*********************************************************************************************/
+/************************************** Form Section *****************************************/
+/*********************************************************************************************/
+#form_section {
+  margin-top: 60px; }
+  #form_section #form_container {
+    /*background-color: green;*/
+    flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    margin-top: 60px; }
+    #form_section #form_container #join_us_form {
+      /*background-color: darkorange;*/
+      background: url("../img/common/fondoformulario.png");
+      /*background-repeat: no-repeat;*/
+      background-size: 100% 490px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      height: 490px;
+      justify-content: center;
+      -webkit-justify-content: center;
+      margin: 0 auto;
+      width: 450px; }
+      #form_section #form_container #join_us_form #form_fields_container {
+        /*background-color: violet;*/
+        align-items: flex-end;
+        -webkit-align-items: flex-end;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        margin: auto;
+        width: 90%; }
+        #form_section #form_container #join_us_form #form_fields_container input[type='submit'] {
+          background: url("../img/common/enviar_btn.png");
+          cursor: pointer;
+          height: 59px;
+          margin: 50px 20px 0px 230px;
+          width: 150px; }
+        #form_section #form_container #join_us_form #form_fields_container input[type='submit']:hover {
+          background: url("../img/common/enviar_btn_activo.png"); }
+        #form_section #form_container #join_us_form #form_fields_container label {
+          color: #1a223c;
+          font-family: PFDinTextCondPro;
+          font-size: 18px;
+          font-weight: 700;
+          margin-right: 8px; }
+        #form_section #form_container #join_us_form #form_fields_container .small_field {
+          align-items: center;
+          -webkit-align-items: center;
+          box-sizing: border-box;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          justify-content: flex-end;
+          -webkit-justify-content: flex-end;
+          padding: 9px 20px;
+          width: 100%; }
+          #form_section #form_container #join_us_form #form_fields_container .small_field input {
+            background-color: #dff4f5;
+            box-sizing: border-box;
+            border-radius: 5px;
+            box-shadow: inset 4px 3px 0px 0px #e6e6d4;
+            color: #1a223c;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 16px;
+            height: 30px;
+            padding: 2px 4px 2px 6px;
+            width: 73%; }
 
 /*# sourceMappingURL=master.css.map */
