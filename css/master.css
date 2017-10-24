@@ -103,7 +103,7 @@ header {
     height: 46px;
     width: 100px; } }
 body {
-  background-color: #dff4f5; }
+  background-color: #ffffee; }
 
 /************************************** Shadow **********************************************/
 #shadow_container img {
@@ -125,7 +125,7 @@ body {
     z-index: 0; }
   .title_container h2 {
     bottom: 0;
-    color: #dff4f5;
+    color: #ffffee;
     font-family: PFDinTextCondPro;
     font-size: 32px;
     font-size: 2.4vw;
@@ -144,8 +144,8 @@ body {
 /******************************** Value Proposal Section *************************************/
 /*********************************************************************************************/
 #value_proposal_section {
-  background-color: #dff4f5;
-  margin-top: -40px; }
+  background-color: #ffffee;
+  margin-top: 50px; }
   #value_proposal_section #proposal_intro {
     color: #1A223C;
     font-family: "Source Sans Pro", sans-serif;
@@ -198,7 +198,9 @@ body {
 /************************************** Form Section *****************************************/
 /*********************************************************************************************/
 #form_section {
-  margin-top: 60px; }
+  background-color: #dff4f5;
+  margin-top: 60px;
+  padding: 60px 0px; }
   #form_section #form_container {
     align-items: center;
     -webkit-align-items: center;
@@ -210,9 +212,7 @@ body {
     -webkit-justify-content: center;
     margin-top: 60px; }
     #form_section #form_container #join_us_form {
-      /*background-color: darkorange;*/
       background: url("../img/common/fondoformulario.png");
-      /*background-repeat: no-repeat;*/
       background-size: 100% 490px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -253,6 +253,7 @@ body {
           transition: left 2s ease;
           position: relative; }
           #form_section #form_container #join_us_form #form_fields_container input[type='submit']:hover {
+            background-color: #f70810;
             bottom: 1px;
             left: 1px; }
         #form_section #form_container #join_us_form #form_fields_container label {
