@@ -200,13 +200,14 @@ body {
 #form_section {
   margin-top: 60px; }
   #form_section #form_container {
-    /*background-color: green;*/
-    flex: 1;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex-direction: column;
-    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
     margin-top: 60px; }
     #form_section #form_container #join_us_form {
       /*background-color: darkorange;*/
@@ -222,8 +223,7 @@ body {
       height: 490px;
       justify-content: center;
       -webkit-justify-content: center;
-      margin: 0 auto;
-      width: 450px; }
+      margin: 0 5%; }
       #form_section #form_container #join_us_form #form_fields_container {
         /*background-color: violet;*/
         align-items: flex-end;
@@ -237,13 +237,24 @@ body {
         margin: auto;
         width: 90%; }
         #form_section #form_container #join_us_form #form_fields_container input[type='submit'] {
-          background: url("../img/common/enviar_btn.png");
+          background-color: #fa5b61;
+          border-radius: 10px;
+          border-top: 2px solid white;
+          border-right: 2px solid white;
+          color: white;
           cursor: pointer;
+          font-family: PFDinTextCondPro;
+          font-weight: bolder;
+          font-size: 22px;
           height: 59px;
-          margin: 50px 20px 0px 230px;
-          width: 150px; }
-        #form_section #form_container #join_us_form #form_fields_container input[type='submit']:hover {
-          background: url("../img/common/enviar_btn_activo.png"); }
+          margin: 60px 20px 0px 230px;
+          width: 150px;
+          transition: bottom 2s ease;
+          transition: left 2s ease;
+          position: relative; }
+          #form_section #form_container #join_us_form #form_fields_container input[type='submit']:hover {
+            bottom: 1px;
+            left: 1px; }
         #form_section #form_container #join_us_form #form_fields_container label {
           color: #1a223c;
           font-family: PFDinTextCondPro;
@@ -273,5 +284,31 @@ body {
             height: 30px;
             padding: 2px 4px 2px 6px;
             width: 73%; }
+
+#form_section #price_explanation {
+  color: #1A223C;
+  font-family: PFDinTextCondPro;
+  font-size: 18px;
+  margin: 0 5%;
+  position: relative;
+  width: 350px; }
+  #form_section #price_explanation #contribution_word {
+    font-weight: 300; }
+  #form_section #price_explanation .price {
+    font-weight: bolder;
+    font-size: 32px; }
+    #form_section #price_explanation .price .value {
+      color: #fa5b61; }
+  #form_section #price_explanation #price_paragraph {
+    font-family: "Source Sans Pro", sans-serif; }
+    #form_section #price_explanation #price_paragraph span {
+      color: #fa5b61;
+      font-weight: 600; }
+  #form_section #price_explanation #doubt_link {
+    color: #fa5b61;
+    font-family: PFDinTextCondPro;
+    font-weight: bold;
+    position: relative;
+    top: 30px; }
 
 /*# sourceMappingURL=master.css.map */
