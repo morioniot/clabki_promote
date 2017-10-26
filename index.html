@@ -7,6 +7,8 @@
         <meta charset="utf-8">
         <link rel="icon" href="./img/common/favicon.png" type="image/png">
         <title>Clabki</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     </head>
     <body>
         <header>
@@ -17,8 +19,7 @@
 				<span>SÍGUENOS</span>
                 <a class="facebook_link social_link" target="_blank" href="https://www.facebook.com/clabki/?fref=ts"></a>
             </div>
-            <script src="./public/js/header.js" type="text/javascript"></script>
-        </header>        
+        </header>
         <section id="value_proposal_section">
             <div class="title_container">
                 <h2>¿DE QUÉ SE TRATA?</h2>
@@ -64,15 +65,15 @@
                 <img src="./img/common/mancha_titulo.png" alt="title_design" />
             </div>
             <div id="form_container">
-                <form id="join_us_form" action="app/joinus.php" method="post">
+                <form id="join_us_form" action="https://sandbox.gateway.payulatam.com/ppp-web-gateway" method="post">
                     <div id="form_fields_container">
                         <div class="small_field">
                             <label for="name">NOMBRE</label>
-                            <input type="text" name="name" id="name" required>
+                            <input type="text" name="buyerFullName" id="name" required>
                         </div>
                         <div class="small_field">
                             <label for="email">TELÉFONO</label>
-                            <input type="email" name="phone" id="phone" required>
+                            <input type="email" name="telephone" id="phone" required>
                         </div>
                         <div class="small_field">
                             <label for="email">CIUDAD</label>
@@ -80,8 +81,23 @@
                         </div>
                         <div class="small_field">
                             <label for="email">CORREO</label>
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="buyerEmail" id="email" required>
                         </div>
+
+                        <!-- Valores de la transacción -->
+                        <input name="amount"        type="hidden"  value="20000" >
+                        <input name="tax"           type="hidden"  value="0"  >
+                        <input name="taxReturnBase" type="hidden"  value="0" >
+                        <input name="responseUrl"    type="hidden"  value="" >
+                        <input name="confirmationUrl"    type="hidden"  value="" >
+                        <input name="description"   type="hidden"  value="Servicio de publicación y búsqueda Clabki" >
+                        <input name="currency"      type="hidden"  value="COP" >
+                        <input name="test"      type="hidden"  value="1" >
+                        <input name="signature"     type="hidden"  value="" id="signature">
+                        <input name="accountId"     type="hidden"  value="512321" >
+                        <input name="merchantId"    type="hidden"  value="508029"   >
+                        <input name="referenceCode" type="hidden"  value="" id="referenceCode">
+
                         <input type="submit" value="COMPRAR">
                     </div>
                 </form>
@@ -101,4 +117,5 @@
             </div>
         </section>
     </body>
+    <script type="text/javascript" src="./js/master.js"></script>
 </html>
