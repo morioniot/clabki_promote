@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <link rel="icon" href="./img/common/favicon.png" type="image/png">
         <title>Clabki</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.1/qs.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     </head>
@@ -69,19 +70,19 @@
                     <div id="form_fields_container">
                         <div class="small_field">
                             <label for="name">NOMBRE</label>
-                            <input type="text" name="buyerFullName" id="name" required>
+                            <input class="required" type="text" name="buyerFullName" id="name" required>
                         </div>
                         <div class="small_field">
                             <label for="email">TELÉFONO</label>
-                            <input type="email" name="telephone" id="phone" required>
+                            <input class="required" type="text" name="telephone" id="phone" required>
                         </div>
                         <div class="small_field">
                             <label for="email">CIUDAD</label>
-                            <input type="email" name="city" id="city" required>
+                            <input class="required" type="text" name="city" id="city" required>
                         </div>
                         <div class="small_field">
                             <label for="email">CORREO</label>
-                            <input type="email" name="buyerEmail" id="email" required>
+                            <input class="required" type="email" name="buyerEmail" id="email" required>
                         </div>
 
                         <!-- Valores de la transacción -->
@@ -98,7 +99,7 @@
                         <input name="merchantId"    type="hidden"  value="508029"   >
                         <input name="referenceCode" type="hidden"  value="" id="referenceCode">
 
-                        <input type="submit" value="COMPRAR">
+                        <input type="submit" value="COMPRAR" id="send_button">
                     </div>
                 </form>
                 <div id="price_explanation">

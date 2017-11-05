@@ -23,7 +23,7 @@
     $paymentMethodType = $paymentMethodTypeAssociation[$_POST['payment_method_type']];
 
     //Changes with each transaction try
-    $transactionId = $_POST['tnameransaction_id'];
+    $transactionId = $_POST['transaction_id'];
 
     //Data to validate signature
     $merchantId = $_POST['merchant_id'];
@@ -60,7 +60,7 @@
             echo($errorMessage);
         }
 
-        else {    
+        else {
             //Desde que se haya hecho la actualización se envía mensaje de éxito
             echo("success operation");
         }
