@@ -1,0 +1,66 @@
+
+header {
+	background-color: $main-yellow;
+    @include display-flex;
+	height: 72px;
+    @include justify-content(space-between);
+}
+
+#logo_container {
+    /*background-color: #666;*/
+    @include align-items(center);
+    @include display-flex;
+    padding-left: 15px;
+
+    a {
+        background: url('../img/common/logo.png');
+        display: block;
+        height: 60px;
+        width: 130px;
+    }
+}
+
+#social_link_container {
+
+    @include align-items(center);
+    color: white;
+    @include display-flex;
+    font-family: $font-title;
+    font-weight: bold;
+    font-size: 22px;
+    @include justify-content(space-between);
+    margin-right: 20px;
+    width: 140px;
+
+    .social_link {
+        /*background-color: crimson;*/
+        display: block;
+    }
+
+    .facebook_link {
+        background-position: top center;
+        background: url('../img/common/facebook.png');
+        height: 36px;
+        width: 36px;
+        &:hover {
+            background-position: bottom center;
+        }
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+
+    #logo_container {
+        padding-left: 10px;
+    }
+
+    #logo_container a {
+        background: url('../img/common/logo_mobile.png');
+        height: 46px;
+        width: 100px;
+    }
+}

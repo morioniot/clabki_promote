@@ -1,0 +1,37 @@
+$main-yellow: #f1cd4e;
+$color-main-pink: #fa5b61;
+$color-pink-high: #f70810;
+$color-main-background: #ffffee;
+$color-form-background: #dff4f5;
+$color-main-font: #1A223C;
+$font-title: PFDinTextCondPro;
+$font-paragraph: 'Source Sans Pro', sans-serif;
+
+@mixin display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin justify-content($position) {
+    justify-content: $position;
+    -webkit-justify-content: $position;
+}
+
+@mixin align-items($position) {
+    align-items: $position;
+    -webkit-align-items: $position;
+}
+
+@mixin flex($parameter) {
+    flex: $parameter;
+    -webkit-box-flex: $parameter;
+    -webkit-flex: $parameter;
+    -ms-flex: $parameter;
+}
+
+@mixin flex-direction($direction) {
+    flex-direction: $direction;
+    -webkit-flex-direction: $direction;
+}
