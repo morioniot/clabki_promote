@@ -12,6 +12,14 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=207271499718170';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <header>
             <div id="logo_container">
                 <a href="./"></a>
@@ -116,6 +124,35 @@
                     <a href="./faq.html" id="doubt_link">¿tienes alguna duda?</a>
                 </div>
             </div>
+        </section>
+        <section id="social_networks_section">
+            <article id="follow_us_box">
+                <h2>¡SÍGUENOS!</h2>
+                <div class="container">
+                    <div id="text_and_counter_count">
+                        <div id="button_text_container">
+                            <div class="fb-like"
+                                data-href="https://www.facebook.com/clabki"
+                                data-layout="button" data-action="like"
+                                data-size="large"
+                                data-show-faces="false"
+                                data-share="false">
+                            </div>
+                            <p>Más seguidores significan más ayudantes para encontrar a una mascota</p>
+                        </div>
+                        <div id="count_container">
+                            <span>A <strong class="pink_bold">368</strong><img src="img/common/lines.png"></span><br>
+                            <strong class="bold">PERSONAS</strong><br>
+                            <span>LES GUSTA</span><br>
+                            <strong class="bold">CLABKI</strong>!
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <hr>
+            <article id="contact_us_box">
+                <h2>¡CONTÁCTANOS!</h2>
+            </article>
         </section>
     </body>
     <script type="text/javascript" src="./js/master.js"></script>
