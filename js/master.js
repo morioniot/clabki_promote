@@ -1,14 +1,26 @@
+//ASKING FOR FOLLOWERS NUMBER
+var updateFollowersCount = function() {
+    console.log('Actualizando contador');
+    axios('../server/getFollowers.php')
+    .then(function(response) {
+        $("#followers_count").html(response.data.fan_count);
+    }).
+    catch(function(error) {
+        console.log(error);
+    });
+};
 
-// ASKING FOR SIGNATURE
-console.log("Entrando en JS");
-axios('../server/signatureGenerator.php')
-.then(function(response) {
-    $("#signature").val(response.data.signature);
-    $("#referenceCode").val(response.data.reference_code);
-})
-.catch(function(error) {
-    console.log(error);
-});
+//UPDATE SIGNATURE
+var updateSignature = function() {
+    axios('../server/signatureGenerator.php')
+    .then(function(response) {
+        $("#signature").val(response.data.signature);
+        $("#referenceCode").val(response.data.reference_code);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+};
 
 // SENDIND DATA TO SAVE IN DB
 var itWasRegistered = false;
@@ -54,3 +66,17 @@ $("#join_us_form").on('submit', function( event ) {
         }
     }
 });
+
+window.onload = function() {
+    updateSignature();
+    updateFollowersCount();
+    FB.Event.subscribe('xfbml.render', function() {
+        console.log('entrando al render inicial');
+        FB.Event.subscribe('edge.create', function(response) {
+            updateFollowersCount();
+        });
+        FB.Event.subscribe('edge.remove', function(response) {
+            updateFollowersCount();
+        });
+    });
+};

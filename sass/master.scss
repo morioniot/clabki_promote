@@ -316,6 +316,10 @@ body {
     @include justify-content(center);
     padding: 70px 0px;
 
+    #follow_us_box .container {
+        padding-top: 20px;
+    }
+
     article {
         color: $color-main-font;
         @include align-items(center);
@@ -328,7 +332,12 @@ body {
             font-size: 45px;
         }
 
+        /********************************************Follow us part********************************/
+
         .container {
+
+            margin-top: 25px;
+
             #text_and_counter_count {
                 @include align-items(center);
                 @include display-flex;
@@ -337,7 +346,7 @@ body {
                 @include justify-content(space-between);
                 width: 400px;
 
-                #button_text_container {
+                .button_text_container {
                     @include display-flex;
                     @include flex-direction(column);
                     @include justify-content(space-between);
@@ -369,6 +378,47 @@ body {
                     }
                 }
             }
+
+            /********************************************Contact us part********************************/
+            #text_and_code {
+
+                @include align-items(center);
+                @include display-flex;
+                font-family: $font-paragraph;
+                font-size: 18px;
+                @include justify-content(space-between);
+                width: 400px;
+
+                .button_text_container {
+
+                    a {
+                        background-color: $color-main-font;
+                        color: white;
+                        font-family: $font-title;
+                        font-weight: 500;
+                        padding: 6px 10px;
+                        text-decoration: none;
+                        border-radius: 5px;
+                    }
+                    p {
+                        margin-top: 15px;
+                        width: 200px;
+                    }
+                }
+
+                img {
+                    width: 250px;
+                    height: auto;
+                }
+            }
         }
+    }
+
+    hr {
+        border-left: solid 1px $color_main_font;
+        height: 270px;
+        position: relative;
+        top: 55px;
+        margin: 0px 60px;
     }
 }
