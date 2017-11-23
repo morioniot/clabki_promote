@@ -298,10 +298,94 @@ body {
 
         #doubt_link {
             color: $color-main-pink;
+            cursor: pointer;
             font-family: $font-title;
             font-weight: bold;
             position: relative;
+            text-decoration: underline;
             top: 30px;
+        }
+    }
+}
+
+/************************************ Questions Popup ****************************************/
+
+#questions_popup {
+    background-color: rgba(26,34,60,0.9);
+    display: none;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+
+    #questions_group_container {
+        @include align-content(center);
+        background-color: $color_main_background;
+        box-sizing: padding-box;
+        @include display-flex;
+        color: $color_main_font;
+        font-family: $font-paragraph;
+        font-size: 16px;
+        height: 90%;
+        @include justify-content(center);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+        overflow-y: scroll;
+        padding: 20px 20px;
+        position: relative;
+        width: 60%;
+        @include flex-wrap(wrap);
+
+        &::-webkit-scrollbar { display: none; }
+
+        .close_button {
+            background-color: transparent;
+            background-image: url("../img/common/close_button.png");
+            cursor: pointer;
+            height: 28px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 28px;
+
+            &:active {
+                outline: none;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .question_division {
+            border-left: 1px solid $color_main_font;
+            height: 20%;
+            margin: 0px 10px;
+        }
+
+        .question {
+            @include align-items(center);
+            @include display-flex;
+            @include flex-direction(column);
+            padding: 10px 5px;
+            height: 25%;
+            width: 45%;
+
+            .question_title {
+                font-family: $font-title;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .question_answer {
+                // background-color: pink;
+                text-align: center;
+            }
         }
     }
 }

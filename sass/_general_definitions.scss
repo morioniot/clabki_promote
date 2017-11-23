@@ -35,3 +35,13 @@ $font-paragraph: 'Source Sans Pro', sans-serif;
     flex-direction: $direction;
     -webkit-flex-direction: $direction;
 }
+
+@mixin flex-wrap($wrap) {
+    flex-wrap: $wrap;
+    -webkit-flex-wrap: $wrap;
+}
+
+@mixin align-content($direction) {
+    align-content: $direction;
+    -webkit-align-content: $direction;
+}

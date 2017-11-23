@@ -67,16 +67,19 @@ $("#join_us_form").on('submit', function( event ) {
     }
 });
 
-window.onload = function() {
+$(document).ready(function() {
     updateSignature();
     updateFollowersCount();
-    FB.Event.subscribe('xfbml.render', function() {
-        console.log('entrando al render inicial');
-        FB.Event.subscribe('edge.create', function(response) {
-            updateFollowersCount();
-        });
-        FB.Event.subscribe('edge.remove', function(response) {
-            updateFollowersCount();
-        });
+
+    /******Adding event to doubts link*******/
+    $("#doubt_link").click(function(){
+        $("#questions_popup").show();
+        $("body").css("overflow", "hidden");
     });
-};
+
+    /******Adding event to doubts link*******/
+    $("#questions_group_container .close_button").click(function(){
+        $("#questions_popup").hide();
+        $("body").css("overflow", "auto");
+    });
+});

@@ -307,10 +307,86 @@ body {
       font-weight: 600; }
   #form_section #price_explanation #doubt_link {
     color: #fa5b61;
+    cursor: pointer;
     font-family: PFDinTextCondPro;
     font-weight: bold;
     position: relative;
+    text-decoration: underline;
     top: 30px; }
+
+/************************************ Questions Popup ****************************************/
+#questions_popup {
+  background-color: rgba(26, 34, 60, 0.9);
+  display: none;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5; }
+  #questions_popup #questions_group_container {
+    align-content: center;
+    -webkit-align-content: center;
+    background-color: #ffffee;
+    box-sizing: padding-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    color: #1A223C;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    height: 90%;
+    justify-content: center;
+    -webkit-justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    overflow-y: scroll;
+    padding: 20px 20px;
+    position: relative;
+    width: 60%;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    #questions_popup #questions_group_container::-webkit-scrollbar {
+      display: none; }
+    #questions_popup #questions_group_container .close_button {
+      background-color: transparent;
+      background-image: url("../img/common/close_button.png");
+      cursor: pointer;
+      height: 28px;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 28px; }
+      #questions_popup #questions_group_container .close_button:active {
+        outline: none; }
+      #questions_popup #questions_group_container .close_button:focus {
+        outline: none; }
+    #questions_popup #questions_group_container .question_division {
+      border-left: 1px solid #1A223C;
+      height: 20%;
+      margin: 0px 10px; }
+    #questions_popup #questions_group_container .question {
+      align-items: center;
+      -webkit-align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      padding: 10px 5px;
+      height: 25%;
+      width: 45%; }
+      #questions_popup #questions_group_container .question .question_title {
+        font-family: PFDinTextCondPro;
+        font-size: 18px;
+        font-weight: 500; }
+      #questions_popup #questions_group_container .question .question_answer {
+        text-align: center; }
 
 /*********************************************************************************************/
 /********************************* Social Network Section ************************************/
