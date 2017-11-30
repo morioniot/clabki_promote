@@ -127,7 +127,7 @@
                         <p class="question_answer">
                             No. Si el radio de publicación es muy amplio, ésta llegará más lejos,
                             pero a menos personas en la zona de pérdida. La información queda más
-                            dispersa. 
+                            dispersa.
                         </p>
                     </div>
                 </div>
@@ -155,9 +155,13 @@
                             <label for="email">CORREO</label>
                             <input class="required" type="email" name="buyerEmail" id="email" required>
                         </div>
+                        <div class="check_box_container">
+                            <label for="interested_check">INCLUIR BÚSQUEDA EN PÁGINAS</label>
+                            <input id="interested_check" type="checkbox" name="interested" value="1">
+                        </div>
 
                         <!-- Valores de la transacción -->
-                        <input name="amount"        type="hidden"  value="20000" >
+                        <input name="amount" id="payment_amount" type="hidden"  value="20000" >
                         <input name="tax"           type="hidden"  value="0"  >
                         <input name="taxReturnBase" type="hidden"  value="0" >
                         <input name="responseUrl"    type="hidden"  value="https://clabki.000webhostapp.com/server/paymentResponse.php" >
@@ -177,7 +181,7 @@
                     <span id="contribution_word">APORTE</span>
                     <div class="price">
                         <span class="currency">COP</span>
-                        <span class="value">$20000</span>
+                        <span class="value" id="value_display">$20000</span>
                     </div>
                     <p id="price_paragraph">
                         El servicio tiene una duración de <span>3 días</span> durante los cuales

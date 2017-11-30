@@ -1,6 +1,5 @@
 //ASKING FOR FOLLOWERS NUMBER
 var updateFollowersCount = function() {
-    console.log('Actualizando contador');
     axios('../server/getFollowers.php')
     .then(function(response) {
         $("#followers_count").html(response.data.fan_count);
@@ -11,8 +10,10 @@ var updateFollowersCount = function() {
 };
 
 //UPDATE SIGNATURE
-var updateSignature = function() {
-    axios('../server/signatureGenerator.php')
+var updateSignature = function( value ) {
+    axios.get('../server/signatureGenerator.php', {
+        params: {value : value}
+    })
     .then(function(response) {
         $("#signature").val(response.data.signature);
         $("#referenceCode").val(response.data.reference_code);
@@ -20,6 +21,12 @@ var updateSignature = function() {
     .catch(function(error) {
         console.log(error);
     });
+};
+
+//UPDATE VALUE DISPLAY (IN FORM)
+var updateValueDisplay = function(value) {
+    $("#payment_amount").val(value);
+    $("#value_display").html("$" + value);
 };
 
 // SENDIND DATA TO SAVE IN DB
@@ -39,13 +46,9 @@ $("#join_us_form").on('submit', function( event ) {
         if(isReadyToSend){
             var parametersArray = $("#join_us_form").serializeArray();
             var parameters = {};
-            var config = {paramsSerializer: function(params) {
-                return qs.stringify(params);
-            }};
             parametersArray.forEach(function(parameterObject) {
                 parameters[parameterObject['name']] = parameterObject['value'];
             });
-            console.log(parameters);
             axios.post('../server/register.php', Qs.stringify(parameters))
             .then(function(response) {
                 if(response.data.error != undefined && !response.data.error) {
@@ -68,7 +71,7 @@ $("#join_us_form").on('submit', function( event ) {
 });
 
 $(document).ready(function() {
-    updateSignature();
+    updateSignature(20000);
     updateFollowersCount();
 
     /******Adding event to doubts link*******/
@@ -81,5 +84,19 @@ $(document).ready(function() {
     $("#questions_group_container .close_button").click(function(){
         $("#questions_popup").hide();
         $("body").css("overflow", "auto");
+    });
+
+    /*****Adding event handler to checkbox*******/
+    $("#interested_check").change(function() {
+        var value = 20000;
+        if(this.checked) {
+            value = 25000;
+            updateValueDisplay(value);
+            updateSignature(value);
+        }
+        else {
+            updateValueDisplay(value);
+            updateSignature(value);
+        }
     });
 });

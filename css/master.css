@@ -201,6 +201,8 @@ body {
   background-color: #dff4f5;
   margin-top: 60px;
   padding: 60px 0px; }
+  #form_section h2 {
+    color: #dff4f5; }
   #form_section #form_container {
     align-items: center;
     -webkit-align-items: center;
@@ -262,7 +264,7 @@ body {
           font-size: 18px;
           font-weight: 700;
           margin-right: 8px; }
-        #form_section #form_container #join_us_form #form_fields_container .small_field {
+        #form_section #form_container #join_us_form #form_fields_container .check_box_container, #form_section #form_container #join_us_form #form_fields_container .small_field {
           align-items: center;
           -webkit-align-items: center;
           box-sizing: border-box;
@@ -274,17 +276,21 @@ body {
           -webkit-justify-content: flex-end;
           padding: 9px 20px;
           width: 100%; }
-          #form_section #form_container #join_us_form #form_fields_container .small_field input {
-            background-color: #dff4f5;
-            box-sizing: border-box;
-            border-radius: 5px;
-            box-shadow: inset 4px 3px 0px 0px #e6e6d4;
-            color: #1a223c;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 16px;
-            height: 30px;
-            padding: 2px 4px 2px 6px;
-            width: 73%; }
+          #form_section #form_container #join_us_form #form_fields_container .check_box_container input[type='checkbox'], #form_section #form_container #join_us_form #form_fields_container .small_field input[type='checkbox'] {
+            margin-top: -4px;
+            height: 15px;
+            width: 15px; }
+        #form_section #form_container #join_us_form #form_fields_container .small_field input {
+          background-color: #dff4f5;
+          box-sizing: border-box;
+          border-radius: 5px;
+          box-shadow: inset 4px 3px 0px 0px #e6e6d4;
+          color: #1a223c;
+          font-family: 'Source Sans Pro', sans-serif;
+          font-size: 16px;
+          height: 30px;
+          padding: 2px 4px 2px 6px;
+          width: 73%; }
 
 #form_section #price_explanation {
   color: #1A223C;

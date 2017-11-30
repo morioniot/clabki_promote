@@ -184,6 +184,10 @@ body {
     margin-top: 60px;
     padding: 60px 0px;
 
+    h2 {
+        color: $color_form_background;
+    }
+
     #form_container {
         @include align-items(center);
         @include display-flex;
@@ -239,13 +243,23 @@ body {
                     margin-right: 8px;
                 }
 
-                .small_field {
+                .check_box_container {
                     @include align-items(center);
                     box-sizing: border-box;
                     @include display-flex;
                     @include justify-content(flex-end);
                     padding: 9px 20px;
                     width: 100%;
+
+                    input[type='checkbox'] {
+                        margin-top: -4px;
+                        height: 15px;
+                        width: 15px;
+                    }
+                }
+
+                .small_field {
+                    @extend .check_box_container;
 
                     input {
                         background-color: #dff4f5;
