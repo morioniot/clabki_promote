@@ -4,6 +4,7 @@ $color-pink-high: #f70810;
 $color-main-background: #ffffee;
 $color-form-background: #dff4f5;
 $color-main-font: #1A223C;
+$color-form: #59ccd9;
 $font-title: PFDinTextCondPro;
 $font-paragraph: 'Source Sans Pro', sans-serif;
 
@@ -44,4 +45,14 @@ $font-paragraph: 'Source Sans Pro', sans-serif;
 @mixin align-content($direction) {
     align-content: $direction;
     -webkit-align-content: $direction;
+}
+
+@mixin flex-basis($size) {
+    flex-basis: $size;
+    -webkit-flex-basis: $size;
+}
+
+@mixin order($order) {
+    order: $order;
+    -webkit-order: $order;
 }

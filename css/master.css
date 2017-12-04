@@ -116,7 +116,7 @@ body {
 .title_container {
   margin: 0 auto;
   position: relative;
-  width: 30%; }
+  width: 380px; }
   .title_container img {
     display: block;
     height: auto;
@@ -127,13 +127,12 @@ body {
     bottom: 0;
     color: #ffffee;
     font-family: PFDinTextCondPro;
-    font-size: 32px;
-    font-size: 2.4vw;
+    font-size: 30px;
     font-weight: bold;
     height: 54%;
     left: 0;
     margin: auto;
-    margin-left: 12%;
+    margin-left: 17%;
     position: absolute;
     right: 0;
     top: 0;
@@ -150,7 +149,6 @@ body {
     color: #1A223C;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 20px;
-    font-size: 1.55vw;
     margin: 0 auto;
     margin-top: 3%;
     text-align: center;
@@ -185,9 +183,9 @@ body {
       font-family: "Source Sans Pro", sans-serif;
       font-size: 18px;
       line-height: 26px;
-      line-height: 2.05vw;
       text-align: left; }
   .proposal_container .proposal_image {
+    margin: 20px;
     width: 25%; }
     .proposal_container .proposal_image img {
       display: block;
@@ -452,7 +450,8 @@ body {
         #social_networks_section article .container #text_and_counter_count #count_container {
           font-family: PFDinTextCondPro;
           font-size: 42px;
-          line-height: 40px; }
+          line-height: 40px;
+          margin-top: -20px; }
           #social_networks_section article .container #text_and_counter_count #count_container .pink_bold {
             color: #fa5b61;
             font-size: 60px;
@@ -487,7 +486,7 @@ body {
           margin-top: 15px;
           width: 200px; }
         #social_networks_section article .container #text_and_code img {
-          width: 250px;
+          width: 220px;
           height: auto; }
   #social_networks_section hr {
     border-left: solid 1px #1A223C;
@@ -495,5 +494,154 @@ body {
     position: relative;
     top: 55px;
     margin: 0px 60px; }
+
+@media only screen and (max-width: 950px) {
+  #value_proposal_section #proposal_intro {
+    width: 70%; }
+  #value_proposal_section .division_line {
+    width: 90%; }
+  #value_proposal_section .proposal_container {
+    width: 85%; }
+    #value_proposal_section .proposal_container .proposal_text {
+      min-width: 352px; }
+    #value_proposal_section .proposal_container .proposal_image {
+      min-width: 190px; }
+
+  #form_section #form_container #price_explanation {
+    min-width: 231px; }
+
+  #social_networks_section {
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    padding: 0px 0px; }
+    #social_networks_section hr {
+      display: none; }
+    #social_networks_section article {
+      margin: 60px 20px; }
+      #social_networks_section article .container #text_and_code img {
+        width: 200px; } }
+@media only screen and (max-width: 750px) {
+  #value_proposal_section #proposal_intro {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 45px;
+    width: 85%; }
+  #value_proposal_section #first_line, #value_proposal_section #third_line {
+    display: none; }
+  #value_proposal_section .proposal_container {
+    align-content: center;
+    -webkit-align-content: center;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center; }
+
+  #form_section #form_container {
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap; }
+    #form_section #form_container #price_explanation {
+      align-items: center;
+      -webkit-align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      order: -1;
+      -webkit-order: -1; }
+      #form_section #form_container #price_explanation #price_paragraph {
+        text-align: center; }
+    #form_section #form_container #join_us_form {
+      margin-top: 80px; }
+
+  #social_networks_section hr {
+    border-left: 0px;
+    border-top: 1px solid #1A223C;
+    display: block;
+    height: 0px;
+    margin: 0px 0px;
+    top: 0px;
+    width: 365px; }
+  #social_networks_section article .container #text_and_code img {
+    width: 220px; } }
+@media only screen and (max-width: 450px) {
+  #value_proposal_section #proposal_intro {
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 25px;
+    text-align: center;
+    width: 84%; }
+  #value_proposal_section .proposal_container {
+    align-content: center;
+    -webkit-align-content: center;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    min-width: 250px;
+    width: 84%; }
+    #value_proposal_section .proposal_container .proposal_text {
+      min-width: 250px;
+      width: 100%; }
+      #value_proposal_section .proposal_container .proposal_text h2 {
+        text-align: center; }
+      #value_proposal_section .proposal_container .proposal_text p {
+        text-align: center; }
+
+  .title_container {
+    width: 100%; }
+    .title_container h2 {
+      color: #1A223C;
+      margin-left: auto;
+      position: static;
+      text-align: center;
+      width: auto; }
+    .title_container img {
+      display: none; }
+
+  #form_section {
+    padding-bottom: 0px; }
+    #form_section h2 {
+      color: #1A223C; }
+    #form_section #form_container {
+      margin-top: 25px; }
+      #form_section #form_container #join_us_form {
+        background-color: #59ccd9;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%; }
+        #form_section #form_container #join_us_form #form_fields_container input[type='submit'] {
+          font-size: 18px; }
+        #form_section #form_container #join_us_form #form_fields_container label {
+          font-size: 16px; }
+        #form_section #form_container #join_us_form #form_fields_container .check_box_container, #form_section #form_container #join_us_form #form_fields_container .small_field {
+          padding: 9px 8px; }
+        #form_section #form_container #join_us_form #form_fields_container .small_field {
+          align-items: flex-start;
+          -webkit-align-items: flex-start;
+          flex-direction: column;
+          -webkit-flex-direction: column;
+          padding: 9px 8px; }
+          #form_section #form_container #join_us_form #form_fields_container .small_field input {
+            width: 100%; }
+
+  #social_networks_section hr {
+    width: 250px; }
+  #social_networks_section article h2 {
+    font-size: 35px; }
+  #social_networks_section article .container #text_and_counter_count {
+    flex-direction: column;
+    -webkit-flex-direction: column; }
+    #social_networks_section article .container #text_and_counter_count #count_container {
+      margin-top: 50px; }
+  #social_networks_section article .container #text_and_code {
+    flex-direction: column;
+    -webkit-flex-direction: column; }
+    #social_networks_section article .container #text_and_code img {
+      margin-top: 30px;
+      width: 220px; } }
 
 /*# sourceMappingURL=master.css.map */

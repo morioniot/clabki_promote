@@ -1,0 +1,250 @@
+@media only screen and (max-width: 950px) {
+
+    #value_proposal_section {
+
+        #proposal_intro {
+            width: 70%;
+        }
+
+        .division_line {
+            width: 90%;
+        }
+
+        .proposal_container {
+            width: 85%;
+
+            .proposal_text {
+                min-width: 352px;
+            }
+            .proposal_image {
+                min-width: 190px;
+            }
+        }
+    }
+
+    #form_section {
+        #form_container {
+            #price_explanation {
+                min-width: 231px;
+            }
+        }
+    }
+
+    #social_networks_section {
+
+        @include flex-wrap(wrap);
+        @include justify-content(space-around);
+        padding: 0px 0px;
+
+        hr {
+            display: none;
+        }
+
+        article {
+            margin: 60px 20px;
+
+            .container {
+                #text_and_code {
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #value_proposal_section {
+
+        #proposal_intro {
+            font-size: 18px;
+            line-height: 26px;
+            margin-top: 45px;
+            width: 85%;
+        }
+
+        #first_line, #third_line {
+            display: none;
+        }
+
+        .proposal_container {
+            @include align-content(center);
+            @include flex-wrap(wrap);
+            @include justify-content(center);
+        }
+    }
+
+    #form_section {
+        #form_container {
+            @include flex-wrap(wrap);
+            #price_explanation {
+                @include align-items(center);
+                @include display-flex;
+                @include flex-direction(column);
+                @include order(-1);
+
+                #price_paragraph {
+                    text-align: center;
+                }
+            }
+
+            #join_us_form {
+                margin-top: 80px;
+            }
+        }
+    }
+
+    #social_networks_section {
+
+        hr {
+            border-left: 0px;
+            border-top: 1px solid $color_main_font;
+            display: block;
+            height: 0px;
+            margin: 0px 0px;
+            top: 0px;
+            width: 365px;
+        }
+
+        article {
+            .container {
+                #text_and_code {
+                    img {
+                        width: 220px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+    #value_proposal_section {
+
+        #proposal_intro {
+            font-size: 17px;
+            line-height: 24px;
+            margin-top: 25px;
+            text-align: center;
+            width: 84%;
+        }
+
+        .proposal_container {
+            @include align-content(center);
+            @include flex-wrap(wrap);
+            @include justify-content(center);
+            min-width: 250px;
+            width: 84%;
+
+            .proposal_text {
+                min-width: 250px;
+                width: 100%;
+
+                h2 {
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .title_container {
+
+        width: 100%;
+
+        h2 {
+            color: $color_main_font;
+            margin-left: auto;
+            position: static;
+            text-align: center;
+            width: auto;
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    #form_section {
+
+        padding-bottom: 0px;
+
+        h2 {
+            color: $color_main_font;
+        }
+
+        #form_container {
+
+            margin-top: 25px;
+
+            #join_us_form {
+                background-color: $color_form;
+                margin-left: 0px;
+                margin-right: 0px;
+                width: 100%;
+
+                #form_fields_container {
+
+                    input[type='submit'] {
+                        font-size: 18px;
+                    }
+
+                    label {
+                        font-size: 16px;
+                    }
+
+                    .check_box_container {
+                        padding: 9px 8px;
+                    }
+
+                    .small_field {
+                        @include align-items(flex-start);
+                        @include flex-direction(column);
+                        padding: 9px 8px;
+
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #social_networks_section {
+
+        hr {
+            width: 250px;
+        }
+
+        article {
+
+            h2 {
+                font-size: 35px;
+            }
+
+            .container {
+
+                #text_and_counter_count {
+                    @include flex-direction(column);
+                    #count_container {
+                        margin-top: 50px;
+                    }
+                }
+
+                #text_and_code {
+                    @include flex-direction(column);
+                    img {
+                        margin-top: 30px;
+                        width: 220px;
+                    }
+                }
+            }
+        }
+    }
+}
