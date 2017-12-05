@@ -634,12 +634,14 @@ body {
     font-size: 35px; }
   #social_networks_section article .container #text_and_counter_count {
     flex-direction: column;
-    -webkit-flex-direction: column; }
+    -webkit-flex-direction: column;
+    width: 100%; }
     #social_networks_section article .container #text_and_counter_count #count_container {
       margin-top: 50px; }
   #social_networks_section article .container #text_and_code {
     flex-direction: column;
-    -webkit-flex-direction: column; }
+    -webkit-flex-direction: column;
+    width: 100%; }
     #social_networks_section article .container #text_and_code img {
       margin-top: 30px;
       width: 220px; } }

@@ -232,6 +232,7 @@
 
                 #text_and_counter_count {
                     @include flex-direction(column);
+                    width: 100%;
                     #count_container {
                         margin-top: 50px;
                     }
@@ -239,6 +240,7 @@
 
                 #text_and_code {
                     @include flex-direction(column);
+                    width: 100%;
                     img {
                         margin-top: 30px;
                         width: 220px;
