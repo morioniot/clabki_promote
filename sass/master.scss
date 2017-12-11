@@ -328,7 +328,7 @@ body {
 #questions_popup {
     background-color: rgba(26,34,60,0.9);
     display: none;
-    bottom: 0;
+    bottom: 0;    
     height: 100%;
     left: 0;
     position: fixed;
@@ -340,20 +340,19 @@ body {
     #questions_group_container {
         @include align-content(center);
         background-color: $color_main_background;
-        box-sizing: padding-box;
+        box-sizing: border-box;
         @include display-flex;
         color: $color_main_font;
         font-family: $font-paragraph;
         font-size: 16px;
         height: 90%;
         @include justify-content(center);
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 1%;
+        margin: auto;
+        max-width: 900px;
         overflow-y: scroll;
         padding: 20px 20px;
         position: relative;
-        width: 60%;
+        width: 95%;
         @include flex-wrap(wrap);
 
         &::-webkit-scrollbar { display: none; }
@@ -381,6 +380,10 @@ body {
             border-left: 1px solid $color_main_font;
             height: 20%;
             margin: 0px 10px;
+        }
+
+        .division_points {
+            display: none;
         }
 
         .question {

@@ -334,7 +334,7 @@ body {
     align-content: center;
     -webkit-align-content: center;
     background-color: #ffffee;
-    box-sizing: padding-box;
+    box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -345,13 +345,12 @@ body {
     height: 90%;
     justify-content: center;
     -webkit-justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
+    margin: auto;
+    max-width: 900px;
     overflow-y: scroll;
     padding: 20px 20px;
     position: relative;
-    width: 60%;
+    width: 95%;
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap; }
     #questions_popup #questions_group_container::-webkit-scrollbar {
@@ -373,6 +372,8 @@ body {
       border-left: 1px solid #1A223C;
       height: 20%;
       margin: 0px 10px; }
+    #questions_popup #questions_group_container .division_points {
+      display: none; }
     #questions_popup #questions_group_container .question {
       align-items: center;
       -webkit-align-items: center;
@@ -522,6 +523,23 @@ body {
       margin: 60px 20px; }
       #social_networks_section article .container #text_and_code img {
         width: 200px; } }
+@media only screen and (max-width: 850px) {
+  #questions_popup #questions_group_container {
+    align-content: flex-start;
+    -webkit-align-content: flex-start; }
+    #questions_popup #questions_group_container .question_division {
+      display: none; }
+    #questions_popup #questions_group_container .division_points {
+      color: #fa5b61;
+      display: block;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      width: 100%; }
+    #questions_popup #questions_group_container .question {
+      height: auto;
+      margin: 10px 20px 0px 20px;
+      min-width: 345px; } }
 @media only screen and (max-width: 750px) {
   #value_proposal_section #proposal_intro {
     font-size: 18px;
@@ -627,6 +645,25 @@ body {
           padding: 9px 8px; }
           #form_section #form_container #join_us_form #form_fields_container .small_field input {
             width: 100%; }
+
+  #questions_popup #questions_group_container .close_button {
+    background-image: url("../img/common/close_button.png");
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px; }
+  #questions_popup #questions_group_container .division_points {
+    font-size: 20px; }
+  #questions_popup #questions_group_container .question {
+    min-width: 285px;
+    width: 90%; }
+    #questions_popup #questions_group_container .question .question_title {
+      font-family: PFDinTextCondPro;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center; }
+    #questions_popup #questions_group_container .question .question_answer {
+      font-size: 14px;
+      text-align: center; }
 
   #social_networks_section hr {
     width: 250px; }

@@ -76,13 +76,13 @@ $(document).ready(function() {
 
     /******Adding event to doubts link*******/
     $("#doubt_link").click(function(){
-        $("#questions_popup").show();
+        $("#questions_popup").css("display", "flex");
         $("body").css("overflow", "hidden");
     });
 
     /******Adding event to doubts link*******/
     $("#questions_group_container .close_button").click(function(){
-        $("#questions_popup").hide();
+        $("#questions_popup").css("display", "none");
         $("body").css("overflow", "auto");
     });
 
