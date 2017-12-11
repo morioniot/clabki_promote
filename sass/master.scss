@@ -123,17 +123,7 @@ body {
         margin-top: 3%;
         text-align: center;
         width: 50%;
-    }
-
-    .division_line {
-        border-top: 1px solid $color-main-font;
-        margin: 15px auto;
-        width: 80%;
-    }
-
-    #first_line {
-        margin-top: 50px;
-    }
+    }    
 }
 
 /***************************** Proposal Container ***************************************/
@@ -328,7 +318,7 @@ body {
 #questions_popup {
     background-color: rgba(26,34,60,0.9);
     display: none;
-    bottom: 0;    
+    bottom: 0;
     height: 100%;
     left: 0;
     position: fixed;

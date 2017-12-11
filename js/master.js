@@ -85,18 +85,4 @@ $(document).ready(function() {
         $("#questions_popup").css("display", "none");
         $("body").css("overflow", "auto");
     });
-
-    /*****Adding event handler to checkbox*******/
-    $("#interested_check").change(function() {
-        var value = 20000;
-        if(this.checked) {
-            value = 25000;
-            updateValueDisplay(value);
-            updateSignature(value);
-        }
-        else {
-            updateValueDisplay(value);
-            updateSignature(value);
-        }
-    });
 });

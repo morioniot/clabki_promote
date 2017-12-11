@@ -153,12 +153,6 @@ body {
     margin-top: 3%;
     text-align: center;
     width: 50%; }
-  #value_proposal_section .division_line {
-    border-top: 1px solid #1A223C;
-    margin: 15px auto;
-    width: 80%; }
-  #value_proposal_section #first_line {
-    margin-top: 50px; }
 
 /***************************** Proposal Container ***************************************/
 .proposal_container {
@@ -499,8 +493,6 @@ body {
 @media only screen and (max-width: 950px) {
   #value_proposal_section #proposal_intro {
     width: 70%; }
-  #value_proposal_section .division_line {
-    width: 90%; }
   #value_proposal_section .proposal_container {
     width: 85%; }
     #value_proposal_section .proposal_container .proposal_text {
@@ -546,8 +538,6 @@ body {
     line-height: 26px;
     margin-top: 45px;
     width: 85%; }
-  #value_proposal_section #first_line, #value_proposal_section #third_line {
-    display: none; }
   #value_proposal_section .proposal_container {
     align-content: center;
     -webkit-align-content: center;
