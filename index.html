@@ -122,7 +122,7 @@
                 <img src="./img/common/mancha_titulo.png" alt="title_design" />
             </div>
             <div id="form_container">
-                <form id="join_us_form" action="https://sandbox.gateway.payulatam.com/ppp-web-gateway" method="post">
+                <form id="join_us_form" action="https://gateway.payulatam.com/ppp-web-gateway" method="post">
                     <div id="form_fields_container">
                         <div class="small_field">
                             <label for="name">NOMBRE</label>
@@ -139,7 +139,7 @@
                         <div class="small_field">
                             <label for="email">CORREO</label>
                             <input class="required" type="email" name="buyerEmail" id="email" required>
-                        </div>                        
+                        </div>
 
                         <!-- Valores de la transacción -->
                         <input name="amount" id="payment_amount" type="hidden"  value="20000" >
@@ -149,10 +149,10 @@
                         <input name="confirmationUrl"    type="hidden"  value="https://clabki.000webhostapp.com/server/paymentConfirmation.php" >
                         <input name="description"   type="hidden"  value="Servicio de publicación y búsqueda Clabki" >
                         <input name="currency"      type="hidden"  value="COP" >
-                        <input name="test"      type="hidden"  value="1" >
+                        <input name="test"      type="hidden"  value="0" >
                         <input name="signature"     type="hidden"  value="" id="signature">
-                        <input name="accountId"     type="hidden"  value="512321" >
-                        <input name="merchantId"    type="hidden"  value="508029"   >
+                        <input name="accountId"     type="hidden"  value="516688" >
+                        <input name="merchantId"    type="hidden"  value="515257"   >
                         <input name="referenceCode" type="hidden"  value="" id="referenceCode">
 
                         <input type="submit" value="COMPRAR" id="send_button">
