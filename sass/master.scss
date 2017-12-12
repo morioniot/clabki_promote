@@ -113,17 +113,6 @@ body {
 #value_proposal_section {
     background-color: $color-main-background;
     margin-top: 50px;
-
-    #proposal_intro {
-        color: $color-main-font;
-        font-family: $font-paragraph;
-        font-size: 20px;
-        // font-size: 1.55vw;
-        margin: 0 auto;
-        margin-top: 3%;
-        text-align: center;
-        width: 50%;
-    }    
 }
 
 /***************************** Proposal Container ***************************************/
@@ -132,7 +121,7 @@ body {
     @include align-items(center);
     @include display-flex;
     @include justify-content(space-between);
-    margin: 25px auto;
+    margin: 35px auto;
     width: 70%;
 
     .proposal_text {
@@ -152,6 +141,24 @@ body {
             // line-height: 2.05vw;
             text-align: left;
         }
+
+        .proposal_list {
+            @extend .proposal_paragraph;
+            list-style: none;
+
+            li {
+                margin-top: 5px;
+                position: relative;
+            }
+
+            li:before {
+                color: $color_main_pink;
+                content: '✔';
+                font-weight: bold;
+                position: absolute;
+                left: -22px;
+            }
+        }
     }
 
     .proposal_image {
@@ -162,6 +169,13 @@ body {
             height: auto;
             width: 100%;
         }
+    }
+}
+
+/*Special styes for advantages list*/
+#proposal_advantages {
+    .proposal_text {
+        margin-left: 22px;
     }
 }
 

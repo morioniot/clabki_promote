@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: PFDinTextCondPro;
   src: url("../fonts/PFDinTextCondPro-Bold.eot");
@@ -145,14 +146,6 @@ body {
 #value_proposal_section {
   background-color: #ffffee;
   margin-top: 50px; }
-  #value_proposal_section #proposal_intro {
-    color: #1A223C;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 20px;
-    margin: 0 auto;
-    margin-top: 3%;
-    text-align: center;
-    width: 50%; }
 
 /***************************** Proposal Container ***************************************/
 .proposal_container {
@@ -164,7 +157,7 @@ body {
   display: flex;
   justify-content: space-between;
   -webkit-justify-content: space-between;
-  margin: 25px auto;
+  margin: 35px auto;
   width: 70%; }
   .proposal_container .proposal_text {
     color: #1A223C;
@@ -173,11 +166,22 @@ body {
       font-family: PFDinTextCondPro;
       font-weight: 500;
       margin: 10px auto; }
-    .proposal_container .proposal_text .proposal_paragraph {
+    .proposal_container .proposal_text .proposal_paragraph, .proposal_container .proposal_text .proposal_list {
       font-family: "Source Sans Pro", sans-serif;
       font-size: 18px;
       line-height: 26px;
       text-align: left; }
+    .proposal_container .proposal_text .proposal_list {
+      list-style: none; }
+      .proposal_container .proposal_text .proposal_list li {
+        margin-top: 5px;
+        position: relative; }
+      .proposal_container .proposal_text .proposal_list li:before {
+        color: #fa5b61;
+        content: '✔';
+        font-weight: bold;
+        position: absolute;
+        left: -22px; }
   .proposal_container .proposal_image {
     margin: 20px;
     width: 25%; }
@@ -185,6 +189,10 @@ body {
       display: block;
       height: auto;
       width: 100%; }
+
+/*Special styes for advantages list*/
+#proposal_advantages .proposal_text {
+  margin-left: 22px; }
 
 /*********************************************************************************************/
 /************************************** Form Section *****************************************/
@@ -533,11 +541,6 @@ body {
       margin: 10px 20px 0px 20px;
       min-width: 345px; } }
 @media only screen and (max-width: 750px) {
-  #value_proposal_section #proposal_intro {
-    font-size: 18px;
-    line-height: 26px;
-    margin-top: 45px;
-    width: 85%; }
   #value_proposal_section .proposal_container {
     align-content: center;
     -webkit-align-content: center;
@@ -545,6 +548,8 @@ body {
     -webkit-flex-wrap: wrap;
     justify-content: center;
     -webkit-justify-content: center; }
+  #value_proposal_section #proposal_advantages .proposal_text {
+    order: -1; }
 
   #form_section #form_container {
     flex-wrap: wrap;
@@ -598,6 +603,14 @@ body {
         text-align: center; }
       #value_proposal_section .proposal_container .proposal_text p {
         text-align: center; }
+      #value_proposal_section .proposal_container .proposal_text .proposal_list li {
+        text-align: center; }
+      #value_proposal_section .proposal_container .proposal_text .proposal_list li:before {
+        position: relative;
+        left: -5px; }
+
+  #proposal_advantages .proposal_text {
+    margin-left: 0px; }
 
   .title_container {
     width: 100%; }

@@ -82,17 +82,16 @@
 @media only screen and (max-width: 750px) {
     #value_proposal_section {
 
-        #proposal_intro {
-            font-size: 18px;
-            line-height: 26px;
-            margin-top: 45px;
-            width: 85%;
-        }        
-
         .proposal_container {
             @include align-content(center);
             @include flex-wrap(wrap);
             @include justify-content(center);
+        }
+
+        #proposal_advantages {
+            .proposal_text {
+                order: -1;
+            }
         }
     }
 
@@ -167,10 +166,28 @@
                 h2 {
                     text-align: center;
                 }
+
                 p {
                     text-align: center;
                 }
+
+                .proposal_list {
+                    li {
+                        text-align: center;
+                    }
+
+                    li:before {
+                        position: relative;
+                        left: -5px;
+                    }
+                }
             }
+        }
+    }
+
+    #proposal_advantages {
+        .proposal_text {
+            margin-left: 0px;
         }
     }
 
