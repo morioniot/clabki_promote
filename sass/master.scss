@@ -457,7 +457,7 @@ body {
                     @include flex-direction(column);
                     @include justify-content(space-between);
                     p {
-                        margin-top: 10px;
+                        margin-bottom: 10px;
                         width: 200px;
                     }
                 }
@@ -500,15 +500,23 @@ body {
 
                     a {
                         background-color: $color-main-font;
+                        border-radius: 5px;
+                        box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5);
                         color: white;
+                        display: inline-block;
                         font-family: $font-title;
                         font-weight: 500;
                         padding: 6px 10px;
                         text-decoration: none;
-                        border-radius: 5px;
+                        transition: all ease-in-out 250ms;
+
+                        &:hover {
+                            box-shadow: 0 24px 10px -16px rgba(0,0,0,0.5);
+                            transform: translate(0, -3px);
+                        }
                     }
                     p {
-                        margin-top: 15px;
+                        margin-bottom: 15px;
                         width: 200px;
                     }
                 }
