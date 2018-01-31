@@ -71,7 +71,7 @@ $("#join_us_form").on('submit', function( event ) {
 });
 
 $(document).ready(function() {
-    updateSignature(20000);
+    updateSignature(12);
     updateFollowersCount();
 
     /******Adding event to doubts link*******/
