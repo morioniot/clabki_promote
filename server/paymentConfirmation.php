@@ -4,6 +4,7 @@
     ini_set('error_log', 'php-error.log');
     error_reporting(E_ALL);
 
+    require_once(__DIR__.'/vendor/autoload.php');
     require_once(__DIR__.'/dbconnection.php');
 
     $paymentMethodTypeAssociation = array(
@@ -21,6 +22,7 @@
     $referencePol = $_POST['reference_pol'];
     $sign = $_POST['sign'];
     $paymentMethodType = $paymentMethodTypeAssociation[$_POST['payment_method_type']];
+    $billingCountry = $_POST['billing_country'];
 
     //Changes with each transaction try
     $transactionId = $_POST['transaction_id'];
@@ -61,6 +63,78 @@
         }
 
         else {
+
+            //Trayendo datos del comprador
+            $query = "SELECT * FROM `registry` WHERE `reference_code`='".$referenceSale."'";
+            $result = $sqlConnection->query($query);
+            if($result->num_rows) {
+
+                $result->data_seek(0);
+                $object = $result->fetch_object();
+                $name = $object->name;
+                $email = $object->email;
+                $telephone = $object->telephone;
+                $city = $object->city;
+
+                //Enviando Email
+
+                $mail = new PHPMailerOAuth;
+
+                $mail->isSMTP();
+                $mail->SMTPDebug = 0;
+                $mail->Debugoutput = 'html';
+                $mail->Host = 'smtp.gmail.com';
+                $mail->Port = 587;
+                $mail->SMTPSecure = 'tls';
+                $mail->SMTPAuth = true;
+                $mail->AuthType = 'XOAUTH2';
+                $mail->oauthUserEmail = 'comunidad.clabki@gmail.com';
+                $mail->oauthClientId = '406616329011-nlr71cg1il8uskgiasc2cvmg7ddgep5k.apps.googleusercontent.com';
+                $mail->oauthClientSecret = '1KF8P9KBLyvfaLZCiEDbTwKk';
+                $mail->oauthRefreshToken = '1/LOG8Ox0nYB1EyLyl_VBlfnwp_jCiahdWjeusIKuEXM8';
+
+                $mail->setFrom('comunidad.clabki@gmail.com', 'Clabki');
+                $mail->addAddress('comunidad.clabki@gmail.com');
+
+                $mail->isHTML( true );
+                $mail->CharSet = 'UTF-8';
+                $mail->Subject = 'Adquisición de nuevo servicio - ' . $referenceSale;
+                $mail->Body = '<!DOCTYPE html>
+                <html>
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Clabki | Nuevo Servicio</title>
+                    </head>
+                    <style media="screen">
+                    </style>
+                    <body>
+                        <section>
+                            <p>
+                                Se ha confirmado el pago de un nuevo servicio Clabki:
+                            </p>
+                            <ul>
+                                <li><strong>Nombre:</strong> <span>'.$name.'</span></li>
+                                <li><strong>Email:</strong> <span>'.$email.'</span></li>
+                                <li><strong>Contacto:</strong> <span>'.$telephone.'</span></li>
+                                <li><strong>Empresa:</strong> <span>'.$city.'</span></li>
+                                <li><strong>País:</strong> <span>'.$billingCountry.'</span></li>
+                                <li><strong>Estado transacción:</strong> <span>'.$transactionStateMessage.'</span></li>
+                            </ul>
+                        </section>
+                    </body>
+                </html>';
+
+                if(!$mail->send()) {
+                    $mensajeError = 'Mailer Error: ' . $mail->ErrorInfo;
+                    error_log($mensajeError);
+                }
+            }
+
+            else {
+                $mensajeError = "Se generó error al traer los datos del comprador";
+                error_log($mensajeError);
+            }
+
             //Desde que se haya hecho la actualización se envía mensaje de éxito
             echo("success operation");
         }
