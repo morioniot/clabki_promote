@@ -307,11 +307,16 @@ body {
             }
         }
 
-        #price_paragraph {
+        .price_paragraph {
             font-family: $font-paragraph;
             span {
                 color: $color-main-pink;
                 font-weight: 600;
+
+                a {
+                    text-decoration: none;
+                    color: $color-main-pink;
+                }
             }
         }
 

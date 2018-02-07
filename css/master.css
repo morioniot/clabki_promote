@@ -306,11 +306,14 @@ body {
     font-size: 32px; }
     #form_section #price_explanation .price .value {
       color: #fa5b61; }
-  #form_section #price_explanation #price_paragraph {
+  #form_section #price_explanation .price_paragraph {
     font-family: "Source Sans Pro", sans-serif; }
-    #form_section #price_explanation #price_paragraph span {
+    #form_section #price_explanation .price_paragraph span {
       color: #fa5b61;
       font-weight: 600; }
+      #form_section #price_explanation .price_paragraph span a {
+        text-decoration: none;
+        color: #fa5b61; }
   #form_section #price_explanation #doubt_link {
     color: #fa5b61;
     cursor: pointer;
@@ -571,7 +574,7 @@ body {
       -webkit-flex-direction: column;
       order: -1;
       -webkit-order: -1; }
-      #form_section #form_container #price_explanation #price_paragraph {
+      #form_section #form_container #price_explanation .price_paragraph {
         text-align: center; }
     #form_section #form_container #join_us_form {
       margin-top: 80px; }
