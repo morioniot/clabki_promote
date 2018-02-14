@@ -3,11 +3,11 @@
 	class DatabaseConnection extends mysqli {
 
 		const DB_HOSTNAME = "localhost";
-		const DB_USERNAME = "id3131148_morion_iot";
+		const DB_USERNAME = "u840748033_clab";
 		//const DB_USERNAME = "root";
 		const DB_PASSWORD = "@Morion2016";
 		//const DB_PASSWORD = "@MorionMysql2016";
-		const DB_NAME = "id3131148_clabki_promote";
+		const DB_NAME = "u840748033_clab";
 
 		public function __construct() {
 
