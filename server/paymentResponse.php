@@ -53,7 +53,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
         <meta charset="utf-8">
         <link rel="icon" href="../img/common/favicon.png" type="image/png">
-        <title>Clabki</title>
+        <title>Clabki | Te ayudamos a encontrar a tu mascota perdida</title>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90695201-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-90695201-1');
+        </script>
     </head>
     <body>
         <header>
