@@ -85,4 +85,27 @@ $(document).ready(function() {
         $("#questions_popup").css("display", "none");
         $("body").css("overflow", "auto");
     });
+
+    /*****Creating functionality of fake select******/
+    //Toggle options when "select" is clicked
+    $(".dropdown dt").click(function() {
+        var $selectList = $(".dropdown dd ul");
+        $selectList.toggle();
+    });
+
+    //Select option clicked and hides options
+    $(".dropdown dd ul li").click(function(){
+        var $option = $(this);
+        var optionContent = $option.html();
+        $(".dropdown dt").html(optionContent);
+        $(".dropdown dd ul").hide();
+        $("#country_selector").val($option.find(".option").attr("id"));
+    });
+
+    //Hides options if another part of the page is clicked
+    $(document).bind("click", function(e) {
+        var $clicked = $(e.target);
+        if(!$clicked.parents().hasClass("dropdown"))
+            $(".dropdown dd ul").hide();
+    });
 });

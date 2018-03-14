@@ -2,3 +2,4 @@ vendor
 .sass-cache
 googleb28a8ec5d0217ff5.html
 server/dbconnection.php
+server/php-error.log

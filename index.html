@@ -151,15 +151,180 @@
                             <input class="required" type="text" name="buyerFullName" id="name" required>
                         </div>
                         <div class="small_field">
-                            <label for="email">TELÉFONO</label>
+                            <label for="telephone">TELÉFONO</label>
                             <input class="required" type="text" name="telephone" id="phone" required>
                         </div>
                         <div class="small_field">
-                            <label for="email">CIUDAD</label>
+                            <label for="country">PAÍS</label>
+                            <dl class="dropdown">
+                                <dt>
+                                    <span class="instruction">Selecciona tu país</span>
+                                    <span class="arrow">
+                                        <img src="img/common/arrow.png" alt="select arrow" />
+                                    </span>
+                                </dt>
+                                <dd>
+                                    <ul>
+                                        <li>
+                                            <span class="option" id="ARG">Argentina</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Argentina.png" alt="Argentina" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="BOL">Bolivia</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Bolivia.png" alt="Bolivia" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="CHL">Chile</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Chile.png" alt="Chile" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="COL">Colombia</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Colombia.png" alt="Colombia" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="CRI">Costa Rica</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Costa-Rica.png" alt="Costa Rica" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="CUB">Cuba</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Cuba.png" alt="Cuba" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="ECU">Ecuador</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Ecuador.png" alt="Ecuador" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="SLV">El Salvador</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/El-Salvador.png" alt="El Salvador" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="ESP">España</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/España.png" alt="España" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="GTM">Guatemala</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Guatemala.png" alt="Guatemala" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="GNQ">Guinea Ecuatorial</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Guinea-Ecuatorial.png" alt="Guinea Ecuatorial" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="HND">Honduras</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Honduras.png" alt="Honduras" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="MEX">México</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Mexico.png" alt="México" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="NIC">Nicaragua</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Nicaragua.png" alt="Nicaragua" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="PAN">Panamá</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Panama.png" alt="Panamá" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="PRY">Paraguay</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Paraguay.png" alt="Paraguay" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="PER">Perú</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Peru.png" alt="Perú" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="PRI">Puerto Rico</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Puerto-Rico.png" alt="Puerto Rico" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="DOM">República Dominicana</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Republica-Dominicana.png" alt="República Dominicana" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="URY">Uruguay</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Uruguay.png" alt="Uruguay" />
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="option" id="VEN">Venezuela</span>
+                                            <span class="flag">
+                                                <img src="img/common/countries/Venezuela.png" alt="Venezuela" />
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <select class="required" name="country" id="country_selector" required="true">
+                                <option value="">Selecciona tu país</option>
+                                <option value="ARG">Argentina</option>
+                                <option value="BOL">Bolivia</option>
+                                <option value="CHL">Chile</option>
+                                <option value="COL">Colombia</option>
+                                <option value="CRI">Costa Rica</option>
+                                <option value="CUB">Cuba</option>
+                                <option value="ECU">Ecuador</option>
+                                <option value="SLV">El Salvador</option>
+                                <option value="ESP">España</option>
+                                <option value="GTM">Guatemala</option>
+                                <option value="GNQ">Guinea Ecuatorial</option>
+                                <option value="HND">Honduras</option>
+                                <option value="MEX">México</option>
+                                <option value="NIC">Nicaragua</option>
+                                <option value="PAN">Panamá</option>
+                                <option value="PRY">Paraguay</option>
+                                <option value="PER">Perú</option>
+                                <option value="PRI">Puerto Rico</option>
+                                <option value="DOM">República Dominicana</option>
+                                <option value="URY">Uruguay</option>
+                                <option value="VEN">Venezuela</option>
+                            </select>
+                        </div>
+                        <div class="small_field">
+                            <label for="city">CIUDAD</label>
                             <input class="required" type="text" name="city" id="city" required>
                         </div>
                         <div class="small_field">
-                            <label for="email">CORREO</label>
+                            <label for="buyerEmail">CORREO</label>
                             <input class="required" type="email" name="buyerEmail" id="email" required>
                         </div>
 

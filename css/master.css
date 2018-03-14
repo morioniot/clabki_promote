@@ -238,7 +238,7 @@ body {
         -webkit-flex-direction: column;
         margin: auto;
         width: 90%; }
-        #form_section #form_container #join_us_form #form_fields_container input[type='submit'] {
+        #form_section #form_container #join_us_form #form_fields_container input[type='submit'], #form_section #form_container #join_us_form #form_fields_container .small_field [type='submit'].dropdown {
           background-color: #fa5b61;
           border-radius: 10px;
           border-top: 2px solid white;
@@ -254,7 +254,7 @@ body {
           transition: bottom 2s ease;
           transition: left 2s ease;
           position: relative; }
-          #form_section #form_container #join_us_form #form_fields_container input[type='submit']:hover {
+          #form_section #form_container #join_us_form #form_fields_container input[type='submit']:hover, #form_section #form_container #join_us_form #form_fields_container .small_field [type='submit'].dropdown:hover {
             background-color: #f70810;
             bottom: 1px;
             left: 1px; }
@@ -276,11 +276,11 @@ body {
           -webkit-justify-content: flex-end;
           padding: 9px 20px;
           width: 100%; }
-          #form_section #form_container #join_us_form #form_fields_container .check_box_container input[type='checkbox'], #form_section #form_container #join_us_form #form_fields_container .small_field input[type='checkbox'] {
+          #form_section #form_container #join_us_form #form_fields_container .check_box_container input[type='checkbox'], #form_section #form_container #join_us_form #form_fields_container .small_field input[type='checkbox'], #form_section #form_container #join_us_form #form_fields_container .small_field [type='checkbox'].dropdown {
             margin-top: -4px;
             height: 15px;
             width: 15px; }
-        #form_section #form_container #join_us_form #form_fields_container .small_field input {
+        #form_section #form_container #join_us_form #form_fields_container .small_field input, #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown {
           background-color: #dff4f5;
           box-sizing: border-box;
           border-radius: 5px;
@@ -291,6 +291,68 @@ body {
           height: 30px;
           padding: 2px 4px 2px 6px;
           width: 73%; }
+        #form_section #form_container #join_us_form #form_fields_container .small_field select {
+          position: absolute; }
+        #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dd, #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dt, #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown ul {
+          margin: 0px;
+          padding: 0px; }
+        #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dd {
+          background-color: transparent;
+          position: relative; }
+          #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dd ul {
+            box-sizing: border-box;
+            left: 0px;
+            list-style: none;
+            max-height: 180px;
+            overflow-y: scroll;
+            position: absolute;
+            top: 7px;
+            width: 100%;
+            z-index: 1; }
+          #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dd li {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            align-items: center;
+            -webkit-align-items: center;
+            background-color: #dff4f5;
+            cursor: pointer;
+            padding: 4px 4px 4px 6px; }
+            #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dd li:hover {
+              background-color: #fa5b61;
+              color: white; }
+            #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dd li .flag {
+              display: block;
+              width: 24px; }
+              #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dd li .flag img {
+                display: block;
+                width: 100%;
+                height: auto; }
+        #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dt {
+          cursor: pointer;
+          height: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          align-items: center;
+          -webkit-align-items: center;
+          justify-content: space-between;
+          -webkit-justify-content: space-between; }
+          #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dt .instruction {
+            display: block;
+            height: 100%;
+            line-height: 25px; }
+          #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dt .flag {
+            display: block;
+            width: 24px; }
+            #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dt .flag img {
+              display: block;
+              width: 100%;
+              height: auto; }
 
 #form_section #price_explanation {
   color: #1A223C;
@@ -643,7 +705,7 @@ body {
         margin-left: 0px;
         margin-right: 0px;
         width: 100%; }
-        #form_section #form_container #join_us_form #form_fields_container input[type='submit'] {
+        #form_section #form_container #join_us_form #form_fields_container input[type='submit'], #form_section #form_container #join_us_form #form_fields_container .small_field [type='submit'].dropdown {
           font-size: 18px; }
         #form_section #form_container #join_us_form #form_fields_container label {
           font-size: 16px; }
@@ -655,7 +717,7 @@ body {
           flex-direction: column;
           -webkit-flex-direction: column;
           padding: 9px 8px; }
-          #form_section #form_container #join_us_form #form_fields_container .small_field input {
+          #form_section #form_container #join_us_form #form_fields_container .small_field input, #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown {
             width: 100%; }
 
   #questions_popup #questions_group_container .close_button {

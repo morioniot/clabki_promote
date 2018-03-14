@@ -278,6 +278,89 @@ body {
                         padding: 2px 4px 2px 6px;
                         width: 73%;
                     }
+
+                    //Styles for select inputs
+                    select {
+                        position: absolute;
+                        // z-index: -1;
+                    }
+
+                    .dropdown {
+
+                        @extend input;
+
+                        dd, dt, ul {
+                            margin: 0px;
+                            padding: 0px;
+                        }
+
+                        dd {
+                            background-color: transparent;
+                            position: relative;
+
+                            ul {
+                                box-sizing: border-box;
+                                left: 0px;
+                                list-style: none;
+                                max-height: 180px;
+                                overflow-y: scroll;
+                                position: absolute;
+                                top: 7px;
+                                width: 100%;
+                                z-index: 1;
+                            }
+
+                            li {
+                                @include display-flex;
+                                @include justify-content(space-between);
+                                @include align-items(center);
+                                background-color: #dff4f5;
+                                cursor: pointer;
+                                padding: 4px 4px 4px 6px;
+
+                                &:hover {
+                                    background-color: $color-main-pink;
+                                    color: white;
+                                }
+
+                                .flag {
+                                    display: block;
+                                    width: 24px;
+
+                                    img {
+                                        display: block;
+                                        width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+
+                        dt {
+                            cursor: pointer;
+                            height: 100%;
+                            @include display-flex;
+                            @include align-items(center);
+                            @include justify-content(space-between);
+
+                            .instruction {
+                                display: block;
+                                height: 100%;
+                                line-height: 25px;
+                            }
+
+                            .flag {
+                                display: block;
+                                width: 24px;
+
+                                img {
+                                    display: block;
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
