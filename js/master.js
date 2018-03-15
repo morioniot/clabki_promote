@@ -10,9 +10,12 @@ var updateFollowersCount = function() {
 };
 
 //UPDATE SIGNATURE
-var updateSignature = function( value ) {
+var updateSignature = function(value, country) {
     axios.get('../server/signatureGenerator.php', {
-        params: {value : value}
+        params: {
+            value : value,
+            country: country
+        }
     })
     .then(function(response) {
         $("#signature").val(response.data.signature);
@@ -21,6 +24,26 @@ var updateSignature = function( value ) {
     .catch(function(error) {
         console.log(error);
     });
+};
+
+//UPDATES THE FORM TO INCLUDE OR NOT THE PAYMENT METHOD VARIABLE
+var updatePaymentMethodVariable = function( country ) {
+    //The payment method variable is updated only if the
+    //country is different from COL
+    $paymentMethodInput = $('input[name="paymentMethods"]');
+    if(country !== "COL") {
+        if(!($paymentMethodInput.length > 0)) {
+            $("<input>")
+            .attr("name", "paymentMethods")
+            .attr("type", "hidden")
+            .val("VISA, MASTERCARD, DINERS, AMEX")
+            .appendTo("#form_fields_container");
+        }
+    }
+    else {
+        if($paymentMethodInput.length > 0)
+            $paymentMethodInput.remove();
+    }
 };
 
 //UPDATE VALUE DISPLAY (IN FORM)
@@ -71,7 +94,7 @@ $("#join_us_form").on('submit', function( event ) {
 });
 
 $(document).ready(function() {
-    updateSignature(12);
+
     updateFollowersCount();
 
     /******Adding event to doubts link*******/
@@ -97,9 +120,12 @@ $(document).ready(function() {
     $(".dropdown dd ul li").click(function(){
         var $option = $(this);
         var optionContent = $option.html();
+        var selectedCountry = $option.find(".option").attr("id");
         $(".dropdown dt").html(optionContent);
         $(".dropdown dd ul").hide();
-        $("#country_selector").val($option.find(".option").attr("id"));
+        $("#country_selector").val(selectedCountry);
+        updateSignature(12, selectedCountry);
+        updatePaymentMethodVariable( selectedCountry );
     });
 
     //Hides options if another part of the page is clicked

@@ -292,7 +292,8 @@ body {
           padding: 2px 4px 2px 6px;
           width: 73%; }
         #form_section #form_container #join_us_form #form_fields_container .small_field select {
-          position: absolute; }
+          position: absolute;
+          z-index: -1; }
         #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dd, #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dt, #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown ul {
           margin: 0px;
           padding: 0px; }
@@ -301,6 +302,7 @@ body {
           position: relative; }
           #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown dd ul {
             box-sizing: border-box;
+            display: none;
             left: 0px;
             list-style: none;
             max-height: 180px;

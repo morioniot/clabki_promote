@@ -282,7 +282,7 @@ body {
                     //Styles for select inputs
                     select {
                         position: absolute;
-                        // z-index: -1;
+                        z-index: -1;
                     }
 
                     .dropdown {
@@ -300,6 +300,7 @@ body {
 
                             ul {
                                 box-sizing: border-box;
+                                display: none;
                                 left: 0px;
                                 list-style: none;
                                 max-height: 180px;
