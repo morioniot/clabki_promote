@@ -13,20 +13,21 @@
     $buyerFullName = $_POST['buyerFullName'];
     $buyerEmail = $_POST['buyerEmail'];
     $telephone = $_POST['telephone'];
+    $country = $_POST['country'];
     $city = $_POST['city'];
     $referenceCode = $_POST['referenceCode'];
 
     if($buyerFullName != '' && $buyerEmail != '' && $telephone != ''
-    && $city != '' && $referenceCode != '') {
+    && $country != '' && $city != '' && $referenceCode != '') {
 
             //Guardando en la base de datos
             $query = "INSERT INTO `registry`
-            (`id`,`name`,`email`,`telephone`,`city`,`reference_code`
+            (`id`,`name`,`email`,`telephone`,`country`,`city`,`reference_code`
             ,`transaction_id`,`reference_pol`,`value`,`transaction_state`,`currency`,`payment_method`
             ,`confirmation_date`,`registry_date`)
             VALUES
-            (NULL,'".$buyerFullName."','".$buyerEmail."','".$telephone."','".$city."',
-            '".$referenceCode."',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NOW())";
+            (NULL,'".$buyerFullName."','".$buyerEmail."','".$telephone."','".$country."',
+            '".$city."','".$referenceCode."',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NOW())";
 
             if(!$conexionSql->query($query)) {
                 $errorMessage = "Lo sentimos, no pudimos almacenar tus datos";
@@ -77,6 +78,7 @@
                                 <li><strong>Nombre:</strong> <span>'.$buyerFullName.'</span></li>
                                 <li><strong>Email:</strong> <span>'.$buyerEmail.'</span></li>
                                 <li><strong>Teléfono:</strong> <span>'.$telephone.'</span></li>
+                                <li><strong>País:</strong> <span>'.$country.'</span></li>
                                 <li><strong>Ciudad:</strong> <span>'.$city.'</span></li>
                                 <li><strong>Código de referencia:</strong> <span>'.$referenceCode.'</span></li>
                             </ul>
