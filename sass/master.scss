@@ -539,7 +539,7 @@ body {
                 font-family: $font-paragraph;
                 font-size: 18px;
                 @include justify-content(space-between);
-                width: 400px;
+                width: 420px;
 
                 .button_text_container {
                     @include display-flex;
@@ -559,7 +559,7 @@ body {
 
                     .pink_bold {
                         color: $color-main-pink;
-                        font-size: 60px;
+                        font-size: 58px;
                         font-weight: 500;
                     }
 

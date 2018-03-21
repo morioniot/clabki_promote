@@ -504,7 +504,7 @@ body {
         font-size: 18px;
         justify-content: space-between;
         -webkit-justify-content: space-between;
-        width: 400px; }
+        width: 420px; }
         #social_networks_section article .container #text_and_counter_count .button_text_container {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -524,7 +524,7 @@ body {
           margin-top: -20px; }
           #social_networks_section article .container #text_and_counter_count #count_container .pink_bold {
             color: #fa5b61;
-            font-size: 60px;
+            font-size: 58px;
             font-weight: 500; }
           #social_networks_section article .container #text_and_counter_count #count_container strong {
             font-weight: 500; }
