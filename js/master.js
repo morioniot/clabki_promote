@@ -36,7 +36,7 @@ var updatePaymentMethodVariable = function( country ) {
             $("<input>")
             .attr("name", "paymentMethods")
             .attr("type", "hidden")
-            .val("VISA, MASTERCARD, DINERS, AMEX")
+            .val("VISA,MASTERCARD,DINERS,AMEX")
             .appendTo("#form_fields_container");
         }
     }
