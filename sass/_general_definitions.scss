@@ -5,8 +5,12 @@ $color-main-background: #ffffee;
 $color-form-background: #dff4f5;
 $color-main-font: #1A223C;
 $color-form: #59ccd9;
+$color-pink-background: #fddcdd;
+$color-transparent-blue: rgba(26, 34, 60, 0.85);
+
 $font-title: PFDinTextCondPro;
 $font-paragraph: 'Source Sans Pro', sans-serif;
+$font-icomoon: 'icomoon';
 
 @mixin display-flex {
     display: -webkit-box;

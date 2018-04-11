@@ -288,6 +288,48 @@
         }
     }
 
+    #reviews_section {
+        
+        .slider {
+            width: 310px;
+            height: 310px;
+
+            .slide {
+                .review_link {                    
+                    font-size: 10px;
+                }        
+            }
+
+            .arrows_container {
+                width: 42px;
+                .arrow {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .review_data {            
+
+            .reviewer_name {                
+                font-size: 14px;                
+            }
+
+            .review_text {
+                font-size: 14px;
+            }
+
+            .review_date {                
+                font-size: 10px;                
+            }
+
+            .stars_container {                   
+                .star {                    
+                    font-size: 14px;                    
+                }                
+            }
+        }
+    }
+
     #social_networks_section {
 
         hr {
