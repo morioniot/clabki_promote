@@ -162,6 +162,8 @@ var ReviewsSlider = function() {
     var currentSlide;;
     var slidesCount;
     var movementDirection;
+    var slideChangeTime;
+    var intervalId;
 
     var updateArrowsState = function() {
 
@@ -212,7 +214,65 @@ var ReviewsSlider = function() {
     };
 
     var setSliderTiming = function(time) {
-        setInterval(moveAutomatically, time);
+        slideChangeTime = time;
+        activateAutomaticChange();        
+    };
+
+    var activateAutomaticChange =  function() {
+        sliderBand.css('transition', 'left 1s ease-out');
+        intervalId = setInterval(moveAutomatically, slideChangeTime);
+    };
+
+    var deactivateAutomaticChange = function() {
+        sliderBand.css('transition', 'none');
+        clearInterval(intervalId);
+    };
+
+    var configureSwipeAndPan = function() {        
+
+        var sliderBandLeftPosition;
+        var slideWidth = sliderBand.width() / slidesCount;        
+        var sliderManager = new Hammer.Manager($('#slider_touch')[0]);
+        var pan = new Hammer.Pan({threshold: 1, pointers: 0});
+        var press = new Hammer.Press();             
+        sliderManager.add(pan);
+        sliderManager.add(press);
+
+        //Configuring press gesture
+        sliderManager.on('press', function(e) {
+            deactivateAutomaticChange();            
+        });
+
+        sliderManager.on('pressup', function(e) {
+            activateAutomaticChange();
+        });
+
+        //Start of the pan gesture
+        sliderManager.on('panstart', function(e) {            
+            sliderBandLeftPosition = sliderBand.position().left;
+            deactivateAutomaticChange();
+        });
+
+        //While the pan gesture is happening
+        sliderManager.on('pan', function(e) {            
+            sliderBand.css('left', sliderBandLeftPosition + e.deltaX);
+        });
+
+        //End of the pan gesture
+        sliderManager.on('panend', function(e) {            
+            var limit = sliderBand.width() - (1.5 * slideWidth);
+            var currentBandDisplacement = sliderBand.position().left * -1;                        
+            if(currentBandDisplacement > limit)
+                currentSlide = slidesCount;
+            else {
+                //Computes how much the band was moved and adds one half more
+                var displacementRate = (currentBandDisplacement/slideWidth) + (1/2);
+                currentSlide = Math.ceil(displacementRate);                
+            }
+            goToCurrentSlide();
+            updateArrowsState();
+            activateAutomaticChange();
+        });
     };
 
     var initialize = function( slidesList ) {
@@ -240,6 +300,9 @@ var ReviewsSlider = function() {
         goToCurrentSlide();
         updateArrowsState();
         movementDirection = 'next';
+
+        //Enabling pan gesture
+        configureSwipeAndPan();
     };
 
     return {
@@ -295,7 +358,7 @@ $(document).ready(function() {
     axios.get('../json/ratings.json', {responseType: 'json'})
     .then(function(response) {
         reviewsSlider.initialize(response.data);
-        reviewsSlider.setSliderTiming(8500);
+        reviewsSlider.setSliderTiming(10000);
     })
     .catch(function(error) {
         console.log(error);

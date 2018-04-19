@@ -661,8 +661,7 @@ body {
             @include display-flex;
             height: 100%;            
             overflow: hidden;
-            position: relative;
-            transition: left 1s ease-out;
+            position: relative;            
         }
 
         .slide {
@@ -700,7 +699,8 @@ body {
             position: absolute;
             right: 15px;
             top: 15px;
-            width: 49px;            
+            width: 49px;
+            z-index: 3;            
 
             .arrow {
                 color: white;
@@ -768,6 +768,15 @@ body {
                 }
             }
         }
+    }
+
+    #slider_touch {        
+        height: 100%;
+        left: 0;        
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
     }
 }
 
