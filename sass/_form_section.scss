@@ -1,0 +1,236 @@
+/*********************************************************************************************/
+/************************************** Form Section *****************************************/
+/*********************************************************************************************/
+
+#form_section {
+
+    background-color: $color-form-background;
+    margin-top: 60px;
+    padding: 60px 0px;
+
+    h2 {
+        color: $color_form_background;
+    }
+
+    #form_container {
+        @include align-items(center);
+        @include display-flex;
+        @include justify-content(center);
+        margin-top: 60px;
+
+        #join_us_form {
+            background: url('../img/common/fondoformulario.png');
+            background-size: 100% 490px;
+            @include display-flex;
+            @include flex-direction(column);
+            height: 490px;
+            @include justify-content(center);
+            margin: 0 5%;
+
+            #form_fields_container {
+                /*background-color: violet;*/
+                @include align-items(flex-end);
+                @include display-flex;
+                @include flex-direction(column);
+                margin: auto;
+                width: 90%;
+
+                input[type='submit'] {
+                    background-color: $color-main-pink;
+                    border-radius: 10px;
+                    border-top: 2px solid white;
+                    border-right: 2px solid white;
+                    color: white;
+                    cursor: pointer;
+                    font-family: $font-title;
+                    font-weight: bolder;
+                    font-size: 22px;
+                    height: 59px;
+                    margin: 60px 20px 0px 230px;
+                    width: 150px;
+                    transition: bottom 2s ease;
+                    transition: left 2s ease;
+                    position: relative;
+
+                    &:hover {
+                        background-color: $color-pink-high;
+                        bottom: 1px;
+                        left: 1px;
+                    }
+                }
+
+                label {
+                    color: #1a223c;
+                    font-family: $font-title;
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-right: 8px;
+                }
+
+                .check_box_container {
+                    @include align-items(center);
+                    box-sizing: border-box;
+                    @include display-flex;
+                    @include justify-content(flex-end);
+                    padding: 9px 20px;
+                    width: 100%;
+
+                    input[type='checkbox'] {
+                        margin-top: -4px;
+                        height: 15px;
+                        width: 15px;
+                    }
+                }
+
+                .small_field {
+                    @extend .check_box_container;
+
+                    input {
+                        background-color: #dff4f5;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        box-shadow: inset 4px 3px 0px 0px #e6e6d4;
+                        color: #1a223c;
+                        font-family: 'Source Sans Pro', sans-serif;
+                        font-size: 16px;
+                        height: 30px;
+                        padding: 2px 4px 2px 6px;
+                        width: 73%;
+                    }
+
+                    //Styles for select inputs
+                    select {
+                        position: absolute;
+                        z-index: -1;
+                    }
+
+                    .dropdown {
+
+                        @extend input;
+
+                        dd, dt, ul {
+                            margin: 0px;
+                            padding: 0px;
+                        }
+
+                        dd {
+                            background-color: transparent;
+                            position: relative;
+
+                            ul {
+                                box-sizing: border-box;
+                                display: none;
+                                left: 0px;
+                                list-style: none;
+                                max-height: 180px;
+                                overflow-y: scroll;
+                                position: absolute;
+                                top: 7px;
+                                width: 100%;
+                                z-index: 1;
+                            }
+
+                            li {
+                                @include display-flex;
+                                @include justify-content(space-between);
+                                @include align-items(center);
+                                background-color: #dff4f5;
+                                cursor: pointer;
+                                padding: 4px 4px 4px 6px;
+
+                                &:hover {
+                                    background-color: $color-main-pink;
+                                    color: white;
+                                }
+
+                                .flag {
+                                    display: block;
+                                    width: 24px;
+
+                                    img {
+                                        display: block;
+                                        width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+
+                        dt {
+                            cursor: pointer;
+                            height: 100%;
+                            @include display-flex;
+                            @include align-items(center);
+                            @include justify-content(space-between);
+
+                            .instruction {
+                                display: block;
+                                height: 100%;
+                                line-height: 25px;
+                            }
+
+                            .flag {
+                                display: block;
+                                width: 24px;
+
+                                img {
+                                    display: block;
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+#form_section {
+
+    #price_explanation {
+        color: $color-main-font;
+        font-family: $font-title;
+        font-size: 18px;
+        margin: 0 5%;
+        position: relative;
+        width: 350px;
+
+        #contribution_word {
+            font-weight: 300;
+        }
+
+        .price {
+            font-weight: bolder;
+            font-size: 32px;
+            .value {
+                color: $color-main-pink;
+            }
+        }
+
+        .price_paragraph {
+            font-family: $font-paragraph;
+            span {
+                color: $color-main-pink;
+                font-weight: 600;
+
+                a {
+                    text-decoration: none;
+                    color: $color-main-pink;
+                }
+            }
+        }     
+
+        #doubt_link {
+            color: $color-main-pink;
+            cursor: pointer;
+            font-family: $font-title;
+            font-weight: bold;
+            position: relative;
+            text-decoration: underline;
+            top: 30px;
+        }
+    }
+}

@@ -159,7 +159,7 @@ var ReviewsSlider = function() {
     var leftArrow = $('#left_arrow');
     var rightArrow = $('#right_arrow');
 
-    var currentSlide;;
+    var currentSlide;
     var slidesCount;
     var movementDirection;
     var slideChangeTime;

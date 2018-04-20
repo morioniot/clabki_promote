@@ -1,0 +1,125 @@
+/*********************************************************************************************/
+/********************************* Social Network Section ************************************/
+/*********************************************************************************************/
+
+#social_networks_section {
+    background: white;
+    @include display-flex;
+    @include justify-content(center);
+    padding: 70px 0px;
+
+    #follow_us_box .container {
+        padding-top: 20px;
+    }
+
+    article {
+        color: $color-main-font;
+        @include align-items(center);
+        @include display-flex;
+        @include flex-direction(column);
+
+
+        h2 {
+            font-family: $font-title;
+            font-size: 45px;
+        }
+
+        /********************************************Follow us part********************************/
+
+        .container {
+
+            margin-top: 25px;
+
+            #text_and_counter_count {
+                @include align-items(center);
+                @include display-flex;
+                font-family: $font-paragraph;
+                font-size: 18px;
+                @include justify-content(space-between);
+                width: 420px;
+
+                .button_text_container {
+                    @include display-flex;
+                    @include flex-direction(column);
+                    @include justify-content(space-between);
+                    p {
+                        margin-bottom: 10px;
+                        width: 200px;
+                    }
+                }
+
+                #count_container {
+                    font-family: $font-title;
+                    font-size: 42px;
+                    line-height: 40px;
+                    margin-top: -20px;
+
+                    .pink_bold {
+                        color: $color-main-pink;
+                        font-size: 58px;
+                        font-weight: 500;
+                    }
+
+                    strong {
+                        font-weight: 500;
+                    }
+
+                    img {
+                        position: relative;
+                        top: -26px;
+                        left: -16px;
+                    }
+                }
+            }
+
+            /********************************************Contact us part********************************/
+            #text_and_code {
+
+                @include align-items(center);
+                @include display-flex;
+                font-family: $font-paragraph;
+                font-size: 18px;
+                @include justify-content(space-between);
+                width: 400px;
+
+                .button_text_container {
+
+                    a {
+                        background-color: $color-main-font;
+                        border-radius: 5px;
+                        box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5);
+                        color: white;
+                        display: inline-block;
+                        font-family: $font-title;
+                        font-weight: 500;
+                        padding: 6px 10px;
+                        text-decoration: none;
+                        transition: all ease-in-out 250ms;
+
+                        &:hover {
+                            box-shadow: 0 24px 10px -16px rgba(0,0,0,0.5);
+                            transform: translate(0, -3px);
+                        }
+                    }
+                    p {
+                        margin-bottom: 15px;
+                        width: 200px;
+                    }
+                }
+
+                img {
+                    width: 220px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    hr {
+        border-left: solid 1px $color_main_font;
+        height: 270px;
+        position: relative;
+        top: 55px;
+        margin: 0px 60px;
+    }
+}

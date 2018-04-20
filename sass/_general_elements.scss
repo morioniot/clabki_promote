@@ -1,0 +1,49 @@
+/*********************************************************************************************/
+/************************************ General elements ***************************************/
+/*********************************************************************************************/
+
+body {
+    background-color: $color-main-background;
+}
+
+/************************************** Shadow **********************************************/
+
+#shadow_container img {
+    height: 121px;
+    width: 100%;
+}
+
+
+.title_container {
+    // background-color: cadetblue;
+    margin: 0 auto;
+    position: relative;
+    width: 380px;
+
+    img {
+        display: block;
+        height: auto;
+        position: relative;
+        width: 100%;
+        z-index: 0;
+    }
+
+    h2 {
+        // background-color: red;
+        bottom: 0;
+        color: $color-main-background;
+        font-family: $font-title;
+        font-size: 30px;
+        // font-size: 2.4vw;
+        font-weight: bold;
+        height: 54%;
+        left: 0;
+        margin: auto;
+        margin-left: 17%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 65%;
+        z-index: 1;
+    }
+}
