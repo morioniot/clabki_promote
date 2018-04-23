@@ -255,7 +255,7 @@ body {
           font-weight: bolder;
           font-size: 22px;
           height: 59px;
-          margin: 60px 20px 0px 230px;
+          margin: 20px 20px 0px 230px;
           width: 150px;
           transition: bottom 2s ease;
           transition: left 2s ease;
@@ -361,30 +361,75 @@ body {
               display: block;
               width: 100%;
               height: auto; }
+        #form_section #form_container #join_us_form #form_fields_container .plan_selector {
+          margin: 20px auto;
+          position: relative;
+          width: 80%; }
+          #form_section #form_container #join_us_form #form_fields_container .plan_selector .plan_options_container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-around;
+            -webkit-justify-content: space-around;
+            margin-top: 12px;
+            position: absolute;
+            width: 100%;
+            z-index: -1; }
+          #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            width: 100%; }
+            #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .option_button {
+              flex: 1;
+              -webkit-box-flex: 1;
+              -webkit-flex: 1;
+              -ms-flex: 1;
+              background-color: #dff4f5;
+              border: 1px solid #777;
+              color: #777;
+              cursor: pointer;
+              font-family: "Source Sans Pro", sans-serif;
+              font-size: 14px;
+              margin: 0 0.5px;
+              padding: 10px 0;
+              text-align: center; }
+            #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .first {
+              border-radius: 12px 0px 0px 12px; }
+            #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .last {
+              border-radius: 0px 12px 12px 0px; }
+            #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .selected {
+              background-color: white;
+              border-color: #fa5b61;
+              border-width: 2px;
+              color: #1A223C;
+              font-weight: bold; }
 
-#form_section #price_explanation {
+#form_section .price_explanation {
   color: #1A223C;
   font-family: PFDinTextCondPro;
   font-size: 18px;
   margin: 0 5%;
   position: relative;
   width: 350px; }
-  #form_section #price_explanation #contribution_word {
+  #form_section .price_explanation #contribution_word {
     font-weight: 300; }
-  #form_section #price_explanation .price {
+  #form_section .price_explanation .price {
     font-weight: bolder;
     font-size: 32px; }
-    #form_section #price_explanation .price .value {
+    #form_section .price_explanation .price .value {
       color: #fa5b61; }
-  #form_section #price_explanation .price_paragraph {
+  #form_section .price_explanation .price_paragraph {
     font-family: "Source Sans Pro", sans-serif; }
-    #form_section #price_explanation .price_paragraph span {
+    #form_section .price_explanation .price_paragraph span {
       color: #fa5b61;
       font-weight: 600; }
-      #form_section #price_explanation .price_paragraph span a {
+      #form_section .price_explanation .price_paragraph span a {
         text-decoration: none;
         color: #fa5b61; }
-  #form_section #price_explanation #doubt_link {
+  #form_section .price_explanation #doubt_link {
     color: #fa5b61;
     cursor: pointer;
     font-family: PFDinTextCondPro;
@@ -690,7 +735,7 @@ body {
     #value_proposal_section .proposal_container .proposal_image {
       min-width: 190px; }
 
-  #form_section #form_container #price_explanation {
+  #form_section #form_container .price_explanation {
     min-width: 231px; }
 
   #social_networks_section {
@@ -736,7 +781,7 @@ body {
   #form_section #form_container {
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap; }
-    #form_section #form_container #price_explanation {
+    #form_section #form_container .price_explanation {
       align-items: center;
       -webkit-align-items: center;
       display: -webkit-box;
@@ -747,7 +792,7 @@ body {
       -webkit-flex-direction: column;
       order: -1;
       -webkit-order: -1; }
-      #form_section #form_container #price_explanation .price_paragraph {
+      #form_section #form_container .price_explanation .price_paragraph {
         text-align: center; }
     #form_section #form_container #join_us_form {
       margin-top: 80px; }

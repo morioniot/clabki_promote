@@ -1,3 +1,7 @@
+//GLOBAL VARIABLES
+var currentCountrySelected = "COL";
+var currentPriceSelected = 9;
+
 //ASKING FOR FOLLOWERS NUMBER
 var updateFollowersCount = function() {
     axios('../server/getFollowers.php')
@@ -10,7 +14,7 @@ var updateFollowersCount = function() {
 };
 
 //UPDATE SIGNATURE
-var updateSignature = function(value, country) {
+var updateSignature = function(value, country) {    
     axios.get('../server/signatureGenerator.php', {
         params: {
             value : value,
@@ -47,9 +51,11 @@ var updatePaymentMethodVariable = function( country ) {
 };
 
 //UPDATE VALUE DISPLAY (IN FORM)
-var updateValueDisplay = function(value) {
-    $("#payment_amount").val(value);
-    $("#value_display").html("$" + value);
+var updatePlanDisplays = function(days, people, price) {
+    $("#payment_amount").val(price);
+    $(".price_explanation .value").html("$" + price);
+    $(".price_explanation .days").html(days + " días");
+    $(".price_explanation .people").html(people + " personas");
 };
 
 // SENDING DATA TO SAVE IN DB
@@ -338,12 +344,12 @@ $(document).ready(function() {
     $(".dropdown dd ul li").click(function(){
         var $option = $(this);
         var optionContent = $option.html();
-        var selectedCountry = $option.find(".option").attr("id");
+        currentCountrySelected = $option.find(".option").attr("id");
         $(".dropdown dt").html(optionContent);
         $(".dropdown dd ul").hide();
-        $("#country_selector").val(selectedCountry);
-        updateSignature(12, selectedCountry);
-        updatePaymentMethodVariable( selectedCountry );
+        $("#country_selector").val(currentCountrySelected);
+        updateSignature(currentPriceSelected, currentCountrySelected);
+        updatePaymentMethodVariable( currentCountrySelected );
     });
 
     //Hides options if another part of the page is clicked
@@ -353,7 +359,29 @@ $(document).ready(function() {
             $(".dropdown dd ul").hide();
     });
 
-    //Creating and initializing reviews slider
+    /*********Creating functionality of fafe plan options**********/
+    //Adding events to radio buttons changes
+    $("input[name='plan']").on("change", function() {
+        var $selection = $(this);
+        var days = $selection.attr("data-days");
+        var people = $selection.attr("data-people");
+        currentPriceSelected = parseInt($selection.attr("data-price"));
+        updatePlanDisplays(days, people, currentPriceSelected);
+        updateSignature(currentPriceSelected, currentCountrySelected);
+    });
+
+    //Adding handlers to hover events in fake buttons
+    $(".option_button").click(function(){        
+        var $buttonPressed = $(this);
+        var selectedReference = $buttonPressed.attr("data-reference");
+        var $optionSelected = $("input[value='" + selectedReference + "']");        
+        $(".option_button").removeClass("selected");
+        $buttonPressed.addClass("selected");
+        $optionSelected.prop("checked", true);
+        $optionSelected.trigger("change");        
+    });
+
+    /*********Creating and initializing reviews slider*******/
     var reviewsSlider = ReviewsSlider();
     axios.get('../json/ratings.json', {responseType: 'json'})
     .then(function(response) {

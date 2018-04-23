@@ -20,7 +20,7 @@
 
     #form_section {
         #form_container {
-            #price_explanation {
+            .price_explanation {
                 min-width: 231px;
             }
         }
@@ -98,7 +98,7 @@
     #form_section {
         #form_container {
             @include flex-wrap(wrap);
-            #price_explanation {
+            .price_explanation {
                 @include align-items(center);
                 @include display-flex;
                 @include flex-direction(column);

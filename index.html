@@ -330,6 +330,24 @@
                             <label for="buyerEmail">CORREO</label>
                             <input class="required" type="email" name="buyerEmail" id="email" required>
                         </div>
+                        <div class="plan_selector">
+                            <div class="plan_options_container">
+                                <input type="radio" name="plan" value="3D1000P" checked data-days="3" data-people="1000" data-price="9">
+                                <input type="radio" name="plan" value="3D2000P" data-days="3" data-people="2000" data-price="15">
+                                <input type="radio" name="plan" value="7D1000P" data-days="7" data-people="1000" data-price="17">
+                            </div>
+                            <div class="options_fake_buttons">
+                                <button type="button" class="option_button first selected" data-reference="3D1000P">
+                                    PLAN BÁSICO
+                                </button>
+                                <button type="button" class="option_button" data-reference="3D2000P">
+                                    + PERSONAS
+                                </button>
+                                <button type="button" class="option_button last" data-reference="7D1000P">
+                                    + DÍAS
+                                </button>
+                            </div>
+                        </div>
 
                         <!-- Valores de la transacción -->
                         <input name="amount" id="payment_amount" type="hidden"  value="12" >
@@ -348,15 +366,15 @@
                         <input type="submit" value="COMPRAR" id="send_button">
                     </div>
                 </form>
-                <div id="price_explanation">
+                <div class="price_explanation">
                     <span id="contribution_word">APORTE</span>
                     <div class="price">
                         <span class="currency">USD</span>
-                        <span class="value" id="value_display">$12</span>
+                        <span class="value" id="value_display">$9</span>
                     </div>
                     <p class="price_paragraph">
-                        El servicio tiene una duración de <span>3 días</span> durante los cuales
-                        tu publicación puede alcanzar una visualización de hasta <span>1000</span> personas
+                        El servicio tiene una duración de <span class="days">3 días</span> durante los cuales
+                        tu publicación puede alcanzar una visualización de hasta <span class="people">1000 personas</span>
                         por día.
                     </p>
                     <br>
