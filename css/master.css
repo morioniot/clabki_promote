@@ -221,17 +221,19 @@ body {
     margin-top: 60px; }
     #form_section #form_container #join_us_form {
       background: url("../img/common/fondoformulario.png");
-      background-size: 100% 490px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
       flex-direction: column;
       -webkit-flex-direction: column;
-      height: 490px;
       justify-content: center;
       -webkit-justify-content: center;
-      margin: 0 5%; }
+      margin: 0 5%;
+      padding: 65px 0px;
+      width: 400px; }
       #form_section #form_container #join_us_form #form_fields_container {
         /*background-color: violet;*/
         align-items: flex-end;
@@ -255,7 +257,7 @@ body {
           font-weight: bolder;
           font-size: 22px;
           height: 59px;
-          margin: 20px 20px 0px 230px;
+          margin: 40px 20px 0px 230px;
           width: 150px;
           transition: bottom 2s ease;
           transition: left 2s ease;
@@ -364,7 +366,7 @@ body {
         #form_section #form_container #join_us_form #form_fields_container .plan_selector {
           margin: 20px auto;
           position: relative;
-          width: 80%; }
+          width: 90%; }
           #form_section #form_container #join_us_form #form_fields_container .plan_selector .plan_options_container {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -396,6 +398,10 @@ body {
               margin: 0 0.5px;
               padding: 10px 0;
               text-align: center; }
+              #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .option_button:focus {
+                outline: none; }
+              #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .option_button:active {
+                outline: none; }
             #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .first {
               border-radius: 12px 0px 0px 12px; }
             #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .last {
@@ -406,6 +412,19 @@ body {
               border-width: 2px;
               color: #1A223C;
               font-weight: bold; }
+          #form_section #form_container #join_us_form #form_fields_container .plan_selector .price_explanation {
+            background-color: #dff4f5;
+            box-shadow: 3px 8px 20px 2px #1A223C;
+            box-sizing: border-box;
+            display: none;
+            font-size: 14px;
+            margin: 0px auto;
+            margin-top: 20px;
+            padding: 15px;
+            text-align: center;
+            width: 95%; }
+            #form_section #form_container #join_us_form #form_fields_container .plan_selector .price_explanation .price {
+              font-size: 20px; }
 
 #form_section .price_explanation {
   color: #1A223C;
@@ -796,6 +815,9 @@ body {
         text-align: center; }
     #form_section #form_container #join_us_form {
       margin-top: 80px; }
+      #form_section #form_container #join_us_form #form_fields_container .plan_selector .price_explanation {
+        display: block;
+        margin-top: 30px; }
 
   #social_networks_section hr {
     border-left: 0px;
@@ -875,6 +897,12 @@ body {
           padding: 9px 8px; }
           #form_section #form_container #join_us_form #form_fields_container .small_field input, #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown {
             width: 100%; }
+        #form_section #form_container #join_us_form #form_fields_container .plan_selector {
+          width: 95%; }
+          #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .first {
+            border-radius: 5px 0px 0px 5px; }
+          #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .last {
+            border-radius: 0px 5px 5px 0px; }
 
   #questions_popup #questions_group_container .close_button {
     background-image: url("../img/common/close_button.png");

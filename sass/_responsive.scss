@@ -111,6 +111,15 @@
 
             #join_us_form {
                 margin-top: 80px;
+
+                #form_fields_container {
+                    .plan_selector {
+                        .price_explanation {
+                            display: block;
+                            margin-top: 30px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -249,6 +258,18 @@
                             width: 100%;
                         }
                     }
+
+                    .plan_selector {
+                        width: 95%;
+                        .options_fake_buttons {
+                            .first {
+                                border-radius: 5px 0px 0px 5px;
+                            }
+                            .last {
+                                border-radius: 0px 5px 5px 0px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -289,15 +310,15 @@
     }
 
     #reviews_section {
-        
+
         .slider {
             width: 310px;
             height: 310px;
 
             .slide {
-                .review_link {                    
+                .review_link {
                     font-size: 10px;
-                }        
+                }
             }
 
             .arrows_container {
@@ -308,24 +329,24 @@
             }
         }
 
-        .review_data {            
+        .review_data {
 
-            .reviewer_name {                
-                font-size: 14px;                
+            .reviewer_name {
+                font-size: 14px;
             }
 
             .review_text {
                 font-size: 14px;
             }
 
-            .review_date {                
-                font-size: 10px;                
+            .review_date {
+                font-size: 10px;
             }
 
-            .stars_container {                   
-                .star {                    
-                    font-size: 14px;                    
-                }                
+            .stars_container {
+                .star {
+                    font-size: 14px;
+                }
             }
         }
     }

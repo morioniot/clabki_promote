@@ -16,18 +16,19 @@
     $country = $_POST['country'];
     $city = $_POST['city'];
     $referenceCode = $_POST['referenceCode'];
+    $plan = $_POST['plan'];
 
     if($buyerFullName != '' && $buyerEmail != '' && $telephone != ''
-    && $country != '' && $city != '' && $referenceCode != '') {
+    && $country != '' && $city != '' && $referenceCode != '' && $plan != '') {
 
             //Guardando en la base de datos
             $query = "INSERT INTO `registry`
-            (`id`,`name`,`email`,`telephone`,`country`,`city`,`reference_code`
+            (`id`,`name`,`email`,`telephone`,`country`,`city`,`plan`,`reference_code`
             ,`transaction_id`,`reference_pol`,`value`,`transaction_state`,`currency`,`payment_method`
             ,`confirmation_date`,`registry_date`)
             VALUES
             (NULL,'".$buyerFullName."','".$buyerEmail."','".$telephone."','".$country."',
-            '".$city."','".$referenceCode."',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NOW())";
+            '".$city."','".$plan."','".$referenceCode."',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NOW())";
 
             if(!$conexionSql->query($query)) {
                 $errorMessage = "Lo sentimos, no pudimos almacenar tus datos";
@@ -80,6 +81,7 @@
                                 <li><strong>Teléfono:</strong> <span>'.$telephone.'</span></li>
                                 <li><strong>País:</strong> <span>'.$country.'</span></li>
                                 <li><strong>Ciudad:</strong> <span>'.$city.'</span></li>
+                                <li><strong>Plan:</strong> <span>'.$plan.'</span></li>
                                 <li><strong>Código de referencia:</strong> <span>'.$referenceCode.'</span></li>
                             </ul>
                         </section>
