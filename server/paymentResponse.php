@@ -61,6 +61,14 @@
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'UA-90695201-1');
+            gtag('config', 'AW-817321095');
+        </script>
+        <!-- Event snippet for Intento de transacción conversion page -->
+        <script>
+          gtag('event', 'conversion', {
+              'send_to': 'AW-817321095/JgBmCNLdgYIBEIep3YUD',
+              'transaction_id': '<?php echo($referenceCode)?>'
+          });
         </script>
     </head>
     <body>
