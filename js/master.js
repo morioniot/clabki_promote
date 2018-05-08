@@ -383,7 +383,7 @@ $(document).ready(function() {
 
     /*********Creating and initializing reviews slider*******/
     var reviewsSlider = ReviewsSlider();
-    axios.get('../json/ratings.json', {responseType: 'json'})
+    axios.get('../json/final_ratings.json', {responseType: 'json'})
     .then(function(response) {
         reviewsSlider.initialize(response.data);
         reviewsSlider.setSliderTiming(10000);
