@@ -396,7 +396,7 @@ $(document).ready(function() {
     axios.get('../json/final_ratings.json', {responseType: 'json'})
     .then(function(response) {
         reviewsSlider.initialize(response.data);
-        //reviewsSlider.setSliderTiming(10000);
+        reviewsSlider.setSliderTiming(10000);
     })
     .catch(function(error) {
         console.log(error);
