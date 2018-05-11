@@ -4,8 +4,12 @@
 
 #reviews_section {
 
-    background-color: $color-main-background;
+    background-color: white;
     padding: 60px 0px;
+
+    h2 {
+        color: white;
+    }
 
     .slider {
         background-color: white;

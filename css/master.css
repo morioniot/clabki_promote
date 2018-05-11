@@ -645,8 +645,10 @@ body {
 /************************************* Reviews Section ***************************************/
 /*********************************************************************************************/
 #reviews_section {
-  background-color: #ffffee;
+  background-color: white;
   padding: 60px 0px; }
+  #reviews_section h2 {
+    color: white; }
   #reviews_section .slider {
     background-color: white;
     border-radius: 3px;
@@ -864,7 +866,7 @@ body {
   .title_container {
     width: 100%; }
     .title_container h2 {
-      color: #1A223C;
+      color: #1A223C !important;
       margin-left: auto;
       position: static;
       text-align: center;
