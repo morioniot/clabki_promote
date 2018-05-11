@@ -103,8 +103,18 @@ $("#join_us_form").on('submit', function( event ) {
 var createSlide = function( slideInfo ) {
 
     //Creating name element
-    var nameContainer = $('<span/>', {class:'reviewer_name'});
-    nameContainer.text(slideInfo.reviewer_name.toUpperCase());
+    var nameElement = $('<span/>', {class:'reviewer_name'});
+    nameElement.text(slideInfo.reviewer_name.toUpperCase());
+
+    //Creating country image
+    var countriesImagesRoute = './img/common/countries/';
+    var countryImage = 
+        $('<img/>', {src: countriesImagesRoute + slideInfo.reviewer_country});
+
+    //Cretaing identity element (name + country)
+    var identityContainer = $('<div/>', {class:'identity_container'});
+    nameElement.appendTo(identityContainer);
+    countryImage.appendTo(identityContainer);
 
     //Creating stars element
     var starsContainer = $('<div/>', {class: 'stars_container'});
@@ -135,7 +145,7 @@ var createSlide = function( slideInfo ) {
 
     //Creting full data element (contains all the previous elements)
     var fullDataContainer = $('<article/>', {class:'review_data'});
-    nameContainer.appendTo(fullDataContainer);
+    identityContainer.appendTo(fullDataContainer);
     starsContainer.appendTo(fullDataContainer);
     dateContainer.appendTo(fullDataContainer);
     textContainer.appendTo(fullDataContainer);
@@ -386,7 +396,7 @@ $(document).ready(function() {
     axios.get('../json/final_ratings.json', {responseType: 'json'})
     .then(function(response) {
         reviewsSlider.initialize(response.data);
-        reviewsSlider.setSliderTiming(10000);
+        //reviewsSlider.setSliderTiming(10000);
     })
     .catch(function(error) {
         console.log(error);

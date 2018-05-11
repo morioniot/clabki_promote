@@ -721,9 +721,21 @@ body {
     left: 8%;
     position: absolute;
     width: 84%; }
-    #reviews_section .review_data .reviewer_name {
-      font-family: PFDinTextCondPro;
-      font-weight: 500; }
+    #reviews_section .review_data .identity_container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      -webkit-align-items: center; }
+      #reviews_section .review_data .identity_container .reviewer_name {
+        font-family: PFDinTextCondPro;
+        font-weight: 500; }
+      #reviews_section .review_data .identity_container img {
+        display: block;
+        margin-left: 8px;
+        margin-top: -3px;
+        width: 20px; }
     #reviews_section .review_data .review_text {
       text-align: left;
       font-family: "Source Sans Pro", sans-serif; }
