@@ -1,3 +1,21 @@
+<?php
+    
+    require_once(__DIR__.'/server/dbconnection.php');
+    
+    $mySqlConnection = new DatabaseConnection();
+    
+    $token = trim($_GET['t']);
+
+    if(isset($token)) {
+        $query = "UPDATE `tracking` SET `count`=`count` + 1 WHERE `token`='".$token."'";
+    
+        if($mySqlConnection->query($query)) {
+            $query = "INSERT INTO `tracking_access` (`token`,`access_date`) VALUES ('".$token."', NOW())";
+            $mySqlConnection->query($query);
+        }
+    }    
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
