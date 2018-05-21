@@ -19,6 +19,7 @@
 			}
 
 			$this->set_charset("utf8");
+			$this->query("SET time_zone='-5:00'");
 		}
 	}
 ?>
