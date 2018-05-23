@@ -147,6 +147,15 @@
         }
     }
 
+    footer {
+        @include flex-direction(column);
+        @include align-items(center);
+        font-size: 18px;
+        .contact_icon {
+            font-size: 20px;
+        }
+    }
+
 }
 
 @media only screen and (max-width: 450px) {
@@ -382,6 +391,16 @@
                     }
                 }
             }
+        }
+    }
+
+    footer {        
+        font-size: 16px;
+        .contact_icon {
+            font-size: 18px;
+        }
+        .contact_info {
+            height: 16px;
         }
     }
 }

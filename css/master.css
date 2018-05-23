@@ -801,7 +801,8 @@ footer {
     display: -webkit-flex;
     display: flex;
     align-items: center;
-    -webkit-align-items: center; }
+    -webkit-align-items: center;
+    margin: 10px 16px; }
   footer .contact_icon {
     font-family: "icomoon";
     font-size: 22px; }
@@ -900,7 +901,16 @@ footer {
     top: 0px;
     width: 365px; }
   #social_networks_section article .container #text_and_code img {
-    width: 220px; } }
+    width: 220px; }
+
+  footer {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    font-size: 18px; }
+    footer .contact_icon {
+      font-size: 20px; } }
 @media only screen and (max-width: 450px) {
   #value_proposal_section #proposal_intro {
     font-size: 17px;
@@ -1029,6 +1039,13 @@ footer {
     width: 100%; }
     #social_networks_section article .container #text_and_code img {
       margin-top: 30px;
-      width: 220px; } }
+      width: 220px; }
+
+  footer {
+    font-size: 16px; }
+    footer .contact_icon {
+      font-size: 18px; }
+    footer .contact_info {
+      height: 16px; } }
 
 /*# sourceMappingURL=master.css.map */

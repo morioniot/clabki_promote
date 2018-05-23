@@ -1,6 +1,6 @@
 <?php
     
-    ini_set('log_errors', 1);
+    /*ini_set('log_errors', 1);
     ini_set('error_log', __DIR__.'/server/php-error.log');    
 
     require_once(__DIR__.'/server/dbconnection.php');
@@ -19,7 +19,7 @@
                 error_log($errorLogMessage);
             }
         }
-    }
+    }*/
 
 ?>
 <!DOCTYPE html>
