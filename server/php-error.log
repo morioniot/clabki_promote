@@ -12,3 +12,9 @@
 [13-Mar-2018 13:14:34 America/New_York] PHP Fatal error:  require_once(): Failed opening required '/home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/register.php on line 7
 [13-Mar-2018 13:14:36 America/New_York] PHP Warning:  require_once(/home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/vendor/autoload.php): failed to open stream: No such file or directory in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/register.php on line 7
 [13-Mar-2018 13:14:36 America/New_York] PHP Fatal error:  require_once(): Failed opening required '/home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/register.php on line 7
+[23-May-2018 01:01:20 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u840748033_clab'@'localhost' (using password: YES) in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/dbconnection.php on line 14
+[23-May-2018 01:01:20 America/New_York] PHP Fatal error:  Uncaught Exception: Connection failed: Access denied for user 'u840748033_clab'@'localhost' (using password: YES) in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/dbconnection.php:18
+Stack trace:
+#0 /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/processDoubtsAccess.php(9): DatabaseConnection->__construct()
+#1 {main}
+  thrown in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/dbconnection.php on line 18

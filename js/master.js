@@ -327,14 +327,34 @@ var ReviewsSlider = function() {
     };
 };
 
+//SAVE IN DB ACCESS TO THE DOUBTS POPUP
+var updateDoubtsPopupAccess = function() {
+    var paramsList = location.search;
+    var token = paramsList.substring(paramsList.indexOf('=') + 1);
+    if(token !== ''){
+        axios.post('../server/processDoubtsAccess.php', Qs.stringify({token: token}))
+        .then(function(response) {
+            if(response.data.error != undefined && !response.data.error) {                
+            }
+            else {
+                console.log(response.data.error);                
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    }
+};
+
 $(document).ready(function() {
 
     updateFollowersCount();
 
-    /******Adding event to doubts link*******/
-    $("#doubt_link").click(function(){
+    /******Adding event to doubts link and button*******/
+    $("#doubt_link, .doubts_button").click(function(){
         $("#questions_popup").css("display", "flex");
         $("body").css("overflow", "hidden");
+        updateDoubtsPopupAccess();
     });
 
     /******Adding event to doubts link*******/

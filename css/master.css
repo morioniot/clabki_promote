@@ -200,6 +200,32 @@ body {
 #proposal_advantages .proposal_text {
   margin-left: 22px; }
 
+#doubts_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 60px; }
+  #doubts_container .doubts_button {
+    background-color: #59ccd9;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    font-family: PFDinTextCondPro;
+    font-size: 22px;
+    font-weight: 500;
+    margin: auto;
+    padding: 6px 10px;
+    text-decoration: none;
+    transition: all ease-in-out 250ms; }
+    #doubts_container .doubts_button:hover {
+      box-shadow: 0 24px 10px -16px rgba(0, 0, 0, 0.5);
+      transform: translate(0, -3px); }
+
 /*********************************************************************************************/
 /************************************** Form Section *****************************************/
 /*********************************************************************************************/

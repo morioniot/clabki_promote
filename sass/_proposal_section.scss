@@ -70,3 +70,29 @@
         margin-left: 22px;
     }
 }
+
+#doubts_container {
+    @include display-flex;
+    @include justify-content(center);
+    padding-top: 20px;
+    padding-bottom: 60px;
+    .doubts_button {
+        background-color: $color-form;
+        border-radius: 5px;
+        box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5);
+        color: white;
+        cursor: pointer;        
+        font-family: $font-title;
+        font-size: 22px;
+        font-weight: 500;
+        margin: auto;
+        padding: 6px 10px;
+        text-decoration: none;
+        transition: all ease-in-out 250ms;
+
+        &:hover {
+            box-shadow: 0 24px 10px -16px rgba(0,0,0,0.5);
+            transform: translate(0, -3px);
+        }
+    }
+}

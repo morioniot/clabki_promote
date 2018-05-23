@@ -1,19 +1,25 @@
 <?php
     
+    /*ini_set('log_errors', 1);
+    ini_set('error_log', __DIR__.'/server/php-error.log');    
+
     require_once(__DIR__.'/server/dbconnection.php');
     
     $mySqlConnection = new DatabaseConnection();
     
-    $token = trim($_GET['t']);
-
-    if(isset($token)) {
+    if(isset($_GET['t'])) {
+        
+        $token = trim($_GET['t']);
         $query = "UPDATE `tracking` SET `count`=`count` + 1 WHERE `token`='".$token."'";
     
         if($mySqlConnection->query($query)) {
-            $query = "INSERT INTO `tracking_access` (`token`,`access_date`) VALUES ('".$token."', NOW())";
-            $mySqlConnection->query($query);
+            $query = "INSERT INTO `tracking_access` (`id`,`token`,`doubts_access_count`,`access_date`) VALUES (NULL,'".$token."','0',NOW())";
+            if(!$mySqlConnection->query($query)) {
+                $errorLogMessage = 'No se pudieron almacenar los datos: '.$mySqlConnection->error;
+                error_log($errorLogMessage);
+            }
         }
-    }    
+    }*/
 
 ?>
 <!DOCTYPE html>
@@ -91,6 +97,9 @@
                         <li>Quienes viven en el lugar de la pérdida compartirán la información haciendo que ésta sea vista por muchas más personas en el sector.</li>
                     </ul>
                 </div>
+            </div>
+            <div id="doubts_container">
+                <button class="doubts_button">MÁS INFORMACIÓN AQUÍ</button>
             </div>
         </section>
          <section id="reviews_section">
