@@ -1,6 +1,6 @@
 <?php
     
-    /*ini_set('log_errors', 1);
+    ini_set('log_errors', 1);
     ini_set('error_log', __DIR__.'/server/php-error.log');    
 
     require_once(__DIR__.'/server/dbconnection.php');
@@ -19,7 +19,7 @@
                 error_log($errorLogMessage);
             }
         }
-    }*/
+    }
 
 ?>
 <!DOCTYPE html>
@@ -74,11 +74,9 @@
             </div>
             <div class="proposal_container">
                 <div class="proposal_text">
-                    <h2 class="proposal_title">ANUNCIOS GEOLOCALIZADOS EN FACEBOOK</h2>
+                    <h2 class="proposal_title">ZONAS DE BÚSQUEDA DIGITALES</h2>
                     <p class="proposal_paragraph">
-                        Utilizamos publicidad pagada de facebook para construir un anuncio geolocalizado
-                        con información relevante sobre la pérdida de tu mascota que será visto por miles
-                        de personas que viven cerca del lugar de la pérdida.
+                        Creamos zonas de búsqueda a través de publicidad pagada de Facebook para que la información de tu mascota perdida sea vista directamente por miles de personas que viven cerca o que visitan el lugar donde se perdió.
                     </p>
                 </div>
                 <figure class="proposal_image">
@@ -92,9 +90,10 @@
                 <div class="proposal_text">
                     <h2 class="proposal_title">VENTAJAS</h2>
                     <ul class="proposal_list">
-                        <li>Miles de personas verán tu anuncio sin necesidad de que sigan páginas de Animales Perdidos.</li>
-                        <li>Las probabilidades de encontrar a tu mascota aumentarán ya que la información será vista por personas pŕoximas a donde se perdió.</li>
+                        <li>Miles de personas en la zona de búsqueda sabrán que tu mascota está perdida en el sector que frecuentan <strong>sin necesidad</strong> de que sigan páginas de mascotas perdidas en redes sociales.</li>
+                        <li>Las probabilidades de encontrar a tu mascota aumentarán ya que la información será vista por personas próximas a donde se perdió.</li>
                         <li>Quienes viven en el lugar de la pérdida compartirán la información haciendo que ésta sea vista por muchas más personas en el sector.</li>
+                        <li>La zona de búsqueda será editada las veces que sea necesario a medida que recibamos indicios de dónde está tu mascota.</li>
                     </ul>
                 </div>
             </div>
