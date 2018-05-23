@@ -86,6 +86,18 @@
             @include align-content(center);
             @include flex-wrap(wrap);
             @include justify-content(center);
+
+            #map_image_container {
+                margin: 20px;
+                min-width: 310px;
+                width: 50%;
+            }
+        }
+
+        #service_description {            
+            .proposal_paragraph, .proposal_title {
+                text-align: center;
+            }
         }
 
         #proposal_advantages {
@@ -200,6 +212,11 @@
                     }
                 }
             }
+
+            #map_image_container {                
+                min-width: 280px;
+            }
+
         }
     }
 

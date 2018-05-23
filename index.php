@@ -72,15 +72,15 @@
                 <h2>¿DE QUÉ SE TRATA?</h2>
                 <img src="./img/common/mancha_titulo.png" alt="title_design" />
             </div>
-            <div class="proposal_container">
+            <div class="proposal_container" id="service_description">
                 <div class="proposal_text">
                     <h2 class="proposal_title">ZONAS DE BÚSQUEDA DIGITALES</h2>
                     <p class="proposal_paragraph">
                         Creamos zonas de búsqueda a través de publicidad pagada de Facebook para que la información de tu mascota perdida sea vista directamente por miles de personas que viven cerca o que visitan el lugar donde se perdió.
                     </p>
                 </div>
-                <figure class="proposal_image">
-                    <img src="./img/common/facebook_anuncio.png" alt="anuncio geolocalizado para mascotas" />
+                <figure class="proposal_image" id="map_image_container">
+                    <img src="./img/common/zona_busqueda.png" alt="zona de búsqueda" />
                 </figure>
             </div>
             <div class="proposal_container" id="proposal_advantages">

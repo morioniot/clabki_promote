@@ -18,3 +18,9 @@ Stack trace:
 #0 /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/processDoubtsAccess.php(9): DatabaseConnection->__construct()
 #1 {main}
   thrown in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/dbconnection.php on line 18
+[23-May-2018 16:27:48 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u840748033_clab'@'localhost' (using password: YES) in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/dbconnection.php on line 14
+[23-May-2018 16:27:49 America/New_York] PHP Fatal error:  Uncaught Exception: Connection failed: Access denied for user 'u840748033_clab'@'localhost' (using password: YES) in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/dbconnection.php:18
+Stack trace:
+#0 /home/morion/Documents/Development/Software/Web/Clabki2/clabki/index.php(8): DatabaseConnection->__construct()
+#1 {main}
+  thrown in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/dbconnection.php on line 18

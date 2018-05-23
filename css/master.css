@@ -195,6 +195,9 @@ body {
       display: block;
       height: auto;
       width: 100%; }
+  .proposal_container #map_image_container {
+    margin: 20px 0px;
+    width: 40%; }
 
 /*Special styes for advantages list*/
 #proposal_advantages .proposal_text {
@@ -867,6 +870,12 @@ footer {
     -webkit-flex-wrap: wrap;
     justify-content: center;
     -webkit-justify-content: center; }
+    #value_proposal_section .proposal_container #map_image_container {
+      margin: 20px;
+      min-width: 310px;
+      width: 50%; }
+  #value_proposal_section #service_description .proposal_paragraph, #value_proposal_section #service_description .proposal_container .proposal_text .proposal_list, .proposal_container .proposal_text #value_proposal_section #service_description .proposal_list, #value_proposal_section #service_description .proposal_title {
+    text-align: center; }
   #value_proposal_section #proposal_advantages .proposal_text {
     order: -1; }
 
@@ -939,6 +948,8 @@ footer {
       #value_proposal_section .proposal_container .proposal_text .proposal_list li:before {
         position: relative;
         left: -5px; }
+    #value_proposal_section .proposal_container #map_image_container {
+      min-width: 280px; }
 
   #proposal_advantages .proposal_text {
     margin-left: 0px; }
