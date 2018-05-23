@@ -783,6 +783,39 @@ body {
     width: 100%;
     z-index: 2; }
 
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  background-color: #1A223C;
+  color: white;
+  font-family: PFDinTextCondPro;
+  font-size: 20px;
+  padding: 20px 0px; }
+  footer .contact_container_footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center; }
+  footer .contact_icon {
+    font-family: "icomoon";
+    font-size: 22px; }
+  footer .contact_info {
+    display: block;
+    height: 20px;
+    margin-left: 10px; }
+  footer #whatsapp_footer:before {
+    content: "\ea93"; }
+  footer #email_footer:before {
+    content: "\e945"; }
+  footer #facebook_footer:before {
+    content: "\ea91"; }
+
 @media only screen and (max-width: 950px) {
   #value_proposal_section #proposal_intro {
     width: 70%; }

@@ -480,6 +480,20 @@
                 </div>
             </article>
         </section>
+        <footer>
+            <div class="contact_container_footer">
+                <span class="contact_icon" id="whatsapp_footer"></span>
+                <span class="contact_info">+57 310 852 9139</span>
+            </div>
+            <div class="contact_container_footer">
+                <span class="contact_icon" id="email_footer"></span>
+                <span class="contact_info">COMUNIDAD.CLABKI@GMAIL.COM</span>
+            </div>
+            <div class="contact_container_footer">
+                <span class="contact_icon" id="facebook_footer"></span>
+                <span class="contact_info">FACEBOOK.COM/CLABKI</span>
+            </div>
+        </footer>
     </body>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.1/qs.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.0/axios.min.js"></script>
