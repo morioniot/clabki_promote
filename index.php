@@ -121,12 +121,28 @@
                 <div id="questions_group_container">
                     <button type="button" class="close_button"></button>
                     <div class="question">
+                        <h4 class="question_title">¿EN QUÉ SE DIFERENCIA UNA PUBLICACIÓN HECHA CON CLABKI DE OTRAS PUBLICACIONES?</h4>
+                        <p class="question_answer">
+                            Las publicaciones hechas en Clabki son promovidas por medio de publicidad para que aparezcan en el muro de las personas que viven en un sector predeterminado.
+                        </p>
+                    </div>                   
+                    <hr class="question_division">
+                    <span class="division_points">. . . . .</span>
+                    <div class="question">
+                        <h4 class="question_title">¿CÓMO SÉ QUE EL ANUNCIO FUE HECHO Y SE ESTÁ DIFUNDIENDO?</h4>
+                        <p class="question_answer">
+                            Tú tienes acceso a la publicación y apoyarás el proceso de creación. Puedes pedir las estadísticas del número de personas que la han visto en cualquier momento de la campaña.
+                        </p>
+                    </div>
+                    
+                    <span class="division_points">. . . . .</span>
+                    <div class="question">
                         <h4 class="question_title">¿QUÉ PASA DESPUÉS DE PAGAR?</h4>
                         <p class="question_answer">
                             Te contactaremos lo más pronto posible para que iniciemos el proceso de la creación de la publicación.
                             Si por alguna razón esto no ocurre, en la página puedes encontrar cómo contactarnos.
                         </p>
-                    </div>
+                    </div>                    
                     <hr class="question_division">
                     <span class="division_points">. . . . .</span>
                     <div class="question">
@@ -135,17 +151,7 @@
                             Nosotros nos encargamos de hacer la publicación a través del fanpage de
                             Clabki y posteriormente de promoverla en la zona acordada.
                         </p>
-                    </div>
-                    <span class="division_points">. . . . .</span>
-                    <div class="question">
-                        <h4 class="question_title">¿ME GARANTIZAN ENCONTRAR MI MASCOTA?</h4>
-                        <p class="question_answer">
-                            No. Sin embargo, te aseguramos que las probabilidades de encontrarla van a
-                            aumentar porque vamos a ser más personas buscando en la zona donde es más
-                            probable que esté.
-                        </p>
-                    </div>
-                    <hr class="question_division">
+                    </div>                    
                     <span class="division_points">. . . . .</span>
                     <div class="question">
                         <h4 class="question_title">¿TODOS MIS VECINOS VEN LA PUBLICACIÓN?</h4>
@@ -153,6 +159,16 @@
                             No necesariamente. Facebook usa un algoritmo para determinar un público
                             objetivo en la zona especificada y sólo un porcentaje de estas personas reciben
                             el mensaje.
+                        </p>
+                    </div>                    
+                    <span class="division_points">. . . . .</span>
+                    <hr class="question_division">
+                    <div class="question">
+                        <h4 class="question_title">¿MEJOR UN RADIO DE PUBLICACIÓN MÁS AMPLIO?</h4>
+                        <p class="question_answer">
+                            No. Si el radio de publicación es muy amplio, ésta llegará más lejos,
+                            pero a menos personas en la zona de pérdida. La información queda más
+                            dispersa.
                         </p>
                     </div>
                     <span class="division_points">. . . . .</span>
@@ -167,13 +183,13 @@
                     <span class="division_points">. . . . .</span>
                     <hr class="question_division">
                     <div class="question">
-                        <h4 class="question_title">¿MEJOR UN RADIO DE PUBLICACIÓN MÁS AMPLIO?</h4>
+                        <h4 class="question_title">¿ME GARANTIZAN ENCONTRAR MI MASCOTA?</h4>
                         <p class="question_answer">
-                            No. Si el radio de publicación es muy amplio, ésta llegará más lejos,
-                            pero a menos personas en la zona de pérdida. La información queda más
-                            dispersa.
+                            No. Sin embargo, te aseguramos que las probabilidades de encontrarla van a
+                            aumentar porque vamos a ser más personas buscando en la zona donde es más
+                            probable que esté.
                         </p>
-                    </div>
+                    </div>                    
                 </div>
             </div>
             <div class="title_container">
