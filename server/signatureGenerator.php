@@ -9,19 +9,19 @@
 		return $token;
 	}
 
-	if(!empty($_GET['value']) && !empty($_GET['country'])) {
+	if(!empty($_GET['value']) && !empty($_GET['country']) && !empty($_GET['currency'])) {
 		$value = $_GET['value'];
 		$country = $_GET['country'];
+		$currency = $_GET['currency'];
 	}
 
 	$time = new DateTime();
 	$ApiKey = "4Vj8eK4rloUd272L48hsrarnUA";
 	$merchant_id = "508029";
-	$reference_code = $time->getTimestamp() . generateToken(6);
-	$currency = 'USD';
+	$reference_code = $time->getTimestamp() . generateToken(6);	
 
 	//Generating signature depending on country (updates payment methods)
-	if($country === "COL")
+	if($country === "CO")
 		$signature = "$ApiKey~$merchant_id~$reference_code~$value~$currency";
 	else
 		$signature = "$ApiKey~$merchant_id~$reference_code~$value~$currency~VISA,MASTERCARD,DINERS,AMEX";

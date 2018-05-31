@@ -1,6 +1,59 @@
 //GLOBAL VARIABLES
-var currentCountrySelected = "COL";
-var currentPriceSelected = 9;
+var currentCountrySelected;
+var currentCurrencySelected;
+var currentPlanSelected = "basicPlan";
+
+
+var countryToCurrency =  {
+    
+    AR: "USD",
+    BO: "USD",
+    CL: "USD",
+    CO: "COP",
+    CR: "USD",
+    CU: "USD",
+    EC: "USD",
+    SV: "USD",
+    ES: "USD",
+    GT: "USD",
+    GQ: "USD",
+    HN: "USD",
+    MX: "USD",
+    NI: "USD",
+    PA: "USD",
+    PY: "USD",
+    PE: "USD",
+    PR: "USD",
+    DO: "USD",
+    UY: "USD",
+    VE: "USD"
+
+};
+
+var plansInformation = {
+
+    basicPlan : {
+        USD: "9",
+        COP: "25000",
+        peoplePerDay: "1000",
+        days: "3"
+    },
+
+    morePeople : {
+        USD: "15",
+        COP: "40000",
+        peoplePerDay: "2000",
+        days: "3"
+    },
+
+    moreDays : {
+        USD: "17",
+        COP: "45000",
+        peoplePerDay: "1000",
+        days: "7"
+    }
+
+};
 
 //ASKING FOR FOLLOWERS NUMBER
 var updateFollowersCount = function() {
@@ -14,11 +67,12 @@ var updateFollowersCount = function() {
 };
 
 //UPDATE SIGNATURE
-var updateSignature = function(value, country) {    
+var updateSignature = function() {    
     axios.get('../server/signatureGenerator.php', {
         params: {
-            value : value,
-            country: country
+            value : plansInformation[currentPlanSelected][currentCurrencySelected],
+            country: currentCountrySelected,
+            currency: currentCurrencySelected
         }
     })
     .then(function(response) {
@@ -33,9 +87,9 @@ var updateSignature = function(value, country) {
 //UPDATES THE FORM TO INCLUDE OR NOT THE PAYMENT METHOD VARIABLE
 var updatePaymentMethodVariable = function( country ) {
     //The payment method variable is updated only if the
-    //country is different from COL
+    //country is different from CO
     $paymentMethodInput = $('input[name="paymentMethods"]');
-    if(country !== "COL") {
+    if(country !== "CO") {
         if(!($paymentMethodInput.length > 0)) {
             $("<input>")
             .attr("name", "paymentMethods")
@@ -51,8 +105,17 @@ var updatePaymentMethodVariable = function( country ) {
 };
 
 //UPDATE VALUE DISPLAY (IN FORM)
-var updatePlanDisplays = function(days, people, price) {
-    $("#payment_amount").val(price);
+var updatePlanDisplays = function() {
+    console.log(plansInformation[currentPlanSelected]);
+    var price = plansInformation[currentPlanSelected][currentCurrencySelected];
+    var days = plansInformation[currentPlanSelected]["days"];
+    var people = plansInformation[currentPlanSelected]["peoplePerDay"];
+
+    //Form variables
+    $("input[name='amount']").val(price);
+    $("input[name='currency']").val(currentCurrencySelected);
+    //Display tags
+    $(".price_explanation .currency").html(currentCurrencySelected);
     $(".price_explanation .value").html("$" + price);
     $(".price_explanation .days").html(days + " días");
     $(".price_explanation .people").html(people + " personas");
@@ -327,11 +390,18 @@ var ReviewsSlider = function() {
     };
 };
 
-//SAVE IN DB ACCESS TO THE DOUBTS POPUP
-var updateDoubtsPopupAccess = function() {
+//GETS TOKEN FROM URL
+var getTokenFromURL =  function() {
     var paramsList = location.search;
     var token = paramsList.substring(paramsList.indexOf('=') + 1);
-    if(token !== ''){
+    if(token !== '') return token;
+    return false;
+}; 
+
+//SAVES IN DB ACCESS TO THE DOUBTS POPUP
+var updateDoubtsPopupAccess = function() {
+    var token = getTokenFromURL();
+    if(token) {
         axios.post('../server/processDoubtsAccess.php', Qs.stringify({token: token}))
         .then(function(response) {
             if(response.data.error != undefined && !response.data.error) {                
@@ -345,6 +415,24 @@ var updateDoubtsPopupAccess = function() {
         });
     }
 };
+
+//SAVES NEW ACCES TO THE PAGE USING TRACKING CODE
+var updateAccessCount = function() {    
+    var token = getTokenFromURL();
+    if(token) {
+        axios.get('../server/countNewAccess.php', {
+            params: {token : token},
+            responseType: 'json'
+        })
+        .then(function(response) {
+            if(!response.data.error)
+                console.log("OK")
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    }     
+}
 
 $(document).ready(function() {
 
@@ -375,11 +463,13 @@ $(document).ready(function() {
         var $option = $(this);
         var optionContent = $option.html();
         currentCountrySelected = $option.find(".option").attr("id");
+        currentCurrencySelected = countryToCurrency[currentCountrySelected];
         $(".dropdown dt").html(optionContent);
         $(".dropdown dd ul").hide();
         $("#country_selector").val(currentCountrySelected);
-        updateSignature(currentPriceSelected, currentCountrySelected);
         updatePaymentMethodVariable( currentCountrySelected );
+        updatePlanDisplays();
+        updateSignature();
     });
 
     //Hides options if another part of the page is clicked
@@ -393,14 +483,12 @@ $(document).ready(function() {
     //Adding events to radio buttons changes
     $("input[name='plan']").on("change", function() {
         var $selection = $(this);
-        var days = $selection.attr("data-days");
-        var people = $selection.attr("data-people");
-        currentPriceSelected = parseInt($selection.attr("data-price"));
-        updatePlanDisplays(days, people, currentPriceSelected);
-        updateSignature(currentPriceSelected, currentCountrySelected);
+        currentPlanSelected = $selection.attr("data-plan");        
+        updatePlanDisplays();
+        updateSignature();
     });
 
-    //Adding handlers to hover events in fake buttons
+    //Adding handlers to click events in fake buttons
     $(".option_button").click(function(){        
         var $buttonPressed = $(this);
         var selectedReference = $buttonPressed.attr("data-reference");
@@ -422,4 +510,29 @@ $(document).ready(function() {
         console.log(error);
     });
 
+    /**********Tracking of users by code (timer used to avoid misscounts)*********/
+    setTimeout(updateAccessCount, 8000)
+
+    /******Changing currency depending on accessing country*******/
+    axios.get('https://ipapi.co/json/', {responseType: 'json'})
+    .then(function(response) {        
+        
+        if(countryToCurrency.hasOwnProperty(response.data.country)) {
+            currentCountrySelected = response.data.country;
+            currentCurrencySelected = countryToCurrency[currentCountrySelected];
+            $(".dropdown dd ul .option#" + currentCountrySelected).trigger("click");
+        }
+        else {
+            currentCountrySelected = "MX";
+            currentCurrencySelected = countryToCurrency[currentCountrySelected];
+            updatePlanDisplays();            
+        }
+
+    })
+    .catch(function(error) {
+        currentCountrySelected = "MX";
+        currentCurrencySelected = countryToCurrency[currentCountrySelected];
+        updatePlanDisplays();        
+        console.log(error);
+    });
 });
