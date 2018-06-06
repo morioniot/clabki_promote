@@ -718,7 +718,9 @@ body {
       #reviews_section .slider .slide .review_link {
         color: #59ccd9;
         font-family: "Source Sans Pro", sans-serif;
-        font-size: 12px; }
+        font-size: 12px;
+        position: relative;
+        z-index: 3; }
     #reviews_section .slider .arrows_container {
       display: -webkit-box;
       display: -ms-flexbox;

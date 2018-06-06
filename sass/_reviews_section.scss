@@ -54,6 +54,8 @@
                 color: $color-form;
                 font-family: $font-paragraph;
                 font-size: 12px;
+                position: relative; //For z-index to work
+                z-index: 3;
             }        
         }
 
