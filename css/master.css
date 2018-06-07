@@ -1030,7 +1030,9 @@ footer {
   #reviews_section .review_data .reviewer_name {
     font-size: 14px; }
   #reviews_section .review_data .review_text {
-    font-size: 14px; }
+    font-size: 14px;
+    max-height: 170px;
+    overflow-y: scroll; }
   #reviews_section .review_data .review_date {
     font-size: 10px; }
   #reviews_section .review_data .stars_container .star {

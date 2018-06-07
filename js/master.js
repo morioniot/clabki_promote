@@ -311,18 +311,18 @@ var ReviewsSlider = function() {
 
         var sliderBandLeftPosition;
         var slideWidth = sliderBand.width() / slidesCount;        
-        var sliderManager = new Hammer.Manager($('#slider_touch')[0]);
+        var sliderManager = new Hammer.Manager($('#slider_touch')[0], {touchAction: 'pan-y'});
         var pan = new Hammer.Pan({threshold: 1, pointers: 0});
         var press = new Hammer.Press();             
         sliderManager.add(pan);
         sliderManager.add(press);
 
         //Configuring press gesture
-        sliderManager.on('press', function(e) {
+        sliderManager.on('press', function(e) {            
             deactivateAutomaticChange();            
         });
 
-        sliderManager.on('pressup', function(e) {
+        sliderManager.on('pressup', function(e) {            
             activateAutomaticChange();
         });
 
@@ -333,7 +333,7 @@ var ReviewsSlider = function() {
         });
 
         //While the pan gesture is happening
-        sliderManager.on('pan', function(e) {            
+        sliderManager.on('panleft panright', function(e) {            
             sliderBand.css('left', sliderBandLeftPosition + e.deltaX);
         });
 
