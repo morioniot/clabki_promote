@@ -340,10 +340,15 @@ var ReviewsSlider = function() {
         //End of the pan gesture
         sliderManager.on('panend', function(e) {            
             var limit = sliderBand.width() - (1.5 * slideWidth);
-            var currentBandDisplacement = sliderBand.position().left * -1;                        
+            var currentBandDisplacement = sliderBand.position().left * -1;
+            //The user is trying to move to a slide after the last one
             if(currentBandDisplacement > limit)
                 currentSlide = slidesCount;
-            else {
+            //The user is trying to move to a slide before the first one
+            else if(currentBandDisplacement < 0) {
+                currentSlide = 1;
+            }
+            else{
                 //Computes how much the band was moved and adds one half more
                 var displacementRate = (currentBandDisplacement/slideWidth) + (1/2);
                 currentSlide = Math.ceil(displacementRate);                
