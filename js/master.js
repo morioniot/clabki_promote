@@ -145,6 +145,7 @@ $("#join_us_form").on('submit', function( event ) {
             .then(function(response) {
                 if(response.data.error != undefined && !response.data.error) {
                     itWasRegistered = true;
+                    fbq('track', 'CompleteRegistration');
                     $('#join_us_form').submit();
                 }
                 else {
@@ -446,7 +447,10 @@ $(document).ready(function() {
     /******Adding event to doubts link and button*******/
     $("#doubt_link, .doubts_button").click(function(){
         $("#questions_popup").css("display", "flex");
-        $("body").css("overflow", "hidden");
+        $("body").css("overflow", "hidden");        
+        fbq('track', 'ViewContent', {
+            content_type: 'doubts',
+        });
         updateDoubtsPopupAccess();
     });
 
