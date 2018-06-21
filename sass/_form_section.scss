@@ -5,11 +5,7 @@
 #form_section {
 
     background-color: $color-form-background;    
-    padding: 60px 0px;
-
-    h2 {
-        color: $color_form_background;
-    }
+    padding: 60px 0px;    
 
     #form_container {
         @include align-items(center);

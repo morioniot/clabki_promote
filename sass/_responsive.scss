@@ -231,16 +231,11 @@
         width: 100%;
 
         h2 {
-            color: $color_main_font !important;
-            margin-left: auto;
+            font-size: 30px;                    
             position: static;
             text-align: center;
             width: auto;
-        }
-
-        img {
-            display: none;
-        }
+        }        
     }
 
     #form_section {

@@ -18,32 +18,16 @@ body {
     // background-color: cadetblue;
     margin: 0 auto;
     position: relative;
-    width: 380px;
+    width: 380px;    
 
-    img {
-        display: block;
-        height: auto;
-        position: relative;
-        width: 100%;
-        z-index: 0;
-    }
-
-    h2 {
-        // background-color: red;
-        bottom: 0;
-        color: $color-main-background;
+    h2 {               
+        color: $color-main-font;
         font-family: $font-title;
-        font-size: 30px;
+        font-size: 34px;
         // font-size: 2.4vw;
         font-weight: bold;
-        height: 54%;
-        left: 0;
+        height: 54%;        
         margin: auto;
-        margin-left: 17%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 65%;
-        z-index: 1;
+        text-align: center;              
     }
 }

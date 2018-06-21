@@ -124,27 +124,14 @@ body {
   margin: 0 auto;
   position: relative;
   width: 380px; }
-  .title_container img {
-    display: block;
-    height: auto;
-    position: relative;
-    width: 100%;
-    z-index: 0; }
   .title_container h2 {
-    bottom: 0;
-    color: #ffffee;
+    color: #1A223C;
     font-family: PFDinTextCondPro;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: bold;
     height: 54%;
-    left: 0;
     margin: auto;
-    margin-left: 17%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 65%;
-    z-index: 1; }
+    text-align: center; }
 
 /*********************************************************************************************/
 /******************************** Value Proposal Section *************************************/
@@ -235,8 +222,6 @@ body {
 #form_section {
   background-color: #dff4f5;
   padding: 60px 0px; }
-  #form_section h2 {
-    color: #dff4f5; }
   #form_section #form_container {
     align-items: center;
     -webkit-align-items: center;
@@ -675,8 +660,6 @@ body {
 #reviews_section {
   background-color: #ffffee;
   padding: 60px 0px; }
-  #reviews_section h2 {
-    color: white; }
   #reviews_section .slider {
     background-color: white;
     border-radius: 3px;
@@ -959,13 +942,10 @@ footer {
   .title_container {
     width: 100%; }
     .title_container h2 {
-      color: #1A223C !important;
-      margin-left: auto;
+      font-size: 30px;
       position: static;
       text-align: center;
       width: auto; }
-    .title_container img {
-      display: none; }
 
   #form_section {
     padding-bottom: 0px; }
