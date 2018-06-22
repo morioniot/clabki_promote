@@ -11,7 +11,7 @@
         @include align-items(center);
         @include display-flex;
         @include justify-content(center);
-        margin-top: 60px;
+        margin-top: 30px;
 
         #join_us_form {
             background: url('../img/common/fondoformulario.png');
@@ -241,7 +241,7 @@
                         box-shadow: 3px 8px 20px 2px $color-main-font;
                         box-sizing: border-box;
                         display: none;
-                        font-size: 14px;
+                        font-size: 15px;
                         margin: 0px auto;
                         margin-top: 20px;
                         padding: 15px;

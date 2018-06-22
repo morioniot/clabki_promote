@@ -231,7 +231,7 @@ body {
     display: flex;
     justify-content: center;
     -webkit-justify-content: center;
-    margin-top: 60px; }
+    margin-top: 30px; }
     #form_section #form_container #join_us_form {
       background: url("../img/common/fondoformulario.png");
       background-repeat: no-repeat;
@@ -430,7 +430,7 @@ body {
             box-shadow: 3px 8px 20px 2px #1A223C;
             box-sizing: border-box;
             display: none;
-            font-size: 14px;
+            font-size: 15px;
             margin: 0px auto;
             margin-top: 20px;
             padding: 15px;
@@ -699,7 +699,7 @@ body {
         left: 0;
         right: 0; }
       #reviews_section .slider .slide .review_link {
-        color: #59ccd9;
+        color: #44cdd7;
         font-family: "Source Sans Pro", sans-serif;
         font-size: 12px;
         position: relative;
@@ -868,23 +868,16 @@ footer {
     flex-wrap: wrap;
     -webkit-flex-wrap: wrap; }
     #form_section #form_container .price_explanation {
-      align-items: center;
-      -webkit-align-items: center;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-direction: column;
-      -webkit-flex-direction: column;
-      order: -1;
-      -webkit-order: -1; }
-      #form_section #form_container .price_explanation .price_paragraph {
-        text-align: center; }
+      display: none; }
     #form_section #form_container #join_us_form {
-      margin-top: 80px; }
-      #form_section #form_container #join_us_form #form_fields_container .plan_selector .price_explanation {
-        display: block;
-        margin-top: 30px; }
+      width: 450px; }
+      #form_section #form_container #join_us_form #form_fields_container .plan_selector {
+        margin-bottom: 35px;
+        margin-top: 0px;
+        order: -1; }
+        #form_section #form_container #join_us_form #form_fields_container .plan_selector .price_explanation {
+          display: block;
+          margin-top: 30px; }
 
   #social_networks_section hr {
     border-left: 0px;
@@ -948,36 +941,36 @@ footer {
       width: auto; }
 
   #form_section {
+    background-color: #44cdd7;
     padding-bottom: 0px; }
     #form_section h2 {
       color: #1A223C; }
-    #form_section #form_container {
-      margin-top: 25px; }
-      #form_section #form_container #join_us_form {
-        background-color: #59ccd9;
-        margin-left: 0px;
-        margin-right: 0px;
-        width: 100%; }
-        #form_section #form_container #join_us_form #form_fields_container input[type='submit'], #form_section #form_container #join_us_form #form_fields_container .small_field [type='submit'].dropdown {
-          font-size: 18px; }
-        #form_section #form_container #join_us_form #form_fields_container label {
-          font-size: 16px; }
-        #form_section #form_container #join_us_form #form_fields_container .check_box_container, #form_section #form_container #join_us_form #form_fields_container .small_field {
-          padding: 9px 8px; }
-        #form_section #form_container #join_us_form #form_fields_container .small_field {
-          align-items: flex-start;
-          -webkit-align-items: flex-start;
-          flex-direction: column;
-          -webkit-flex-direction: column;
-          padding: 9px 8px; }
-          #form_section #form_container #join_us_form #form_fields_container .small_field input, #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown {
-            width: 100%; }
-        #form_section #form_container #join_us_form #form_fields_container .plan_selector {
-          width: 95%; }
-          #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .first {
-            border-radius: 5px 0px 0px 5px; }
-          #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .last {
-            border-radius: 0px 5px 5px 0px; }
+    #form_section #form_container #join_us_form {
+      background-color: #44cdd7;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-top: 0px;
+      width: 100%; }
+      #form_section #form_container #join_us_form #form_fields_container input[type='submit'], #form_section #form_container #join_us_form #form_fields_container .small_field [type='submit'].dropdown {
+        font-size: 18px; }
+      #form_section #form_container #join_us_form #form_fields_container label {
+        font-size: 16px; }
+      #form_section #form_container #join_us_form #form_fields_container .check_box_container, #form_section #form_container #join_us_form #form_fields_container .small_field {
+        padding: 9px 8px; }
+      #form_section #form_container #join_us_form #form_fields_container .small_field {
+        align-items: flex-start;
+        -webkit-align-items: flex-start;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        padding: 9px 8px; }
+        #form_section #form_container #join_us_form #form_fields_container .small_field input, #form_section #form_container #join_us_form #form_fields_container .small_field .dropdown {
+          width: 100%; }
+      #form_section #form_container #join_us_form #form_fields_container .plan_selector {
+        width: 95%; }
+        #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .first {
+          border-radius: 5px 0px 0px 5px; }
+        #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .last {
+          border-radius: 0px 5px 5px 0px; }
 
   #questions_popup #questions_group_container .close_button {
     background-image: url("../img/common/close_button.png");

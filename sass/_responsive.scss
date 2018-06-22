@@ -109,23 +109,22 @@
 
     #form_section {
         #form_container {
+            
             @include flex-wrap(wrap);
+            
             .price_explanation {
-                @include align-items(center);
-                @include display-flex;
-                @include flex-direction(column);
-                @include order(-1);
-
-                .price_paragraph {
-                    text-align: center;
-                }
+               display: none;
             }
 
-            #join_us_form {
-                margin-top: 80px;
+            #join_us_form {                
+                width: 450px;                
 
                 #form_fields_container {
-                    .plan_selector {
+                    .plan_selector {                        
+                        margin-bottom: 35px;
+                        margin-top: 0px;
+                        order: -1;                        
+
                         .price_explanation {
                             display: block;
                             margin-top: 30px;
@@ -240,20 +239,20 @@
 
     #form_section {
 
+        background-color: $color-form;
         padding-bottom: 0px;
 
         h2 {
             color: $color_main_font;
         }
 
-        #form_container {
-
-            margin-top: 25px;
+        #form_container {            
 
             #join_us_form {
                 background-color: $color_form;
                 margin-left: 0px;
                 margin-right: 0px;
+                padding-top: 0px;
                 width: 100%;
 
                 #form_fields_container {
@@ -281,7 +280,9 @@
                     }
 
                     .plan_selector {
+
                         width: 95%;
+
                         .options_fake_buttons {
                             .first {
                                 border-radius: 5px 0px 0px 5px;
