@@ -35,23 +35,16 @@
         <!-- End Facebook Pixel Code -->
     </head>
     <body>
+        <!-- Load Facebook SDK for JavaScript -->
         <div id="fb-root"></div>
-        <script>
-            window.fbAsyncInit = function() {
-                FB.init({
-                  appId            : '207271499718170',
-                  autoLogAppEvents : true,
-                  xfbml            : true,
-                  version          : 'v2.11'
-                });
-            };
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=207271499718170';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+       
         <header>
             <div id="logo_container">
                 <a href="./"></a>
@@ -477,7 +470,17 @@
                     </div>
                 </div>
             </article>
-        </section>
+        </section> 
+
+        <!-- Your customer chat code -->
+        <div class="fb-customerchat"
+          attribution=setup_tool
+          page_id="516607761870650"
+          theme_color="#1a223c"
+          logged_in_greeting="¡Hola! Cuéntanos hace cuánto y dónde se perdió tu mascota. Queremos ayudarte"
+          logged_out_greeting="¡Hola! Cuéntanos hace cuánto y dónde se perdió tu mascota. Queremos ayudarte">
+        </div>
+
         <footer>
             <div class="contact_container_footer">
                 <span class="contact_icon" id="whatsapp_footer"></span>
