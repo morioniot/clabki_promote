@@ -51,6 +51,13 @@
 }
 
 @media only screen and (max-width: 850px) {
+
+    .video_general_container {
+        .video_adjustable_container {
+            width: 60%;
+        }
+    }
+
     #questions_popup {
 
         #questions_group_container {
@@ -82,6 +89,12 @@
 @media only screen and (max-width: 750px) {
     #value_proposal_section {
 
+        .video_general_container {
+            .video_adjustable_container {
+                width: 80%;
+            }
+        }
+
         .proposal_container {
             @include align-content(center);
             @include flex-wrap(wrap);
@@ -94,7 +107,7 @@
             }
         }
 
-        #service_description {            
+        #service_description {
             .proposal_paragraph, .proposal_title {
                 text-align: center;
             }
@@ -109,21 +122,21 @@
 
     #form_section {
         #form_container {
-            
+
             @include flex-wrap(wrap);
-            
+
             .price_explanation {
                display: none;
             }
 
-            #join_us_form {                
-                width: 450px;                
+            #join_us_form {
+                width: 450px;
 
                 #form_fields_container {
-                    .plan_selector {                        
+                    .plan_selector {
                         margin-bottom: 35px;
                         margin-top: 0px;
-                        order: -1;                        
+                        order: -1;
 
                         .price_explanation {
                             display: block;
@@ -173,6 +186,12 @@
 
     #value_proposal_section {
 
+        .video_general_container {
+            .video_adjustable_container {
+                width: 90%;
+            }
+        }
+
         #proposal_intro {
             font-size: 17px;
             line-height: 24px;
@@ -212,7 +231,7 @@
                 }
             }
 
-            #map_image_container {                
+            #map_image_container {
                 min-width: 280px;
             }
 
@@ -230,11 +249,11 @@
         width: 100%;
 
         h2 {
-            font-size: 30px;                    
+            font-size: 30px;
             position: static;
             text-align: center;
             width: auto;
-        }        
+        }
     }
 
     #form_section {
@@ -246,7 +265,7 @@
             color: $color_main_font;
         }
 
-        #form_container {            
+        #form_container {
 
             #join_us_form {
                 background-color: $color_form;
@@ -409,7 +428,7 @@
         }
     }
 
-    footer {        
+    footer {
         font-size: 16px;
         .contact_icon {
             font-size: 18px;

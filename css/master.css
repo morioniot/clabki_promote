@@ -141,6 +141,26 @@ body {
   margin-top: 50px; }
 
 /***************************** Proposal Container ***************************************/
+.video_general_container .video_adjustable_container {
+  position: relative;
+  background-color: #1A223C;
+  margin: 30px auto;
+  width: 50%; }
+  .video_general_container .video_adjustable_container:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%; }
+  .video_general_container .video_adjustable_container > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+.video_general_container iframe {
+  height: 100%;
+  width: 100%; }
+
 .proposal_container {
   align-items: center;
   -webkit-align-items: center;
@@ -831,6 +851,9 @@ footer {
       #social_networks_section article .container #text_and_code img {
         width: 200px; } }
 @media only screen and (max-width: 850px) {
+  .video_general_container .video_adjustable_container {
+    width: 60%; }
+
   #questions_popup #questions_group_container {
     align-content: flex-start;
     -webkit-align-content: flex-start; }
@@ -848,6 +871,8 @@ footer {
       margin: 10px 20px 0px 20px;
       min-width: 345px; } }
 @media only screen and (max-width: 750px) {
+  #value_proposal_section .video_general_container .video_adjustable_container {
+    width: 80%; }
   #value_proposal_section .proposal_container {
     align-content: center;
     -webkit-align-content: center;
@@ -899,6 +924,8 @@ footer {
     footer .contact_icon {
       font-size: 20px; } }
 @media only screen and (max-width: 450px) {
+  #value_proposal_section .video_general_container .video_adjustable_container {
+    width: 90%; }
   #value_proposal_section #proposal_intro {
     font-size: 17px;
     line-height: 24px;

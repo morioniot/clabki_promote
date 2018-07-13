@@ -9,6 +9,20 @@
 
 /***************************** Proposal Container ***************************************/
 
+.video_general_container {
+    .video_adjustable_container {
+        @include aspect-ratio(1280,720);
+        background-color: $color-main-font;
+        margin: 30px auto;
+        width: 50%;
+    }
+
+    iframe {
+        height: 100%;
+        width: 100%;
+    }
+}
+
 .proposal_container {
     @include align-items(center);
     @include display-flex;
@@ -86,7 +100,7 @@
         border-radius: 5px;
         box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5);
         color: white;
-        cursor: pointer;        
+        cursor: pointer;
         font-family: $font-title;
         font-size: 22px;
         font-weight: 500;
