@@ -5,7 +5,7 @@ var currentPlanSelected = "basicPlan";
 
 
 var countryToCurrency =  {
-    
+
     AR: "USD",
     BO: "USD",
     CL: "USD",
@@ -18,7 +18,7 @@ var countryToCurrency =  {
     GT: "USD",
     GQ: "USD",
     HN: "USD",
-    MX: "USD",
+    MX: "MXN",
     NI: "USD",
     PA: "USD",
     PY: "USD",
@@ -35,6 +35,7 @@ var plansInformation = {
     basicPlan : {
         USD: "9",
         COP: "25000",
+        MXN: "170",
         peoplePerDay: "1000",
         days: "3"
     },
@@ -42,6 +43,7 @@ var plansInformation = {
     morePeople : {
         USD: "15",
         COP: "40000",
+        MXN: "283",
         peoplePerDay: "2000",
         days: "3"
     },
@@ -49,6 +51,7 @@ var plansInformation = {
     moreDays : {
         USD: "17",
         COP: "45000",
+        MXN: "320",
         peoplePerDay: "1000",
         days: "7"
     }
@@ -67,7 +70,7 @@ var updateFollowersCount = function() {
 };
 
 //UPDATE SIGNATURE
-var updateSignature = function() {    
+var updateSignature = function() {
     axios.get('../server/signatureGenerator.php', {
         params: {
             value : plansInformation[currentPlanSelected][currentCurrencySelected],
@@ -172,7 +175,7 @@ var createSlide = function( slideInfo ) {
 
     //Creating country image
     var countriesImagesRoute = './img/common/countries/';
-    var countryImage = 
+    var countryImage =
         $('<img/>', {src: countriesImagesRoute + slideInfo.reviewer_country});
 
     //Cretaing identity element (name + country)
@@ -217,7 +220,7 @@ var createSlide = function( slideInfo ) {
 
     //Creating slide background image
     var imagesRoute = './img/common/reviews/';
-    var slideBackgroundImage = 
+    var slideBackgroundImage =
         $('<img/>', {src: imagesRoute + slideInfo.reviewer_picture});
 
     //Creating background veil
@@ -249,13 +252,13 @@ var ReviewsSlider = function() {
 
         //Checking left arrow state
         if(currentSlide > 1)
-            leftArrow.removeClass('disabled');        
+            leftArrow.removeClass('disabled');
         else
             leftArrow.addClass('disabled');
 
         //Checking right arrow state
         if(currentSlide < slidesCount)
-            rightArrow.removeClass('disabled');        
+            rightArrow.removeClass('disabled');
         else
             rightArrow.addClass('disabled');
     };
@@ -266,12 +269,12 @@ var ReviewsSlider = function() {
 
     var goToNext = function() {
         if(currentSlide < slidesCount) {
-            ++currentSlide;            
+            ++currentSlide;
             goToCurrentSlide();
             updateArrowsState();
         }
     };
-    
+
     var goToPrevious = function() {
         if(currentSlide > 1) {
             --currentSlide;
@@ -295,7 +298,7 @@ var ReviewsSlider = function() {
 
     var setSliderTiming = function(time) {
         slideChangeTime = time;
-        activateAutomaticChange();        
+        activateAutomaticChange();
     };
 
     var activateAutomaticChange =  function() {
@@ -308,38 +311,38 @@ var ReviewsSlider = function() {
         clearInterval(intervalId);
     };
 
-    var configureSwipeAndPan = function() {        
+    var configureSwipeAndPan = function() {
 
         var sliderBandLeftPosition;
-        var slideWidth = sliderBand.width() / slidesCount;        
+        var slideWidth = sliderBand.width() / slidesCount;
         var sliderManager = new Hammer.Manager($('#slider_touch')[0], {touchAction: 'pan-y'});
         var pan = new Hammer.Pan({threshold: 1, pointers: 0});
-        var press = new Hammer.Press();             
+        var press = new Hammer.Press();
         sliderManager.add(pan);
         sliderManager.add(press);
 
         //Configuring press gesture
-        sliderManager.on('press', function(e) {            
-            deactivateAutomaticChange();            
+        sliderManager.on('press', function(e) {
+            deactivateAutomaticChange();
         });
 
-        sliderManager.on('pressup', function(e) {            
+        sliderManager.on('pressup', function(e) {
             activateAutomaticChange();
         });
 
         //Start of the pan gesture
-        sliderManager.on('panstart', function(e) {            
+        sliderManager.on('panstart', function(e) {
             sliderBandLeftPosition = sliderBand.position().left;
             deactivateAutomaticChange();
         });
 
         //While the pan gesture is happening
-        sliderManager.on('panleft panright', function(e) {            
+        sliderManager.on('panleft panright', function(e) {
             sliderBand.css('left', sliderBandLeftPosition + e.deltaX);
         });
 
         //End of the pan gesture
-        sliderManager.on('panend', function(e) {            
+        sliderManager.on('panend', function(e) {
             var limit = sliderBand.width() - (1.5 * slideWidth);
             var currentBandDisplacement = sliderBand.position().left * -1;
             //The user is trying to move to a slide after the last one
@@ -352,7 +355,7 @@ var ReviewsSlider = function() {
             else{
                 //Computes how much the band was moved and adds one half more
                 var displacementRate = (currentBandDisplacement/slideWidth) + (1/2);
-                currentSlide = Math.ceil(displacementRate);                
+                currentSlide = Math.ceil(displacementRate);
             }
             goToCurrentSlide();
             updateArrowsState();
@@ -402,7 +405,7 @@ var getTokenFromURL =  function() {
     var token = paramsList.substring(paramsList.indexOf('=') + 1);
     if(token !== '') return token;
     return false;
-}; 
+};
 
 //SAVES IN DB ACCESS TO THE DOUBTS POPUP
 var updateDoubtsPopupAccess = function() {
@@ -410,10 +413,10 @@ var updateDoubtsPopupAccess = function() {
     if(token) {
         axios.post('../server/processDoubtsAccess.php', Qs.stringify({token: token}))
         .then(function(response) {
-            if(response.data.error != undefined && !response.data.error) {                
+            if(response.data.error != undefined && !response.data.error) {
             }
             else {
-                console.log(response.data.error);                
+                console.log(response.data.error);
             }
         })
         .catch(function(error) {
@@ -423,7 +426,7 @@ var updateDoubtsPopupAccess = function() {
 };
 
 //SAVES NEW ACCES TO THE PAGE USING TRACKING CODE
-var updateAccessCount = function() {    
+var updateAccessCount = function() {
     var token = getTokenFromURL();
     if(token) {
         axios.get('../server/countNewAccess.php', {
@@ -437,7 +440,7 @@ var updateAccessCount = function() {
         .catch(function(error) {
             console.log(error);
         });
-    }     
+    }
 }
 
 $(document).ready(function() {
@@ -447,7 +450,7 @@ $(document).ready(function() {
     /******Adding event to doubts link and button*******/
     $("#doubt_link, .doubts_button").click(function(){
         $("#questions_popup").css("display", "flex");
-        $("body").css("overflow", "hidden");        
+        $("body").css("overflow", "hidden");
         fbq('track', 'ViewContent', {
             content_type: 'doubts',
         });
@@ -492,20 +495,20 @@ $(document).ready(function() {
     //Adding events to radio buttons changes
     $("input[name='plan']").on("change", function() {
         var $selection = $(this);
-        currentPlanSelected = $selection.attr("data-plan");        
+        currentPlanSelected = $selection.attr("data-plan");
         updatePlanDisplays();
         updateSignature();
     });
 
     //Adding handlers to click events in fake buttons
-    $(".option_button").click(function(){        
+    $(".option_button").click(function(){
         var $buttonPressed = $(this);
         var selectedReference = $buttonPressed.attr("data-reference");
-        var $optionSelected = $("input[value='" + selectedReference + "']");        
+        var $optionSelected = $("input[value='" + selectedReference + "']");
         $(".option_button").removeClass("selected");
         $buttonPressed.addClass("selected");
         $optionSelected.prop("checked", true);
-        $optionSelected.trigger("change");        
+        $optionSelected.trigger("change");
     });
 
     /*********Creating and initializing reviews slider*******/
@@ -524,8 +527,8 @@ $(document).ready(function() {
 
     /******Changing currency depending on accessing country*******/
     axios.get('https://ipapi.co/json/', {responseType: 'json'})
-    .then(function(response) {        
-        
+    .then(function(response) {
+
         if(countryToCurrency.hasOwnProperty(response.data.country)) {
             currentCountrySelected = response.data.country;
             currentCurrencySelected = countryToCurrency[currentCountrySelected];
@@ -534,14 +537,14 @@ $(document).ready(function() {
         else {
             currentCountrySelected = "MX";
             currentCurrencySelected = countryToCurrency[currentCountrySelected];
-            updatePlanDisplays();            
+            updatePlanDisplays();
         }
 
     })
     .catch(function(error) {
         currentCountrySelected = "MX";
         currentCurrencySelected = countryToCurrency[currentCountrySelected];
-        updatePlanDisplays();        
+        updatePlanDisplays();
         console.log(error);
     });
 });
