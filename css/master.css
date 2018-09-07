@@ -458,6 +458,17 @@ body {
             width: 95%; }
             #form_section #form_container #join_us_form #form_fields_container .plan_selector .price_explanation .price {
               font-size: 20px; }
+  #form_section #cash_payment_note {
+    color: #1A223C;
+    display: none;
+    font-family: PFDinTextCondPro;
+    font-weight: bolder;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    width: 80%; }
+    #form_section #cash_payment_note .pink_bold {
+      color: #fa5b61; }
 
 #form_section .price_explanation {
   color: #1A223C;
@@ -998,6 +1009,9 @@ footer {
           border-radius: 5px 0px 0px 5px; }
         #form_section #form_container #join_us_form #form_fields_container .plan_selector .options_fake_buttons .last {
           border-radius: 0px 5px 5px 0px; }
+    #form_section #cash_payment_note {
+      margin-top: -40px;
+      padding: 24px 0px; }
 
   #questions_popup #questions_group_container .close_button {
     background-image: url("../img/common/close_button.png");

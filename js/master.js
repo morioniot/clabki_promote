@@ -443,6 +443,21 @@ var updateAccessCount = function() {
     }
 }
 
+//SCROLL FUNCTION (taken from github/benjamincharity/6058688)
+var smoothScroll = function(el, to, duration) {
+    if (duration < 0) {
+        return;
+    }
+    var difference = to - $(window).scrollTop();
+    var perTick = difference / duration * 10;
+    this.scrollToTimerCache = setTimeout(function() {
+        if (!isNaN(parseInt(perTick, 10))) {
+            window.scrollTo(0, $(window).scrollTop() + perTick);
+            smoothScroll(el, to, duration - 10);
+        }
+    }.bind(this), 10);
+};
+
 $(document).ready(function() {
 
     updateFollowersCount();
@@ -522,10 +537,17 @@ $(document).ready(function() {
         console.log(error);
     });
 
+    /**********Adding scroll event to the contact link in cash payment note ********/
+    $("#cash_payment_note a").on('click', function(e) {
+        e.preventDefault();
+        smoothScroll($(window), $('footer').offset().top, 500);
+    });
+
     /**********Tracking of users by code (timer used to avoid misscounts)*********/
     setTimeout(updateAccessCount, 8000)
 
-    /******Changing currency depending on accessing country*******/
+    /******Changing page depending on accessing country*******/
+    /*Exmaple: country, cash payment note (only for Colombia)*/
     axios.get('https://ipapi.co/json/', {responseType: 'json'})
     .then(function(response) {
 
@@ -533,6 +555,9 @@ $(document).ready(function() {
             currentCountrySelected = response.data.country;
             currentCurrencySelected = countryToCurrency[currentCountrySelected];
             $(".dropdown dd ul .option#" + currentCountrySelected).trigger("click");
+
+            if(currentCountrySelected === "CO")
+                $("#cash_payment_note").css("display", "block");
         }
         else {
             currentCountrySelected = "MX";
