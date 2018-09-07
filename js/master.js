@@ -560,14 +560,18 @@ $(document).ready(function() {
                 $("#cash_payment_note").css("display", "block");
         }
         else {
-            currentCountrySelected = "MX";
+            /*This country is selected when the accessing country
+            is not in the selection list*/
+            currentCountrySelected = "CU";
             currentCurrencySelected = countryToCurrency[currentCountrySelected];
             updatePlanDisplays();
         }
 
     })
     .catch(function(error) {
-        currentCountrySelected = "MX";
+        /*This country is selected when the accessing country
+        is not in the selection list*/
+        currentCountrySelected = "CU";
         currentCurrencySelected = countryToCurrency[currentCountrySelected];
         updatePlanDisplays();
         console.log(error);
