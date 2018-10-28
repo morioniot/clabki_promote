@@ -183,20 +183,27 @@ var createSlide = function( slideInfo ) {
     nameElement.appendTo(identityContainer);
     countryImage.appendTo(identityContainer);
 
-    //Creating stars element
-    var starsContainer = $('<div/>', {class: 'stars_container'});
-    var starsCount = slideInfo.review_rating;
-    for(var i = 1; i <= 5; i++) {
-        var star = $('<span/>', {class:'star'});
-        if(i <= starsCount)
-            star.addClass('full');
-        star.appendTo(starsContainer);
+    //Creating avaliation element
+    if(slideInfo.review_rating !== undefined) {
+        var avaliationContainer = $('<div/>', {class: 'stars_container'});
+        var starsCount = slideInfo.review_rating;
+        for(var i = 1; i <= 5; i++) {
+            var star = $('<span/>', {class:'star'});
+            if(i <= starsCount)
+                star.addClass('full');
+            star.appendTo(avaliationContainer);
+        }
     }
+    else {
+        var avaliationContainer = $('<div/>', {class: 'emotic_container'});
+        //Adding 'positive' or 'negative' class according to recommendation type
+        avaliationContainer.addClass( slideInfo.recommendation_type );
+    }
+
 
     //Creating date element
     var dateContainer = $('<span/>', {class:'review_date'});
-    var date = moment(slideInfo.review_date, moment.ISO_8601);
-    dateContainer.text(date.format('DD/MM/YYYY'));
+    dateContainer.text(slideInfo.display_date);
 
     //Crating review text element
     var textContainer = $('<p/>', {class:'review_text'});
@@ -213,7 +220,7 @@ var createSlide = function( slideInfo ) {
     //Creting full data element (contains all the previous elements)
     var fullDataContainer = $('<article/>', {class:'review_data'});
     identityContainer.appendTo(fullDataContainer);
-    starsContainer.appendTo(fullDataContainer);
+    avaliationContainer.appendTo(fullDataContainer);
     dateContainer.appendTo(fullDataContainer);
     textContainer.appendTo(fullDataContainer);
     linkContainer.appendTo(fullDataContainer);

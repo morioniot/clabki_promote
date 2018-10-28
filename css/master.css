@@ -45,6 +45,12 @@
   src: url("../fonts/icomoon.eot?vgf2oh#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?vgf2oh") format("truetype"), url("../fonts/icomoon.woff?vgf2oh") format("woff"), url("../fonts/icomoon.svg?vgf2oh#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'faces';
+  src: url("../fonts/faces.eot?vgf2oh");
+  src: url("../fonts/faces.eot?vgf2oh#iefix") format("embedded-opentype"), url("../fonts/faces.ttf?vgf2oh") format("truetype"), url("../fonts/faces.woff?vgf2oh") format("woff"), url("../fonts/faces.svg?vgf2oh#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 * {
   border: 0;
   margin: 0;
@@ -794,6 +800,14 @@ body {
         content: "\e9d7"; }
     #reviews_section .review_data .stars_container .star.full:before {
       content: "\e9d9"; }
+    #reviews_section .review_data .emotic_container {
+      color: #fa5b61;
+      font-family: "faces";
+      font-size: 20px; }
+    #reviews_section .review_data .emotic_container.positive:before {
+      content: "\e901"; }
+    #reviews_section .review_data .emotic_container.negative:before {
+      content: "\e900"; }
   #reviews_section #slider_touch {
     height: 100%;
     left: 0;

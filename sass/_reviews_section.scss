@@ -5,7 +5,7 @@
 #reviews_section {
 
     background-color: $color-main-background;
-    padding: 60px 0px;   
+    padding: 60px 0px;
 
     .slider {
         background-color: white;
@@ -19,14 +19,14 @@
 
         #slider_band {
             @include display-flex;
-            height: 100%;            
+            height: 100%;
             overflow: hidden;
-            position: relative;            
+            position: relative;
         }
 
         .slide {
             @include display-flex;
-            @include align-items(center);            
+            @include align-items(center);
             height: 100%;
             overflow-y: hidden;
             position: relative;
@@ -52,7 +52,7 @@
                 font-size: 12px;
                 position: relative; //For z-index to work
                 z-index: 3;
-            }        
+            }
         }
 
         .arrows_container {
@@ -62,7 +62,7 @@
             right: 15px;
             top: 15px;
             width: 49px;
-            z-index: 3;            
+            z-index: 3;
 
             .arrow {
                 color: white;
@@ -88,7 +88,7 @@
                 }
             }
 
-        }       
+        }
     }
 
     .review_data {
@@ -113,11 +113,11 @@
                 margin-top: -3px;
                 width: 20px;
             }
-        }        
+        }
 
         .review_text {
             text-align: left;
-            font-family: $font-paragraph;            
+            font-family: $font-paragraph;
         }
 
         .review_date {
@@ -126,8 +126,8 @@
             opacity: 0.7;
         }
 
-        .stars_container {            
-            
+        .stars_container {
+
             .star {
                 color: $color-main-pink;
                 font-family: $font-icomoon;
@@ -142,11 +142,29 @@
                 }
             }
         }
+
+        .emotic_container {
+            color: $color-main-pink;
+            font-family: $font-faces;
+            font-size: 20px;
+        }
+
+        .emotic_container.positive {
+            &:before {
+                content: "\e901";
+            }
+        }
+
+        .emotic_container.negative {
+            &:before {
+                content: "\e900";
+            }
+        }
     }
 
-    #slider_touch {        
+    #slider_touch {
         height: 100%;
-        left: 0;        
+        left: 0;
         position: absolute;
         top: 0;
         width: 100%;

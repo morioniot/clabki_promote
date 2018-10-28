@@ -63,3 +63,14 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'faces';
+  src:  url('../fonts/faces.eot?vgf2oh');
+  src:  url('../fonts/faces.eot?vgf2oh#iefix') format('embedded-opentype'),
+    url('../fonts/faces.ttf?vgf2oh') format('truetype'),
+    url('../fonts/faces.woff?vgf2oh') format('woff'),
+    url('../fonts/faces.svg?vgf2oh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
