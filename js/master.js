@@ -49,9 +49,9 @@ var plansInformation = {
     },
 
     moreDays : {
-        USD: "17",
-        COP: "45000",
-        MXN: "320",
+        USD: "18",
+        COP: "50000",
+        MXN: "360",
         peoplePerDay: "1000",
         days: "7"
     }
