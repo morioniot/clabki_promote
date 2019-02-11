@@ -1,5 +1,82 @@
 [
     {
+        "review_text": "Señores muy buen Servicio... Ya aparecio nuestro peludo realmente muy agradecidos super recomendados para cuando por alguna situación se pierda una mascota de seguro esto será un punto de partida para su regreso... MIL gracias",
+        "review_date": 1549827826,
+        "review_display_date": "2019-02-10T19:43:46+0000",
+        "review_length": 226,
+        "reviewer_name": "Juan Diego Rojas Garzón",
+        "reviewer_country": "Colombia.png",
+        "review_link": "https://www.facebook.com/juandiego.rojasgarzon.1/posts/10217504835868495",
+        "reviewer_picture": "diego_yeye.jpg",
+        "display_date": "10/02/2019"
+    },
+    {
+        "review_text": "Muy buena atencion y servicio, Aparte de eso son muy eficacez pude hallar a mi perrita en cuestion de tiempo gracias a sus servicios. De verdad muy agradecido y recomendado al 100%👌",
+        "review_date": 1549295004,
+        "review_display_date": "2019-02-04T15:43:24+0000",
+        "review_length": 182,
+        "reviewer_name": "Stiven Romero Fajardo",
+        "reviewer_country": "Colombia.png",
+        "review_link": "https://www.facebook.com/romerofajardo/posts/10212515842762331",
+        "reviewer_picture": "stiven_alaska.jpg",
+        "display_date": "04/02/2019"
+    },
+    {
+        "review_text": "Muchísimas gracias, gracias a la publicidad de Clabki muchas personas me ayudaron y llamaron para dar con una zona donde estuviera mi bebe y poder encontrarla 😍🙏🏼💥 son los mejores!!!",
+        "review_date": 1549117552,
+        "review_display_date": "2019-02-02T14:25:52+0000",
+        "review_length": 186,
+        "reviewer_name": "Jenniffer Cárdenas Muñoz",
+        "reviewer_country": "Colombia.png",
+        "review_link": "https://www.facebook.com/jjccm98/posts/10219229690559494",
+        "reviewer_picture": "jenniffer_molly.png",
+        "display_date": "02/02/2019"
+    },
+    {
+        "review_text": "Gracias a esta pagina que hizo pública y viral la información acerca de la pérdida temporal de mi perro Charly, unas personas se pusieron en contacto conmigo y pude reencontrarme con el. A todos mil gracias y recomendada al 100*100",
+        "review_date": 1544751754,
+        "review_display_date": "2018-12-14T01:42:34+0000",
+        "review_length": 231,
+        "reviewer_name": "David Julián Cortés Guasca",
+        "reviewer_country": "Colombia.png",
+        "review_link": "https://www.facebook.com/davidjulian.cortesguasca/posts/10217536420945469",
+        "reviewer_picture": "julian_charly.jpg",
+        "display_date": "13/12/2018"
+    },
+    {
+        "review_text": "Gracias a Nicolás por estar tan pendiente, las redes sociales son muy importantes, nos conectan y nos ayudan en todo momento! Gracias a sus publicaciones encontré mi perrito Motas.  Muchas bendiciones a ustedes por su ayuda y gestión. Supermegarecomendado.... Nunca dejes de insistir, no pierdas la fe! Miles de éxitos! ♥️",
+        "review_date": 1544633907,
+        "review_display_date": "2018-12-12T16:58:27+0000",
+        "review_length": 322,
+        "reviewer_name": "Nataly Niampira Vargas",
+        "reviewer_country": "Colombia.png",
+        "review_link": "https://www.facebook.com/Natix29/posts/10156172734547986",
+        "reviewer_picture": "nataly_motas.jpg",
+        "display_date": "12/12/2018"
+    },
+    {
+        "review_text": "Excelente servicio. Son muy eficientes y efectivos. el servicio cumplió con todas mis espectativas. Todas las personas que están pasando por ese momento de haber perdido su mascota y que están en el proceso de búsqueda, deberían tomar este servicio.🤩👌👍",
+        "review_date": 1544192843,
+        "review_display_date": "2018-12-07T14:27:23+0000",
+        "review_length": 255,
+        "reviewer_name": "Luisa Fernanda Valencia Palomar",
+        "reviewer_country": "Colombia.png",
+        "review_link": "https://www.facebook.com/luisaaj10/posts/10156031248392219",
+        "reviewer_picture": "luisa_cleo.jpg",
+        "display_date": "07/12/2018"
+    },
+    {
+        "review_text": "Fue una gran ayuda para encontrar a mi bebé,me parece genial que existan sitios como estos para ayudar alas personas a encontrar estos seres que son parte de nuestra vida,siempre estuvieron pendientes de informar novedades,de preguntar. Gracias totales!",
+        "review_date": 1540401704,
+        "review_display_date": "2018-10-24T17:21:44+0000",
+        "review_length": 253,
+        "reviewer_name": "Angélica Rojas",
+        "reviewer_country": "Colombia.png",
+        "review_link": "https://www.facebook.com/leidy.a.rojas.1/posts/10156921253408896",
+        "reviewer_picture": "angelica_tony.jpg",
+        "display_date": "24/10/2018"
+    },
+    {
         "review_text": "Muy recomendados. Gracias a esta linda iniciativa nuestro querido peludito está de vuelta con su familia, el servicio de geolocalización fue clave. Además son muy amables, están pendientes y acompañan en esos angustiantes momentos. Muchas gracias.",
         "review_rating": 5,
         "review_date": 1539710122,
@@ -8,8 +85,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/andreitta318/posts/10160990266590542:0",
         "reviewer_picture": "andrea_la_llave.jpg",
-        "display_date": "16/10/2018",
-        "recommendation_type": "positive"
+        "display_date": "16/10/2018"
     },
     {
         "review_text": "Pese que al inicio dudas, la difusion inmediata y la atención que le ponen vale la pena por que asi sea poca la probabilidad mientras hay una oportunidad de lograrlo haslo arriesgandoe gracias Clabki por su trabajo",
@@ -19,8 +95,7 @@
         "reviewer_country": "Ecuador.png",
         "review_link": "https://www.facebook.com/jonathan.ruiz.777/posts/10215719897284734",
         "reviewer_picture": "jonathan_cuky.jpg",
-        "display_date": "07/10/2018",
-        "recommendation_type": "positive"
+        "display_date": "07/10/2018"
     },
     {
         "review_text": "Gracias clabki por la difusión que hizo para que nuestro pequeño regresara a casa. Estamos felices porque Niño está en casa 😋😋😋😋",
@@ -30,8 +105,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/beatriz.barrero/posts/10216079854325143",
         "reviewer_picture": "beatriz_niño.jpg",
-        "display_date": "01/10/2018",
-        "recommendation_type": "positive"
+        "display_date": "01/10/2018"
     },
     {
         "review_text": "Gracias a su ayuda y a la de otras formas mas pudimos encontrar a nuestro Avatar... Ahora mi familia esta completa y muy feliz de nuevo. RECOMENDADO el servicio y super buena la atencion",
@@ -41,8 +115,7 @@
         "reviewer_country": "Ecuador.png",
         "review_link": "https://www.facebook.com/alexandersambo.enriquez/posts/2077156135661208",
         "reviewer_picture": "alexander_avatar.jpg",
-        "display_date": "29/09/2018",
-        "recommendation_type": "positive"
+        "display_date": "29/09/2018"
     },
     {
         "review_text": "Una Gran ayuda para encontrar mascotas perdidas. Gracias Clabki Por colaborar en la busqueda de nuestra consentida Cata. 100% recomendado",
@@ -52,8 +125,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/permalink.php?story_fbid=2196765250594523&id=100007832087201",
         "reviewer_picture": "mariac_cata.jpg",
-        "display_date": "22/09/2018",
-        "recommendation_type": "positive"
+        "display_date": "22/09/2018"
     },
     {
         "review_text": "Agradecida con la comunidad Clabky, en cuestión de horas encontramos a nuestra mascota gracias a la geolocalización , un trato muy humano . Mil Gracias!!!",
@@ -64,8 +136,7 @@
         "reviewer_country": "Mexico.png",
         "review_link": "https://www.facebook.com/zotrez/posts/2030426320352822:0",
         "reviewer_picture": "zotrez_max.jpg",
-        "display_date": "22/09/2018",
-        "recommendation_type": "positive"
+        "display_date": "22/09/2018"
     },
     {
         "review_text": "Una gran ayuda para encontrar a mascotas perdidas. Los recomiendo muchísimo.",
@@ -75,8 +146,7 @@
         "reviewer_country": "Mexico.png",
         "review_link": "https://www.facebook.com/HeyAndyGR/posts/2158922014387043",
         "reviewer_picture": "andrea_kaylie.jpg",
-        "display_date": "12/09/2018",
-        "recommendation_type": "positive"
+        "display_date": "12/09/2018"
     },
     {
         "review_text": "Muy efectivo, ayer pusimos la publicación y ya hoy apareció nuestra perrita vale la pena publicar acá!!! Muchas muchas gracias",
@@ -86,8 +156,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/natalia.pieschaconfonrodona/posts/10160919606825224",
         "reviewer_picture": "natalia_nala.jpg",
-        "display_date": "08/09/2018",
-        "recommendation_type": "positive"
+        "display_date": "08/09/2018"
     },
     {
         "review_text": "Hoy adquirí el servicio y hoy recuperé a Croky! Gracias por todo! Gran servicio.",
@@ -97,8 +166,7 @@
         "reviewer_country": "Mexico.png",
         "review_link": "https://www.facebook.com/ricardo.glezavalos/posts/2093387564060030",
         "reviewer_picture": "ricardo_croky.jpg",
-        "display_date": "29/08/2018",
-        "recommendation_type": "positive"
+        "display_date": "29/08/2018"
     },
     {
         "review_text": "Muy recomendada, la mejor herramienta para buscar a nuestros peluditos, gracias a Clabki encontramos a nuestra princesa y estamos felices de tenerla con nosotros muy efectivo y seguro!! ��",
@@ -109,8 +177,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/andrea.amorocho.37/posts/10156120618743937:0",
         "reviewer_picture": "andrea_princesa.jpg",
-        "display_date": "27/07/2018",
-        "recommendation_type": "positive"
+        "display_date": "27/07/2018"
     },
     {
         "review_text": "Muchas gracias a CLABKI por prestarnos su servicio de manera tan amable y comprensiva para esos momentos tan difíciles, un excelente trabajo y acompañamiento. Gracias Nicolás. Lo recomiendo mucho. NEGRO EN CASA!!",
@@ -121,8 +188,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/leidy.montilla.77/posts/10212287500884392:0",
         "reviewer_picture": "laidy_negro.jpg",
-        "display_date": "24/06/2018",
-        "recommendation_type": "positive"
+        "display_date": "24/06/2018"
     },
     {
         "review_text": "Están muy pendientes de los comentarios y t apoyan mucho en todo el proceso de búsqueda!...en verdad los súper recomiendo!!!!",
@@ -133,8 +199,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/andrea.juliana.rangel/posts/10155442082232466:0",
         "reviewer_picture": "juliana_jacinto.jpg",
-        "display_date": "07/06/2018",
-        "recommendation_type": "positive"
+        "display_date": "07/06/2018"
     },
     {
         "review_text": "Clabki es la mejor herramienta que el ser humano pudo inventar para poder ayudar a encontrar sus hijos de 4 patas... realmente es una bendición el haber encontrado está pagina... son un grupo extraordinario que día a día... segundo a segundo están pendientes de tu caso... jamás te dejan perder la fe... no tenia ni idea que clabki existía... pero por cosas de Dios ellos me contactaron y deposite toda mi confianza y mi fe en ellos y logramos juntos el objetivo que era encontrar a Doky... pagamos un plan de 7 días y justo un día antes que se venciera el plan milagrosamente doky aparece! Felicitaciones a clabki ustedes mostraron total seriedad de principio a fin... super recomendados!!!",
@@ -145,8 +210,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/violeta.p.gonzalez/posts/10156492791302769:0",
         "reviewer_picture": "violeta_doky.jpg",
-        "display_date": "05/06/2018",
-        "recommendation_type": "positive"
+        "display_date": "05/06/2018"
     },
     {
         "review_text": "Exelente me ayudaron a encontrar a mi perrito Lucky muy rápido, su servicio es el mejor!!",
@@ -157,8 +221,7 @@
         "reviewer_country": "Ecuador.png",
         "review_link": "https://www.facebook.com/kmy.quinteros.5/posts/2079617585626517:0",
         "reviewer_picture": "camila_lucky.jpg",
-        "display_date": "30/05/2018",
-        "recommendation_type": "positive"
+        "display_date": "30/05/2018"
     },
     {
         "review_text": "Quedo agradecido por esta comunidad que abre tantos corazones por una misma causa. El servicio sin duda fue excelente mil gracias por todo.",
@@ -169,8 +232,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/cookfck/posts/10156269746278815:0",
         "reviewer_picture": "leonardo_teo.jpg",
-        "display_date": "26/05/2018",
-        "recommendation_type": "positive"
+        "display_date": "26/05/2018"
     },
     {
         "review_text": "Gracias por su amable respuesta y por su pronta colaboración apareció mi perrito llego a nuestra casa en 24 horas solo Dios sabe donde estaba, mil gracias a todos los que nos ayudaron y gracias clabki Dios los bendiga siempre",
@@ -181,8 +243,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/yolanda.Bohorquez.08/posts/10155611706676527:0",
         "reviewer_picture": "yoli_niky.jpg",
-        "display_date": "26/05/2018",
-        "recommendation_type": "positive"
+        "display_date": "26/05/2018"
     },
     {
         "review_text": "Gracias son lo máximo una gran labor con mucho amor recomendados totalmente",
@@ -193,20 +254,7 @@
         "reviewer_country": "Colombia.png",
         "review_link": "https://www.facebook.com/danielag288/posts/10156068184069504:0",
         "reviewer_picture": "daniela_simon.jpg",
-        "display_date": "24/05/2018",
-        "recommendation_type": "positive"
-    },
-    {
-        "review_text": "Esta increíble iniciativa nos ayudó muchísimo en el proceso de búsqueda de mi perrita tormenta, ahora ella ya está en casa sana y salva gracias a la gran difusión que hubo de su información, Clabki cumplió un papel estratégico con la geolocalización y el acompañamiento tan humano que tuvieron con mi familia, estamos muy agradecidos y felices ���",
-        "review_rating": 5,
-        "review_date": 1526440651,
-        "review_length": 347,
-        "reviewer_name": "Maria Camila Naranjo Giraldo",
-        "reviewer_country": "Colombia.png",
-        "review_link": "https://www.facebook.com/maria.c.naranjo.90/posts/10155978906797839:0",
-        "reviewer_picture": "camila_tormenta.jpg",
-        "display_date": "15/05/2018",
-        "recommendation_type": "positive"
+        "display_date": "24/05/2018"
     },
     {
         "review_text": "Muchísimas gracias por toda su ayuda!  A medida que pasaba el tiempo podía ver cómo se compartía la publicación para lograr encontrar a Ben!  Gracias chicos!!!! Hoy una niña duerme feliz junto a su �!!!�����",
@@ -217,79 +265,6 @@
         "reviewer_country": "Argentina.png",
         "review_link": "https://www.facebook.com/benet.sicaro/posts/10155258909451109:0",
         "reviewer_picture": "benet_benu.jpg",
-        "display_date": "10/05/2018",
-        "recommendation_type": "positive"
-    },
-    {
-        "review_text": "Es un grupo humano, ayuda y se interesa porque los animales compañía regresen a sus familias. Dan un trato amable y comprensivo. Muchas gracias.",
-        "review_rating": 5,
-        "review_date": 1525281202,
-        "review_length": 144,
-        "reviewer_name": "Natalia Ayanami Ortiz",
-        "reviewer_country": "Colombia.png",
-        "review_link": "https://www.facebook.com/rhayanami/posts/10156307256502673:0",
-        "reviewer_picture": "natalia_lucius.jpg",
-        "display_date": "02/05/2018",
-        "recommendation_type": "positive"
-    },
-    {
-        "review_text": "Es un grupo maravilloso dispuesto a ayudar en situaciones tan difíciles para nosotros, como lo son el perder a nuestras mascotas ya que ellas hacen parte de nuestro hogar. Brindan una muy buena atención, siempre brindando su apoyo durante el proceso de búsqueda. Agradezco esta herramienta de búsqueda porque gracias a ella encontré a mi amada mascota.",
-        "review_rating": 5,
-        "review_date": 1524666623,
-        "review_length": 352,
-        "reviewer_name": "Jineth Pinzon",
-        "reviewer_country": "Colombia.png",
-        "review_link": "https://www.facebook.com/JinethPinzon12/posts/1933383480036278:0",
-        "reviewer_picture": "jineth_natasha.jpg",
-        "display_date": "25/04/2018",
-        "recommendation_type": "positive"
-    },
-    {
-        "review_text": "Amanecimos super felices con Pepito de regreso en nuestro hogar y sobretodo muy agradecidos con Dios y todas las personas que nos colaboraron en esta noble causa, como lo hicieron ustedes en este caso. Gracias Nico a traves de Clabki. Que Dios les bendiga enormemente y a sus familias. ������",
-        "review_rating": 5,
-        "review_date": 1524330799,
-        "review_length": 292,
-        "reviewer_name": "Paola Navas",
-        "reviewer_country": "Colombia.png",
-        "review_link": "https://www.facebook.com/paola.navas.948/posts/10157190464743765:0",
-        "reviewer_picture": "paola_pepe.jpg",
-        "display_date": "21/04/2018",
-        "recommendation_type": "positive"
-    },
-    {
-        "review_text": "Es un excelente grupo, que buen servicio son claros en el momento de publicar la información y en el acompañamiento que hacen durante  el proceso, están pendientes todo el tiempo siempre con una voz de aliento y positivismo ante la situación, es una muy buena herramienta, estoy muy agradecida por su apoyo los recomiendo.",
-        "review_rating": 5,
-        "review_date": 1523289046,
-        "review_length": 322,
-        "reviewer_name": "Diana Paola Madero",
-        "reviewer_country": "Colombia.png",
-        "review_link": "https://www.facebook.com/diana.madero/posts/10156271623849293:0",
-        "reviewer_picture": "diana_cayo.jpg",
-        "display_date": "09/04/2018",
-        "recommendation_type": "positive"
-    },
-    {
-        "review_text": "Gran labor de la empresa Clabki, estoy supremamente agradecida. Recuperamos nuestras perritas luna y negra. En la tarde de ayer encontramos a negra, gracias a la señorita Adriana quien nos avisó y acompañó nuestra perrita. Y hoy nos llamó la señora Irma de bosques de medina y nos avisó que luna se encontraba allí. Dios los bendiga a todos los que nos colaboraron y acompañaron en este acontecimiento.",
-        "review_rating": 5,
-        "review_date": 1523040128,
-        "review_length": 402,
-        "reviewer_name": "Maria Emperatriz Del Pilar Loaiza Segura",
-        "reviewer_country": "Colombia.png",
-        "review_link": "https://www.facebook.com/emperaiz.loaiza/posts/2527173930841149:0",
-        "reviewer_picture": "maria_luna.jpg",
-        "display_date": "06/04/2018",
-        "recommendation_type": "positive"
-    },
-    {
-        "review_text": "Un excelente servicio recomendado al 100% fue una gran herramienta en la busqueda de mi mascota. Es practico y las personas a cargo estan pendiente de cada detalle asi que es una.ayuda impresionante.",
-        "review_rating": 5,
-        "review_date": 1522635205,
-        "review_length": 199,
-        "reviewer_name": "Lala TP",
-        "reviewer_country": "Colombia.png",
-        "review_link": "https://www.facebook.com/laura.l.torresp/posts/10156332863322490:0",
-        "reviewer_picture": "lala_leon.jpg",
-        "display_date": "01/04/2018",
-        "recommendation_type": "positive"
+        "display_date": "10/05/2018"
     }
 ]
