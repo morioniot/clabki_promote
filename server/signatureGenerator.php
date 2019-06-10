@@ -16,15 +16,15 @@
 	}
 
 	$time = new DateTime();
-	$ApiKey = "4Vj8eK4rloUd272L48hsrarnUA";
+	$api_key = "4Vj8eK4rloUd272L48hsrarnUA";
 	$merchant_id = "508029";
-	$reference_code = $time->getTimestamp() . generateToken(6);	
+	$reference_code = $time->getTimestamp() . generateToken(6);
 
 	//Generating signature depending on country (updates payment methods)
-	if($country === "CO")
-		$signature = "$ApiKey~$merchant_id~$reference_code~$value~$currency";
+	if($country === "CO" || $country === "MX")
+		$signature = "$api_key~$merchant_id~$reference_code~$value~$currency";
 	else
-		$signature = "$ApiKey~$merchant_id~$reference_code~$value~$currency~VISA,MASTERCARD,DINERS,AMEX";
+		$signature = "$api_key~$merchant_id~$reference_code~$value~$currency~VISA,MASTERCARD,DINERS,AMEX";
 
 	$encoded_signature = md5($signature);
 	$response = new stdClass();

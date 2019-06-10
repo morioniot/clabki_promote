@@ -58,6 +58,25 @@ var plansInformation = {
 
 };
 
+//SELECTS CORRECT ACCOUNT ID ACCORDING TO COUNTRY
+var selectAccountIDBasedOnCountry = function(country) {
+    
+    var accountId = "";
+
+    switch(country) {
+        case "CO":
+            accountId = "516688";
+            break;
+        case "MX":
+            accountId = "815599";
+            break;
+        default:
+            accountId = "516688";            
+    }
+
+    return accountId;
+};
+
 //ASKING FOR FOLLOWERS NUMBER
 var updateFollowersCount = function() {
     axios('../server/getFollowers.php')
@@ -92,7 +111,7 @@ var updatePaymentMethodVariable = function( country ) {
     //The payment method variable is updated only if the
     //country is different from CO
     $paymentMethodInput = $('input[name="paymentMethods"]');
-    if(country !== "CO") {
+    if(country !== "CO" && country !== "MX") {
         if(!($paymentMethodInput.length > 0)) {
             $("<input>")
             .attr("name", "paymentMethods")
@@ -113,10 +132,12 @@ var updatePlanDisplays = function() {
     var price = plansInformation[currentPlanSelected][currentCurrencySelected];
     var days = plansInformation[currentPlanSelected]["days"];
     var people = plansInformation[currentPlanSelected]["peoplePerDay"];
+    var accountId = selectAccountIDBasedOnCountry(currentCountrySelected);
 
     //Form variables
     $("input[name='amount']").val(price);
     $("input[name='currency']").val(currentCurrencySelected);
+    $("input[name='accountId']").val(accountId);
     //Display tags
     $(".price_explanation .currency").html(currentCurrencySelected);
     $(".price_explanation .value").html("$" + price);

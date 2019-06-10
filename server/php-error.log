@@ -24,3 +24,18 @@ Stack trace:
 #0 /home/morion/Documents/Development/Software/Web/Clabki2/clabki/index.php(8): DatabaseConnection->__construct()
 #1 {main}
   thrown in /home/morion/Documents/Development/Software/Web/Clabki2/clabki/server/dbconnection.php on line 18
+[02-Jun-2019 18:32:06 America/New_York] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php:3
+Stack trace:
+#0 /home/miguel/Documents/Clabki/clabki_promote/server/register.php(8): require_once()
+#1 {main}
+  thrown in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 3
+[02-Jun-2019 18:51:02 America/New_York] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php:3
+Stack trace:
+#0 /home/miguel/Documents/Clabki/clabki_promote/server/register.php(8): require_once()
+#1 {main}
+  thrown in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 3
+[02-Jun-2019 18:51:44 America/New_York] PHP Fatal error:  Uncaught Error: Class 'mysqli' not found in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php:3
+Stack trace:
+#0 /home/miguel/Documents/Clabki/clabki_promote/server/register.php(8): require_once()
+#1 {main}
+  thrown in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 3
