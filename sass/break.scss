@@ -1,0 +1,67 @@
+@import "fonts";
+@import "reset";
+@import "general_definitions";
+@import "header";
+
+/*********************************************************************************************/
+/******************************** Break Section ***********************************/
+/*********************************************************************************************/
+
+body {
+    @include display-flex;
+    @include flex-direction(column);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#break_section {
+    @include align-items(center);
+    @include display-flex;
+    @include flex-direction(column);
+    @include flex(1);
+    @include justify-content(center);
+    background-color: $color-main-background;
+    color: $color-main-font;
+    font-family: $font-title;
+    font-size: 22px;    
+
+    .break_announcement {
+        max-width: 450px;
+        text-align: center;
+        width: 80%;
+
+        .cat_image {
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+            width: 40%;
+        }
+
+        .return_date {
+            margin-top: 30px;
+            font-size: 26px;
+            font-weight: 600;
+
+            .date {
+                color: $color-main-pink;                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #break_section {
+        font-size: 5.5vw;
+        .break_announcement {
+            .cat_image {
+                width: 30%;
+            }
+            .return_date {
+                font-size: 6.8vw;
+            }
+        }
+    }
+}

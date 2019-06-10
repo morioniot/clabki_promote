@@ -1,0 +1,204 @@
+@font-face {
+  font-family: PFDinTextCondPro;
+  src: url("../fonts/PFDinTextCondPro-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/PFDinTextCondPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCondPro-Bold.woff") format("woff"), url("../fonts/PFDinTextCondPro-Bold.ttf") format("truetype"), url("../fonts/PFDinTextCondPro-Bold.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: PFDinTextCondPro;
+  src: url("../fonts/PFDinTextCondPro-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/PFDinTextCondPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCondPro-Light.woff") format("woff"), url("../fonts/PFDinTextCondPro-Light.ttf") format("truetype"), url("../fonts/PFDinTextCondPro-Light.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: PFDinTextCondPro;
+  src: url("../fonts/PFDinTextCondPro-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/PFDinTextCondPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCondPro-Medium.woff") format("woff"), url("../fonts/PFDinTextCondPro-Medium.ttf") format("truetype"), url("../fonts/PFDinTextCondPro-Medium.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: PFDinTextCondPro;
+  src: url("../fonts/PFDinTextCondPro-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/PFDinTextCondPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCondPro-Regular.woff") format("woff"), url("../fonts/PFDinTextCondPro-Regular.ttf") format("truetype"), url("../fonts/PFDinTextCondPro-Regular.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: PFDinTextCondPro;
+  src: url("../fonts/PFDinTextCondPro-Thin.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/PFDinTextCondPro-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCondPro-Thin.woff") format("woff"), url("../fonts/PFDinTextCondPro-Thin.ttf") format("truetype"), url("../fonts/PFDinTextCondPro-Thin.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?vgf2oh");
+  src: url("../fonts/icomoon.eot?vgf2oh#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?vgf2oh") format("truetype"), url("../fonts/icomoon.woff?vgf2oh") format("woff"), url("../fonts/icomoon.svg?vgf2oh#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "faces";
+  src: url("../fonts/faces.eot?vgf2oh");
+  src: url("../fonts/faces.eot?vgf2oh#iefix") format("embedded-opentype"), url("../fonts/faces.ttf?vgf2oh") format("truetype"), url("../fonts/faces.woff?vgf2oh") format("woff"), url("../fonts/faces.svg?vgf2oh#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f1cd4e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+#logo_container {
+  /*background-color: #666;*/
+  align-items: center;
+  -webkit-align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-left: 15px;
+}
+#logo_container a {
+  background: url("../img/common/logo.png");
+  display: block;
+  height: 60px;
+  width: 130px;
+}
+
+#social_link_container {
+  align-items: center;
+  -webkit-align-items: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-family: PFDinTextCondPro;
+  font-weight: bold;
+  font-size: 22px;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  margin-right: 20px;
+  width: 140px;
+}
+#social_link_container .social_link {
+  /*background-color: crimson;*/
+  display: block;
+}
+#social_link_container .facebook_link {
+  background-position: top center;
+  background: url("../img/common/facebook.png");
+  height: 36px;
+  width: 36px;
+}
+#social_link_container .facebook_link:hover {
+  background-position: bottom center;
+}
+
+@media screen and (max-width: 640px) {
+  #logo_container {
+    padding-left: 10px;
+  }
+
+  #logo_container a {
+    background: url("../img/common/logo_mobile.png");
+    height: 46px;
+    width: 100px;
+  }
+}
+/*********************************************************************************************/
+/******************************** Break Section ***********************************/
+/*********************************************************************************************/
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#break_section {
+  align-items: center;
+  -webkit-align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  justify-content: center;
+  -webkit-justify-content: center;
+  background-color: #ffffee;
+  color: #1A223C;
+  font-family: PFDinTextCondPro;
+  font-size: 22px;
+}
+#break_section .break_announcement {
+  max-width: 450px;
+  text-align: center;
+  width: 80%;
+}
+#break_section .break_announcement .cat_image {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 40%;
+}
+#break_section .break_announcement .return_date {
+  margin-top: 30px;
+  font-size: 26px;
+  font-weight: 600;
+}
+#break_section .break_announcement .return_date .date {
+  color: #fa5b61;
+}
+
+@media only screen and (max-width: 450px) {
+  #break_section {
+    font-size: 5.5vw;
+  }
+  #break_section .break_announcement .cat_image {
+    width: 30%;
+  }
+  #break_section .break_announcement .return_date {
+    font-size: 6.8vw;
+  }
+}
+
+/*# sourceMappingURL=break.css.map */
