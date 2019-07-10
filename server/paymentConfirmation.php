@@ -14,7 +14,8 @@
         "6" => "DEBIT_CARD",
         "7" => "CASH",
         "8" => "REFERENCED",
-        "10" => "BANK_REFERENCED"
+        "10" => "BANK_REFERENCED",
+        "14" => "SPEI"
     );
 
     //Recovering data from post request
