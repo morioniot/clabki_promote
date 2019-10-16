@@ -33,25 +33,25 @@ var countryToCurrency =  {
 var plansInformation = {
 
     basicPlan : {
-        USD: "9",
+        USD: "10",
         COP: "25000",
-        MXN: "170",
+        MXN: "190",
         peoplePerDay: "1000",
         days: "3"
     },
 
     morePeople : {
-        USD: "15",
+        USD: "17",
         COP: "40000",
-        MXN: "283",
+        MXN: "320",
         peoplePerDay: "2000",
         days: "3"
     },
 
     moreDays : {
-        USD: "18",
+        USD: "20",
         COP: "50000",
-        MXN: "360",
+        MXN: "400",
         peoplePerDay: "1000",
         days: "7"
     }
