@@ -22,7 +22,7 @@ var countryToCurrency =  {
     NI: "USD",
     PA: "USD",
     PY: "USD",
-    PE: "USD",
+    PE: "PEN",
     PR: "USD",
     DO: "USD",
     UY: "USD",
@@ -36,6 +36,7 @@ var plansInformation = {
         USD: "10",
         COP: "25000",
         MXN: "190",
+        PEN: "34",
         peoplePerDay: "1000",
         days: "3"
     },
@@ -44,6 +45,7 @@ var plansInformation = {
         USD: "17",
         COP: "40000",
         MXN: "320",
+        PEN: "57",
         peoplePerDay: "2000",
         days: "3"
     },
@@ -52,6 +54,7 @@ var plansInformation = {
         USD: "20",
         COP: "50000",
         MXN: "400",
+        PEN: "70",
         peoplePerDay: "1000",
         days: "7"
     }
@@ -69,6 +72,9 @@ var selectAccountIDBasedOnCountry = function(country) {
             break;
         case "MX":
             accountId = "815599";
+            break;
+        case "PE":
+            accountId = "835903";
             break;
         default:
             accountId = "516688";            
@@ -111,7 +117,7 @@ var updatePaymentMethodVariable = function( country ) {
     //The payment method variable is updated only if the
     //country is different from CO
     $paymentMethodInput = $('input[name="paymentMethods"]');
-    if(country !== "CO" && country !== "MX") {
+    if (country !== "CO" && country !== "MX" && country !== "PE") {
         if(!($paymentMethodInput.length > 0)) {
             $("<input>")
             .attr("name", "paymentMethods")

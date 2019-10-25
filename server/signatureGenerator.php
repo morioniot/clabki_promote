@@ -21,7 +21,7 @@
 	$reference_code = $time->getTimestamp() . generateToken(6);
 
 	//Generating signature depending on country (updates payment methods)
-	if($country === "CO" || $country === "MX")
+	if($country === "CO" || $country === "MX" || $country === "PE")
 		$signature = "$api_key~$merchant_id~$reference_code~$value~$currency";
 	else
 		$signature = "$api_key~$merchant_id~$reference_code~$value~$currency~VISA,MASTERCARD,DINERS,AMEX";
