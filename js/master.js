@@ -1,7 +1,7 @@
 //GLOBAL VARIABLES
 var currentCountrySelected;
 var currentCurrencySelected;
-var currentPlanSelected = "basicPlan";
+var currentPlanSelected = "firstPlan";
 
 
 var countryToCurrency =  {
@@ -32,30 +32,30 @@ var countryToCurrency =  {
 
 var plansInformation = {
 
-    basicPlan : {
+    firstPlan : {
         USD: "10",
         COP: "25000",
         MXN: "190",
         PEN: "34",
-        peoplePerDay: "1000",
+        people: "3000 y 6000",
         days: "3"
     },
 
-    morePeople : {
+    secondPlan : {
         USD: "17",
         COP: "40000",
         MXN: "320",
         PEN: "57",
-        peoplePerDay: "2000",
+        people: "6000 y 12000",
         days: "3"
     },
 
-    moreDays : {
+    thirdPlan : {
         USD: "20",
         COP: "50000",
         MXN: "400",
         PEN: "70",
-        peoplePerDay: "1000",
+        people: "7000 y 14000",
         days: "7"
     }
 
@@ -137,7 +137,7 @@ var updatePlanDisplays = function() {
     console.log(plansInformation[currentPlanSelected]);
     var price = plansInformation[currentPlanSelected][currentCurrencySelected];
     var days = plansInformation[currentPlanSelected]["days"];
-    var people = plansInformation[currentPlanSelected]["peoplePerDay"];
+    var people = plansInformation[currentPlanSelected]["people"];
     var accountId = selectAccountIDBasedOnCountry(currentCountrySelected);
 
     //Form variables
