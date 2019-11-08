@@ -83,6 +83,14 @@ var selectAccountIDBasedOnCountry = function(country) {
     return accountId;
 };
 
+//DISPLAYS CASH PAYMENT NOTE ACCOERDING TO CURRENT COUNTRY
+var displayCashPaymentNote = function() {
+    if (currentCountrySelected === "CO")
+        $("#cash_payment_note").css("display", "block");
+    else
+        $("#cash_payment_note").css("display", "none");
+};
+
 //ASKING FOR FOLLOWERS NUMBER
 var updateFollowersCount = function() {
     axios('../server/getFollowers.php')
@@ -531,6 +539,7 @@ $(document).ready(function() {
         updatePaymentMethodVariable( currentCountrySelected );
         updatePlanDisplays();
         updateSignature();
+        displayCashPaymentNote();
     });
 
     //Hides options if another part of the page is clicked
@@ -589,9 +598,6 @@ $(document).ready(function() {
             currentCountrySelected = response.data.country;
             currentCurrencySelected = countryToCurrency[currentCountrySelected];
             $(".dropdown dd ul .option#" + currentCountrySelected).trigger("click");
-
-            if(currentCountrySelected === "CO")
-                $("#cash_payment_note").css("display", "block");
         }
         else {
             /*This country is selected when the accessing country
