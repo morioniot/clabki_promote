@@ -33,30 +33,30 @@ var countryToCurrency =  {
 var plansInformation = {
 
     firstPlan : {
-        USD: "10",
-        COP: "25000",
-        MXN: "190",
-        PEN: "34",
+        USD: "12",
+        COP: "40000",
+        MXN: "230",
+        PEN: "40",
         people: "3000 y 6000",
         days: "3"
     },
 
     secondPlan : {
-        USD: "17",
-        COP: "40000",
-        MXN: "320",
-        PEN: "57",
-        people: "6000 y 12000",
-        days: "3"
+        USD: "30",
+        COP: "100000",
+        MXN: "570",
+        PEN: "100",
+        people: "9000 y 18000",
+        days: "7"
     },
 
     thirdPlan : {
-        USD: "20",
-        COP: "50000",
-        MXN: "400",
-        PEN: "70",
-        people: "7000 y 14000",
-        days: "7"
+        USD: "50",
+        COP: "170000",
+        MXN: "950",
+        PEN: "170",
+        people: "20000 y 40000",
+        days: "10"
     }
 
 };
