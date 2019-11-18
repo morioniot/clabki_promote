@@ -6,9 +6,9 @@ var currentPlanSelected = "firstPlan";
 
 var countryToCurrency =  {
 
-    AR: "USD",
+    AR: "ARS",
     BO: "USD",
-    CL: "USD",
+    CL: "CLP",
     CO: "COP",
     CR: "USD",
     CU: "USD",
@@ -37,6 +37,8 @@ var plansInformation = {
         COP: "40000",
         MXN: "230",
         PEN: "40",
+        ARS: "715",
+        CLP: "9200",
         people: "3000 y 6000",
         days: "3"
     },
@@ -46,6 +48,8 @@ var plansInformation = {
         COP: "100000",
         MXN: "570",
         PEN: "100",
+        ARS: "1780",
+        CLP: "23000",
         people: "9000 y 18000",
         days: "7"
     },
@@ -55,6 +59,8 @@ var plansInformation = {
         COP: "170000",
         MXN: "950",
         PEN: "170",
+        ARS: "2980",
+        CLP: "38500",
         people: "20000 y 40000",
         days: "10"
     }
