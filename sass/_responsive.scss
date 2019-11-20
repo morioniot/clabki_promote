@@ -256,6 +256,28 @@
         }
     }
 
+    #whatsapp_fixed_box {
+        @include display-flex;
+        @include justify-content(center);
+        @include align-items(center);
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        box-sizing: border-box;
+        height: 38px;                                                                             
+        position: relative;        
+        transform: none;
+        width: 100%;
+        z-index: 2;
+        
+        .whatsapp_instruction {
+            margin-right: 8px;
+        }
+
+        .whatsapp_icon {            
+            margin-right: 2px;            
+        }
+    }
+
     #form_section {
 
         background-color: $color-form;

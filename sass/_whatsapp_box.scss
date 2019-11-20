@@ -1,0 +1,38 @@
+#whatsapp_fixed_box {
+    background-color: $color-main-background;
+    border: 2px solid $color-main-font;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: none;
+    color: $color-main-font;
+    font-family: $font-title;
+    font-weight: bolder;
+    left: 0;
+    padding: 5px 8px;;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    top: calc(50% + 125px);
+    transform-origin: 0% 0%;
+    transform: rotate(-90deg);
+    width: 250px;
+
+    .whatsapp_instruction {
+        color: $color-main-pink;
+        font-weight: 500;
+        margin-right: 5px;
+    }
+
+    .whatsapp_icon {
+        font-family: $font-icomoon;
+        margin-right: -1px;
+        &::before {
+            content: "\ea93";
+        }
+    }
+
+    .whatsapp_number {
+        word-spacing: -1px;
+    }
+}

@@ -133,6 +133,42 @@ header {
     width: 100px;
   }
 }
+#whatsapp_fixed_box {
+  background-color: #ffffee;
+  border: 2px solid #1A223C;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top: none;
+  color: #1A223C;
+  font-family: PFDinTextCondPro;
+  font-weight: bolder;
+  left: 0;
+  padding: 5px 8px;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  top: calc(50% + 125px);
+  transform-origin: 0% 0%;
+  transform: rotate(-90deg);
+  width: 250px;
+}
+#whatsapp_fixed_box .whatsapp_instruction {
+  color: #fa5b61;
+  font-weight: 500;
+  margin-right: 5px;
+}
+#whatsapp_fixed_box .whatsapp_icon {
+  font-family: "icomoon";
+  margin-right: -1px;
+}
+#whatsapp_fixed_box .whatsapp_icon::before {
+  content: "";
+}
+#whatsapp_fixed_box .whatsapp_number {
+  word-spacing: -1px;
+}
+
 /*********************************************************************************************/
 /************************************ General elements ***************************************/
 /*********************************************************************************************/
@@ -1181,6 +1217,31 @@ footer #facebook_footer:before {
     position: static;
     text-align: center;
     width: auto;
+  }
+
+  #whatsapp_fixed_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-sizing: border-box;
+    height: 38px;
+    position: relative;
+    transform: none;
+    width: 100%;
+    z-index: 2;
+  }
+  #whatsapp_fixed_box .whatsapp_instruction {
+    margin-right: 8px;
+  }
+  #whatsapp_fixed_box .whatsapp_icon {
+    margin-right: 2px;
   }
 
   #form_section {
