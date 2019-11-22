@@ -517,18 +517,6 @@ $(document).ready(function() {
 
     updateFollowersCount();
 
-    /******Adding scroll event to whatsapp contact box */
-    var whatsappBoxPosition = $("#whatsapp_fixed_box").offset();
-    if(mobilecheck()) {
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > whatsappBoxPosition.top) {
-                $('#whatsapp_fixed_box').css('position', 'fixed').css('top', '0');
-            } else {
-                $('#whatsapp_fixed_box').css('position', 'relative');
-            }
-        });
-    }
-
     /******Adding event to doubts link and button*******/
     $("#doubt_link, .doubts_button").click(function(){
         $("#questions_popup").css("display", "flex");
