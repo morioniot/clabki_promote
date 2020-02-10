@@ -1,7 +1,7 @@
 //GLOBAL VARIABLES
 var currentCountrySelected;
 var currentCurrencySelected;
-var currentPlanSelected = "firstPlan";
+var currentPlanSelected = "secondPlan";
 
 
 var countryToCurrency =  {
