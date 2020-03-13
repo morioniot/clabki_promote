@@ -39,3 +39,22 @@ Stack trace:
 #0 /home/miguel/Documents/Clabki/clabki_promote/server/register.php(8): require_once()
 #1 {main}
   thrown in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 3
+[12-Mar-2020 15:34:31 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u840748033_clab'@'localhost' (using password: YES) in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 14
+[12-Mar-2020 15:34:31 America/New_York] PHP Fatal error:  Uncaught Exception: Connection failed: Access denied for user 'u840748033_clab'@'localhost' (using password: YES) in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php:18
+Stack trace:
+#0 /home/miguel/Documents/Clabki/clabki_promote/server/register.php(10): DatabaseConnection->__construct()
+#1 {main}
+  thrown in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 18
+[12-Mar-2020 15:37:32 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'u840748033_clab'@'localhost' (using password: YES) in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 14
+[12-Mar-2020 15:37:32 America/New_York] PHP Fatal error:  Uncaught Exception: Connection failed: Access denied for user 'u840748033_clab'@'localhost' (using password: YES) in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php:18
+Stack trace:
+#0 /home/miguel/Documents/Clabki/clabki_promote/server/register.php(10): DatabaseConnection->__construct()
+#1 {main}
+  thrown in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 18
+[12-Mar-2020 18:22:45 America/New_York] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'registro_ventas_clabki' in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 15
+[12-Mar-2020 18:22:45 America/New_York] PHP Fatal error:  Uncaught Exception: Connection failed: Unknown database 'registro_ventas_clabki' in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php:19
+Stack trace:
+#0 /home/miguel/Documents/Clabki/clabki_promote/server/register.php(10): DatabaseConnection->__construct()
+#1 {main}
+  thrown in /home/miguel/Documents/Clabki/clabki_promote/server/dbconnection.php on line 19
+[12-Mar-2020 18:25:17 America/New_York] No se pudieron almacenar los datos: Data truncated for column 'plan' at row 1

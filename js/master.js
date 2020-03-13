@@ -190,7 +190,15 @@ $("#join_us_form").on('submit', function( event ) {
                 if(response.data.error != undefined && !response.data.error) {
                     itWasRegistered = true;
                     fbq('track', 'CompleteRegistration');
-                    $('#join_us_form').submit();
+
+                    //Checking from which country the page is being accessed
+                    if(currentCountrySelected === 'ES') {
+                        $("#before_shopping_popup").css("display", "flex");
+                        $("body").css("overflow", "hidden");
+                    }
+                    else {
+                        $("#join_us_form").submit();                        
+                    }
                 }
                 else {
                     console.log(response.data.error);
@@ -532,6 +540,13 @@ $(document).ready(function() {
         $("#questions_popup").css("display", "none");
         $("body").css("overflow", "auto");
     });
+
+    /******Adding event to shopping popup close and later buttons*******/
+    $("#before_shopping_popup .later_button, #before_shopping_popup .close_button")
+        .click(function () {
+            $("#before_shopping_popup").css("display", "none");
+            $("body").css("overflow", "auto");
+        });
 
     /*****Creating functionality of fake select******/
     //Toggle options when "select" is clicked
