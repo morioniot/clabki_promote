@@ -165,15 +165,62 @@ var updatePlanDisplays = function() {
     $(".price_explanation .people").html(people + " personas");
 };
 
+//CHECKS IF IT IS WORKING HOURS
+var isItWorkingHours = function() {    
+    
+    var workingHoursStart = moment
+        .utc()
+        .subtract(5, 'hours')
+        .hours(9)
+        .minutes(0)
+        .seconds(0);
+
+    var workingHoursEnd = moment
+        .utc()
+        .subtract(5, 'hours')
+        .hours(18)
+        .minutes(0)
+        .seconds(0);
+    
+    var day = moment.utc().day();
+
+    //working hours change on weekends
+    if(day === 6 || day === 0) {
+
+        workingHoursStart = moment
+            .utc()
+            .subtract(5, 'hours')
+            .hours(9)
+            .minutes(0)
+            .seconds(0);
+
+        workingHoursEnd = moment
+            .utc()
+            .subtract(5, 'hours')
+            .hours(17)
+            .minutes(0)
+            .seconds(0);
+    }
+    
+    var currentColombianTime = moment.utc().subtract(5, 'hours'); //UTC -5:00
+    
+    return currentColombianTime.isBetween(workingHoursStart, workingHoursEnd, 'minutes');
+
+};
+
 //SHOWS POPUP INFORMING WORKING HOURS IF IT IS NECESSARY
 var noWorkingHoursAcceptance = false; //(Global variable)
 var showNoWorkingHoursPopup = function() {
     
-    //The client already accepted that we are in no-working hours
-    if(noWorkingHoursAcceptance)
+    //We are in working hours
+    if (isItWorkingHours())
         return false;
     
-    //The client has not yet accepted that we are in no-working hours
+    //The client already accepted that we are in no-working hours
+    if (noWorkingHoursAcceptance)
+        return false;
+    
+    //We are in no-working hours and the client has not yet accepted it
     $("#before_shopping_popup").css("display", "flex");
     $("body").css("overflow", "hidden");
     return true;
