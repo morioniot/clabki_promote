@@ -165,15 +165,22 @@ var updatePlanDisplays = function() {
     $(".price_explanation .people").html(people + " personas");
 };
 
-//SHOWS POPUP INFORMING LABORAL HOURS IF IT IS NECESSARY
+//SHOWS POPUP INFORMING WORKING HOURS IF IT IS NECESSARY
+var noWorkingHoursAcceptance = false; //(Global variable)
 var showNoWorkingHoursPopup = function() {
+    
+    //The client already accepted that we are in no-working hours
+    if(noWorkingHoursAcceptance)
+        return false;
+    
+    //The client has not yet accepted that we are in no-working hours
     $("#before_shopping_popup").css("display", "flex");
     $("body").css("overflow", "hidden");
     return true;
 };
 
 // SENDING DATA TO SAVE IN DB
-var itWasRegistered = false;
+var itWasRegistered = false; //(Global variable)
 $("#join_us_form").on('submit', function( event ) {
 
     if(!itWasRegistered) {
@@ -196,9 +203,8 @@ $("#join_us_form").on('submit', function( event ) {
             .then(function(response) {
                 if(response.data.error != undefined && !response.data.error) {
                     itWasRegistered = true;
-                    fbq('track', 'CompleteRegistration');
-                    if (!showNoWorkingHoursPopup())                
-                        $("#join_us_form").submit();                   
+                    fbq('track', 'CompleteRegistration');                    
+                    $("#join_us_form").submit();                  
                 }
                 else {
                     console.log(response.data.error);
@@ -212,6 +218,10 @@ $("#join_us_form").on('submit', function( event ) {
         else{
             console.log("Por favor verifique que todos los campos hayan sido diligenciados");
         }
+    }
+    else {
+        if (showNoWorkingHoursPopup())
+            event.preventDefault();
     }
 });
 
@@ -541,7 +551,14 @@ $(document).ready(function() {
         $("body").css("overflow", "auto");
     });
 
-    /******Adding event to shopping popup close and later buttons*******/
+    /******Adding click event to shopping popup continue buttons*******/
+    $("#popup_continue_button").click(function() {
+        //This is a global variable
+        noWorkingHoursAcceptance = true;
+        $("#join_us_form").submit(); 
+    });
+    
+    /******Adding click event to shopping popup close and later buttons*******/
     $("#before_shopping_popup .later_button, #before_shopping_popup .close_button")
         .click(function () {
             $("#before_shopping_popup").css("display", "none");
