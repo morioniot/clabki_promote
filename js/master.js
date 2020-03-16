@@ -165,6 +165,13 @@ var updatePlanDisplays = function() {
     $(".price_explanation .people").html(people + " personas");
 };
 
+//SHOWS POPUP INFORMING LABORAL HOURS IF IT IS NECESSARY
+var showNoWorkingHoursPopup = function() {
+    $("#before_shopping_popup").css("display", "flex");
+    $("body").css("overflow", "hidden");
+    return true;
+};
+
 // SENDING DATA TO SAVE IN DB
 var itWasRegistered = false;
 $("#join_us_form").on('submit', function( event ) {
@@ -190,15 +197,8 @@ $("#join_us_form").on('submit', function( event ) {
                 if(response.data.error != undefined && !response.data.error) {
                     itWasRegistered = true;
                     fbq('track', 'CompleteRegistration');
-
-                    //Checking from which country the page is being accessed
-                    if(currentCountrySelected === 'ES') {
-                        $("#before_shopping_popup").css("display", "flex");
-                        $("body").css("overflow", "hidden");
-                    }
-                    else {
-                        $("#join_us_form").submit();                        
-                    }
+                    if (!showNoWorkingHoursPopup())                
+                        $("#join_us_form").submit();                   
                 }
                 else {
                     console.log(response.data.error);
