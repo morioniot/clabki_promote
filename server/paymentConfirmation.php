@@ -76,6 +76,7 @@
                 $email = $object->email;
                 $telephone = $object->telephone;
                 $city = $object->city;
+                $plan = $object->plan;
 
                 //Enviando Email
 
@@ -115,6 +116,7 @@
                             </p>
                             <ul>
                                 <li><strong>Nombre:</strong> <span>'.$name.'</span></li>
+                                <li><strong>Plan:</strong> <span>'.$plan.'</span></li>
                                 <li><strong>Email:</strong> <span>'.$email.'</span></li>
                                 <li><strong>Contacto:</strong> <span>'.$telephone.'</span></li>
                                 <li><strong>Empresa:</strong> <span>'.$city.'</span></li>

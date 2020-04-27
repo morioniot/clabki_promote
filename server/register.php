@@ -77,11 +77,11 @@
                             </p>
                             <ul>
                                 <li><strong>Nombre:</strong> <span>'.$buyerFullName.'</span></li>
+                                <li><strong>Plan:</strong> <span>'.$plan.'</span></li>
                                 <li><strong>Email:</strong> <span>'.$buyerEmail.'</span></li>
                                 <li><strong>Teléfono:</strong> <span>'.$telephone.'</span></li>
                                 <li><strong>País:</strong> <span>'.$country.'</span></li>
                                 <li><strong>Ciudad:</strong> <span>'.$city.'</span></li>
-                                <li><strong>Plan:</strong> <span>'.$plan.'</span></li>
                                 <li><strong>Código de referencia:</strong> <span>'.$referenceCode.'</span></li>
                             </ul>
                         </section>
